@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://swasthyafoodconsulting.com/sitemap.xml
+
+# Disallow development and admin paths
+Disallow: /assets/data/
+Disallow: /*.json$
+
+# Allow all CSS and JS for rendering
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/

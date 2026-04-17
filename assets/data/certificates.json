@@ -1,0 +1,29 @@
+[
+    {
+        "id": "SWA-2026-001",
+        "name": "Amit Kumar",
+        "course": "FoSTaC Advanced Catering",
+        "date": "2026-03-10",
+        "expiry": "2028-03-10",
+        "status": "Valid",
+        "grade": "A+"
+    },
+    {
+        "id": "SWA-2026-002",
+        "name": "Priya Sharma",
+        "course": "ISO 22000 Internal Auditor",
+        "date": "2026-03-15",
+        "expiry": "2029-03-15",
+        "status": "Valid",
+        "grade": "A"
+    },
+    {
+        "id": "SWA-2026-003",
+        "name": "John Doe",
+        "course": "HACCP Implementation",
+        "date": "2025-01-20",
+        "expiry": "2026-01-20",
+        "status": "Expired",
+        "grade": "B+"
+    }
+]

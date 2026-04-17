@@ -1,0 +1,46 @@
+[
+    {
+        "id": "T001",
+        "title": "FoSTaC - Advanced Catering",
+        "category": "Regulatory",
+        "date": "2026-05-15",
+        "duration": "1 Day",
+        "location": "Bengaluru (Offline)",
+        "price": "₹1,500",
+        "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
+        "status": "Open"
+    },
+    {
+        "id": "T002",
+        "title": "ISO 22000:2018 Internal Auditor Training",
+        "category": "Management Systems",
+        "date": "2026-05-20",
+        "duration": "3 Days",
+        "location": "Online (Live)",
+        "price": "₹8,500",
+        "image": "https://images.unsplash.com/photo-1454165833767-1330084bc6f9?auto=format&fit=crop&w=800&q=80",
+        "status": "Upcoming"
+    },
+    {
+        "id": "T003",
+        "title": "HACCP Principles & Implementation",
+        "category": "Food Safety",
+        "date": "2026-06-05",
+        "duration": "2 Days",
+        "location": "Bengaluru (Offline)",
+        "price": "₹5,000",
+        "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+        "status": "Open"
+    },
+    {
+        "id": "T004",
+        "title": "BRCGS Food Safety Issue 9 Awareness",
+        "category": "International Standards",
+        "date": "2026-06-12",
+        "duration": "1 Day",
+        "location": "Online (Live)",
+        "price": "₹4,000",
+        "image": "https://images.unsplash.com/photo-1507537298587-1822f33c11b7?auto=format&fit=crop&w=800&q=80",
+        "status": "Open"
+    }
+]
