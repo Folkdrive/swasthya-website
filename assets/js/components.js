@@ -217,7 +217,7 @@ function getFooterTemplate(prefix) {
 function getFloatingActionsTemplate(prefix) {
     return `
         <div class="floating-actions-elite" style="position: fixed; bottom: 30px; right: 30px; z-index: 100; display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
-            <a href="https://wa.me/919000000000" target="_blank" style="width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; box-shadow: 0 8px 24px rgba(37,211,102,0.4); transition: var(--transition-smooth);">
+            <a href="https://wa.me/918105787342" target="_blank" style="width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; box-shadow: 0 8px 24px rgba(37,211,102,0.4); transition: var(--transition-smooth);" title="Chat on WhatsApp: +91 81057 87342">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
