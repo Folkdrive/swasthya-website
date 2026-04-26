@@ -414,23 +414,27 @@
     </section>
 
     <!-- ═══ FOUNDER AUTHORITY BLOCK ═══ -->
-    <section class="founder-section section-xl tex-bg" style="padding: var(--sp-2xl) 0; overflow: hidden; position: relative;">
-        <div class="founder-glow"></div>
-        <div class="floral-bg-bold"></div>
+    <section class="founder-section section-xl tex-bg" style="padding: var(--sp-3xl) 0; overflow: hidden; position: relative; background: #fff;">
+        <div class="elite-mesh-bg"></div>
+        <div class="floral-bg-bold" style="opacity: 0.12;"></div>
         
-        <!-- Decorative Background Orbs -->
-        <div class="founder-bg-element" style="width: 400px; height: 400px; background: var(--clr-primary); top: -100px; left: -100px;"></div>
-        <div class="founder-bg-element" style="width: 300px; height: 300px; background: #FB8C00; bottom: -50px; right: -50px;"></div>
+        <!-- Vibrant Animated Orbs (The "Folkdrive" feel) -->
+        <div class="founder-bg-element rotateme" style="width: 500px; height: 500px; background: radial-gradient(circle, rgba(0, 150, 136, 0.2) 0%, transparent 70%); top: -150px; left: -100px; animation-duration: 40s;"></div>
+        <div class="founder-bg-element rotatemetwo" style="width: 400px; height: 400px; background: radial-gradient(circle, rgba(251, 140, 0, 0.15) 0%, transparent 70%); bottom: -100px; right: -50px; animation-duration: 35s;"></div>
+        <div class="founder-bg-element float_up_down" style="width: 200px; height: 200px; background: radial-gradient(circle, rgba(90, 79, 207, 0.2) 0%, transparent 70%); top: 20%; right: 10%; animation-duration: 8s;"></div>
 
-        <div class="container">
+        <div class="container" style="position: relative; z-index: 2;">
             <div class="grid grid-2" style="gap: var(--sp-3xl); align-items: center;">
                 <div class="reveal" style="text-align: center;">
                     <div class="founder-portrait-container" style="position: relative; display: inline-block;">
-                        <!-- Rotating Decorative Rings -->
-                        <div class="rotating-ring rotateme" style="width: 110%; height: 110%; top: -5%; left: -5%;"></div>
-                        <div class="rotating-ring rotating-ring-accent rotatemetwo" style="width: 120%; height: 120%; top: -10%; left: -10%;"></div>
+                        <!-- Glowing Aura behind portrait -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 110%; height: 110%; background: radial-gradient(circle, rgba(0, 150, 136, 0.1) 0%, transparent 70%); z-index: -1; filter: blur(30px);"></div>
                         
-                        <img src="assets/images/Founder-Portrait-Clean.webp" alt="Mr. Thammaiah ND - Founder, Swasthya Food Consulting" style="width: 100%; max-width: 480px; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite); display: block; position: relative; z-index: 2;" loading="lazy">
+                        <!-- Rotating Decorative Rings -->
+                        <div class="rotating-ring rotateme" style="width: 115%; height: 115%; top: -7.5%; left: -7.5%; border-width: 2px; border-color: rgba(0, 150, 136, 0.3);"></div>
+                        <div class="rotating-ring rotating-ring-accent rotatemetwo" style="width: 125%; height: 125%; top: -12.5%; left: -12.5%; border-width: 1px; opacity: 0.5;"></div>
+                        
+                        <img src="assets/images/Founder-Portrait-Clean.webp" alt="Mr. Thammaiah ND - Founder, Swasthya Food Consulting" style="width: 100%; max-width: 500px; border-radius: var(--radius-lg); box-shadow: 0 30px 60px rgba(0,0,0,0.15), 0 10px 20px rgba(0, 150, 136, 0.1); display: block; position: relative; z-index: 2;" loading="lazy">
                     </div>
                 </div>
                 <div class="reveal" style="transition-delay: 0.1s;">
