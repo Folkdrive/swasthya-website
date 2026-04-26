@@ -818,46 +818,67 @@ function getFooterTemplate(prefix) {
 
 function getFloatingActionsTemplate(prefix) {
     return `
-        <div class="floating-actions-elite" style="position: fixed; bottom: 30px; left: 30px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
-            <a href="https://wa.me/918105787342" target="_blank" class="whatsapp-btn-animated" title="Chat on WhatsApp: +91 81057 87342">
-                <span class="whatsapp-pulse"></span>
+        <!-- Left Side: WhatsApp -->
+        <div class="floating-left-elite" style="position: fixed; bottom: 30px; left: 30px; z-index: 1000;">
+            <a href="https://wa.me/918105787342" target="_blank" class="elite-fab fab-whatsapp" title="Chat on WhatsApp">
+                <span class="fab-pulse pulse-whatsapp"></span>
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
+
+        <!-- Right Side: Tawk.to -->
+        <div class="floating-right-elite" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+            <a href="https://www.tawk.to/" target="_blank" class="elite-fab fab-tawk" title="Live Support (Tawk.to)">
+                <span class="fab-pulse pulse-tawk"></span>
+                <i class="fas fa-comments"></i>
+            </a>
+        </div>
+
         <style>
-            .whatsapp-btn-animated {
+            .elite-fab {
                 position: relative;
                 width: 60px;
                 height: 60px;
                 border-radius: 50%;
-                background: #25D366;
                 color: white;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 1.85rem;
-                box-shadow: 0 10px 25px rgba(37,211,102,0.3);
+                font-size: 1.8rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
                 transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 text-decoration: none;
-                z-index: 2;
+                z-index: 5;
             }
-            .whatsapp-btn-animated:hover {
+            .fab-whatsapp { background: #25D366; }
+            .fab-tawk { background: #00897B; } /* Matching Swasthya Teal */
+
+            .elite-fab:hover {
                 transform: scale(1.15) rotate(10deg);
-                box-shadow: 0 15px 35px rgba(37,211,102,0.45);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.3);
             }
-            .whatsapp-pulse {
+
+            .fab-pulse {
                 position: absolute;
-                top: 0; left: 0; width: 100%; height: 100%;
-                background: #25D366;
+                inset: 0;
                 border-radius: 50%;
                 z-index: -1;
-                opacity: 0.7;
-                animation: waPulse 2.5s infinite;
+                opacity: 0.6;
+                animation: fabPulse 2.5s infinite;
             }
-            @keyframes waPulse {
-                0% { transform: scale(1); opacity: 0.7; }
-                50% { transform: scale(1.5); opacity: 0; }
+            .pulse-whatsapp { background: #25D366; }
+            .pulse-tawk { background: #00897B; }
+
+            @keyframes fabPulse {
+                0% { transform: scale(1); opacity: 0.6; }
+                50% { transform: scale(1.6); opacity: 0; }
                 100% { transform: scale(1); opacity: 0; }
+            }
+
+            @media (max-width: 640px) {
+                .elite-fab { width: 50px; height: 50px; font-size: 1.5rem; }
+                .floating-left-elite { bottom: 20px; left: 20px; }
+                .floating-right-elite { bottom: 20px; right: 20px; }
             }
         </style>
     `;
