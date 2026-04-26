@@ -99,7 +99,7 @@ function getHeaderTemplate(prefix) {
             <style>
                 .header-portal {
                     position: fixed;
-                    top: 0; left: 0; width: 100%;
+                    top: 0; left: 0; width: 100%; max-width: 100vw;
                     z-index: 1000;
                     background: transparent;
                     padding-top: 5px;
@@ -337,16 +337,41 @@ function getHeaderTemplate(prefix) {
                     <i class="fas fa-users"></i>
                     <span>About Us</span>
                 </a>
-                <a href="${prefix}services/index.html" class="cyber-tile" style="--tile-color: #7c3aed; --delay: 0.15s">
-                    <div class="cyber-tile-glow"></div>
-                    <i class="fas fa-layer-group"></i>
-                    <span>Services</span>
-                </a>
-                <a href="${prefix}trainings/index.html" class="cyber-tile" style="--tile-color: #10b981; --delay: 0.2s">
-                    <div class="cyber-tile-glow"></div>
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <span>Trainings</span>
-                </a>
+
+                <!-- Services Accordion -->
+                <div class="cyber-tile-wrapper" style="--tile-color: #7c3aed; --delay: 0.15s">
+                    <div class="cyber-tile cyber-accordion-trigger" data-accordion="services">
+                        <div class="cyber-tile-glow"></div>
+                        <i class="fas fa-layer-group"></i>
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down acc-arrow"></i>
+                    </div>
+                    <div class="cyber-accordion-content" id="acc-services">
+                        <a href="${prefix}services/fssai.html">FSSAI Regulatory</a>
+                        <a href="${prefix}services/iso22000.html">FSMS Consultancy</a>
+                        <a href="${prefix}services/audits.html">Audits</a>
+                        <a href="${prefix}services/technical.html">Engineering</a>
+                        <a href="${prefix}services/index.html">View All</a>
+                    </div>
+                </div>
+
+                <!-- Trainings Accordion -->
+                <div class="cyber-tile-wrapper" style="--tile-color: #10b981; --delay: 0.2s">
+                    <div class="cyber-tile cyber-accordion-trigger" data-accordion="trainings">
+                        <div class="cyber-tile-glow"></div>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Trainings</span>
+                        <i class="fas fa-chevron-down acc-arrow"></i>
+                    </div>
+                    <div class="cyber-accordion-content" id="acc-trainings">
+                        <a href="${prefix}trainings/index.html#fostac">FoSTaC Training</a>
+                        <a href="${prefix}trainings/index.html#brcgs">BRCGS Training</a>
+                        <a href="${prefix}trainings/index.html#iso">FSMS Training</a>
+                        <a href="${prefix}trainings/index.html#audit">Audit Training</a>
+                        <a href="${prefix}trainings/index.html">Full Catalog</a>
+                    </div>
+                </div>
+
                 <a href="${prefix}clientele.html" class="cyber-tile" style="--tile-color: #f43f5e; --delay: 0.25s">
                     <div class="cyber-tile-glow"></div>
                     <i class="fas fa-building"></i>
@@ -486,10 +511,17 @@ function getHeaderTemplate(prefix) {
             position: relative;
             z-index: 5;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 14px;
             width: 100%;
             max-width: 380px;
+        }
+
+        .cyber-tile-wrapper {
+            grid-column: span 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
 
         .cyber-tile {
@@ -508,6 +540,47 @@ function getHeaderTemplate(prefix) {
             overflow: hidden;
             cursor: pointer;
             transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            width: 100%;
+        }
+
+        .acc-arrow {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.7rem !important;
+            opacity: 0.5;
+            transition: transform 0.3s ease;
+        }
+        .cyber-tile-wrapper.active .acc-arrow { transform: rotate(180deg); opacity: 1; }
+
+        .cyber-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+        .cyber-tile-wrapper.active .cyber-accordion-content {
+            max-height: 400px;
+            padding: 5px 0;
+            margin-top: 5px;
+            border: 1px solid rgba(0,242,255,0.2);
+        }
+        .cyber-accordion-content a {
+            padding: 10px 15px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            text-align: center;
+        }
+        .cyber-accordion-content a:last-child { border-bottom: none; }
+        .cyber-accordion-content a:hover { color: #00f2ff; background: rgba(0,242,255,0.05); }
+
+        .cyber-tile {
             /* Spring pop animation on open */
             opacity: 0;
             transform: scale(0.7) translateY(20px);
@@ -851,12 +924,32 @@ function initHeader() {
         cyberCloseBtn.addEventListener('click', closeMenu);
     }
 
-    // Close when any link inside the overlay is clicked
+    // Close when any simple tile link is clicked
     if (overlay) {
-        overlay.querySelectorAll('a').forEach(link => {
+        overlay.querySelectorAll('.cyber-tile:not(.cyber-accordion-trigger)').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        // Close when any accordion link is clicked
+        overlay.querySelectorAll('.cyber-accordion-content a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
     }
+
+    // Accordion Logic
+    const accordionTriggers = document.querySelectorAll('.cyber-accordion-trigger');
+    accordionTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const wrapper = trigger.closest('.cyber-tile-wrapper');
+            const isActive = wrapper.classList.contains('active');
+            
+            // Close all other accordions
+            document.querySelectorAll('.cyber-tile-wrapper').forEach(w => w.classList.remove('active'));
+            
+            // Toggle current
+            if (!isActive) wrapper.classList.add('active');
+        });
+    });
 }
 
 // Run injection
