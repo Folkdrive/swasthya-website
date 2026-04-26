@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     handleActiveNav();
     initTestimonialSlider();
-    // Training loader and verify engine are handled inline on those pages
+    initTiltEffect(); // New 3D Interaction
 });
 
 /* ─────────────────────────────────────────────
@@ -124,7 +124,7 @@ function handleActiveNav() {
     });
 }
 /* ─────────────────────────────────────────────
-   5. HERO SLIDER ENGINE
+   5. HERO SLIDER ENGINE (5-Slide Elite)
 ───────────────────────────────────────────── */
 
 function initHeroSlider() {
@@ -132,68 +132,94 @@ function initHeroSlider() {
     if (!slider) return;
 
     const slides = slider.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    let currentSlide = 0;
-    let slideInterval;
+    const dots   = document.querySelectorAll('#slider-nav .dot');
+    const prevBtn = document.getElementById('hero-prev');
+    const nextBtn = document.getElementById('hero-next');
 
-    function showSlide(index) {
-        const prevVideo = slides[currentSlide].querySelector('video');
-        if (prevVideo && typeof prevVideo.pause === 'function') {
-            prevVideo.pause();
+    if (!slides.length) return;
+
+    let current = 0;
+    let timer;
+    const INTERVAL = 5500;
+
+    /* ── Show a specific slide ── */
+    function goTo(index) {
+        // Bounds
+        index = (index + slides.length) % slides.length;
+
+        // Remove active from current
+        slides[current].classList.remove('active');
+        if (dots[current]) {
+            dots[current].classList.remove('active');
+            dots[current].style.background = '';
         }
 
-        slides.forEach(s => s.classList.remove('active'));
-        dots.forEach(d => {
-            d.classList.remove('active');
-            d.style.background = 'rgba(0,0,0,0.2)';
-        });
+        current = index;
 
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-        dots[index].style.background = 'var(--clr-primary)';
-        
-        const currentVideo = slides[index].querySelector('video');
-        if (currentVideo && typeof currentVideo.play === 'function') {
-            currentVideo.currentTime = 0;
-            currentVideo.play().catch(e => console.warn('Video autoplay blocked or pending.', e));
+        // Activate new slide
+        const activeSlide = slides[current];
+        activeSlide.classList.add('active');
+
+        // Restart Ken Burns by toggling the animation
+        const bg = activeSlide.querySelector('.slide-bg-kenburns');
+        if (bg) {
+            bg.style.animation = 'none';
+            // Force reflow
+            void bg.offsetWidth;
+            bg.style.animation = '';
         }
 
-        currentSlide = index;
+        if (dots[current]) {
+            dots[current].classList.add('active');
+        }
     }
 
-    function nextSlide() {
-        let next = (currentSlide + 1) % slides.length;
-        showSlide(next);
+    /* ── Auto-advance ── */
+    function start() {
+        stop();
+        timer = setInterval(() => goTo(current + 1), INTERVAL);
     }
 
-    function startSlider() {
-        stopSlider();
-        slideInterval = setInterval(nextSlide, 3000);
+    function stop() {
+        if (timer) clearInterval(timer);
     }
 
-    function stopSlider() {
-        if (slideInterval) clearInterval(slideInterval);
-    }
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            showSlide(index);
-            startSlider();
-        });
+    /* ── Dot clicks ── */
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => { goTo(i); start(); });
     });
 
-    // Pause on hover
-    slider.addEventListener('mouseenter', stopSlider);
-    slider.addEventListener('mouseleave', startSlider);
-
-    // Initial setup
-    const initialVideo = slides[currentSlide].querySelector('video');
-    if (initialVideo) {
-        initialVideo.play().catch(e => console.warn('Initial video autoplay blocked.', e));
+    /* ── Arrow buttons ── */
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => { goTo(current - 1); start(); });
     }
-    
-    startSlider();
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => { goTo(current + 1); start(); });
+    }
+
+    /* ── Pause on hover ── */
+    const section = document.getElementById('hero-section');
+    if (section) {
+        section.addEventListener('mouseenter', stop);
+        section.addEventListener('mouseleave', start);
+    }
+
+    /* ── Touch / Swipe support ── */
+    let touchStartX = 0;
+    slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', e => {
+        const delta = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(delta) > 50) {
+            delta > 0 ? goTo(current + 1) : goTo(current - 1);
+            start();
+        }
+    }, { passive: true });
+
+    /* ── Boot ── */
+    goTo(0);
+    start();
 }
+
 
 /* ─────────────────────────────────────────────
    6. TESTIMONIAL SLIDER ENGINE
@@ -269,4 +295,41 @@ function initTestimonialSlider() {
     
     // Set interval for rotation
     setInterval(updateTestimonial, 4000);
+}
+
+/* ─────────────────────────────────────────────
+   7. 3D MOUSE-FOLLOW TILT EFFECT (Elite)
+───────────────────────────────────────────── */
+
+function initTiltEffect() {
+    const tiltCards = document.querySelectorAll('.card, .capability-card, .stat-card, .industry-item-card, .founder-portrait-container');
+    
+    tiltCards.forEach(card => {
+        // Ensure parent doesn't clip the 3D pop-out
+        if (card.parentElement) card.parentElement.style.perspective = "1000px";
+        
+        card.style.transition = "transform 0.1s ease-out";
+        card.style.transformStyle = "preserve-3d";
+        card.style.willChange = "transform";
+        
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Bold Tilt intensity (increased to 25 degrees for visibility)
+            const rotateX = ((y - centerY) / centerY) * -25;
+            const rotateY = ((x - centerX) / centerX) * 25;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.06, 1.06, 1.06)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transition = "transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)";
+            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        });
+    });
 }

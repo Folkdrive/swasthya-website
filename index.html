@@ -69,154 +69,224 @@
 
 
 
-    <!-- ═══ MODIFIED HERO SLIDER (WHITE BG) ═══ -->
-    <!-- ═══ SIGNATURE HERO SLIDER ═══ -->
-    <section class="hero-elite" style="background: white; color: #1a1a1a; min-height: 85vh; position: relative; overflow: hidden;">
-        <!-- Colorful Background Drops -->
-        <div style="position: absolute; top: -15%; left: -10%; width: 55%; height: 70%; background: radial-gradient(circle, rgba(0,137,123,0.12) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; filter: blur(60px); z-index: 0; pointer-events: none;"></div>
-        <div style="position: absolute; bottom: -20%; right: -10%; width: 65%; height: 80%; background: radial-gradient(circle, rgba(251,140,0,0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; filter: blur(70px); z-index: 0; pointer-events: none;"></div>
-        <div style="position: absolute; top: 40%; left: 30%; width: 30%; height: 40%; background: radial-gradient(circle, rgba(0,122,122,0.06) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; filter: blur(50px); z-index: 0; pointer-events: none;"></div>
+    <!-- ═══ SIGNATURE HERO SLIDER (5-Slide Elite) ═══ -->
+    <section class="hero-elite" id="hero-section" style="min-height: 100vh; position: relative; overflow: hidden; background: #06061a;">
 
-        <!-- <div class="hero-bg-accent"></div> -->
-        <!-- <div class="floral-bg"></div> -->
-        <!-- gradient overlay disabled -->
-        <div class="hero-slider" id="hero-slider" style="z-index: 1;">
-            
-            <!-- Slide 1 -->
-            <div class="slide active">
-                <div class="container hero-grid">
-                    <div class="hero-text animate-fade-in">
-                        <span class="pre-heading" style="color: #1a1a1a; font-weight: 800;">QCI &amp; APEDA Approved · Bengaluru</span>
-                        <h1 >India's Trusted <br><span class="text-primary" >Food Safety Partner.</span></h1>
-                        <p class="text-lead mb-xl" style="color: #4a4a4a; max-width: 560px; font-weight: 500;">
-                            Delivering world-class food safety systems for manufacturers and food establishments across India since 2022.
-                        </p>
-                        <div class="flex" style="gap: var(--sp-md); flex-wrap: wrap;">
-                            <a href="services/index.html" class="btn btn-primary btn-large">Explore Services</a>
-                            <a href="contact.html" class="btn btn-outline btn-large" style="border-color: var(--clr-primary); color: var(--clr-primary);">Free Consultation</a>
+        <div class="hero-slider" id="hero-slider">
+
+            <!-- Floating ambient orbs (float_up_down animation) -->
+            <div class="hero-float-orb hero-orb-teal"></div>
+            <div class="hero-float-orb hero-orb-gold"></div>
+            <div class="hero-float-orb hero-orb-white"></div>
+
+            <!-- ─── Slide 1: Leading FoSTaC Training Partner ─── -->
+            <div class="slide active" data-bg="assets/images/stock/pexels-amirho3intavkooli-28428531.jpg">
+                <div class="slide-bg-kenburns" style="background-image: url('assets/images/stock/pexels-amirho3intavkooli-28428531.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content-wrap container">
+                    <div class="elite-slide-inner">
+                        <span class="slide-eyebrow"><i class="fas fa-award"></i>&nbsp; FSSAI Accredited · QCI Registered</span>
+                        <h1 class="slide-headline">
+                            Leading <span class="slide-highlight">FoSTaC</span><br>Training Partner
+                        </h1>
+                        <p class="slide-subtext">India's most trusted FSSAI Food Safety Training &amp; Certification (FoSTaC) delivery partner, empowering food businesses across 8+ training categories.</p>
+                        <div class="slide-actions">
+                            <a href="trainings/index.html" class="btn-hero-primary">Explore Trainings</a>
+                            <a href="contact.html" class="btn-hero-ghost">Get Certified</a>
                         </div>
-                    </div>
-                    <div class="hero-visual reveal">
-                        <div class="visual-overlap">
-                            <video src="assets/videos/10101924-uhd_3840_2160_30fps.mp4" class="main-video slide-in-video" muted loop playsinline preload="auto"></video>
-                            <div class="floating-metric glass-card">
-                                <span class="metric-num">20+</span>
-                                <span class="metric-label">Years Expertise</span>
-                            </div>
+                        <div class="slide-stats">
+                            <div class="slide-stat"><span class="s-num">6800+</span><span class="s-lbl">Professionals Trained</span></div>
+                            <div class="slide-stat-divider"></div>
+                            <div class="slide-stat"><span class="s-num">8+</span><span class="s-lbl">FoSTaC Categories</span></div>
+                            <div class="slide-stat-divider"></div>
+                            <div class="slide-stat"><span class="s-num">4.84/5</span><span class="s-lbl">Participant Score</span></div>
                         </div>
                     </div>
                 </div>
+                <div class="slide-accent-ring slide-accent-1"></div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="slide">
-                <div class="container hero-grid">
-                    <div class="hero-text">
-                        <span class="pre-heading" style="color: #1a1a1a; font-weight: 800;">ISO 22000 · FSSC · BRCGS</span>
-                        <h1 >Global Standards. <br><span class="text-primary" >Uncompromising Quality.</span></h1>
-                        <p class="text-lead mb-xl" style="color: #4a4a4a; max-width: 560px; font-weight: 500;">
-                            We implement internationally recognized FSMS frameworks that elevate your operations to world-class status.
-                        </p>
-                        <div class="flex" style="gap: var(--sp-md); flex-wrap: wrap;">
-                            <a href="services/iso22000.html" class="btn btn-primary btn-large">View Standards</a>
-                            <a href="verify.html" class="btn btn-outline btn-large" style="border-color: var(--clr-primary); color: var(--clr-primary);">Verify Certificate</a>
+            <!-- ─── Slide 2: Expert FoSTaC Trainers ─── -->
+            <div class="slide" data-bg="assets/images/stock/pexels-helloaesthe-17040619.jpg">
+                <div class="slide-bg-kenburns slide-kb-reverse" style="background-image: url('assets/images/stock/pexels-helloaesthe-17040619.jpg');"></div>
+                <div class="slide-overlay slide-overlay-warm"></div>
+                <div class="slide-content-wrap container">
+                    <div class="elite-slide-inner">
+                        <span class="slide-eyebrow"><i class="fas fa-user-graduate"></i>&nbsp; MTech Dairy Science · 22 Yrs Experience</span>
+                        <h1 class="slide-headline">
+                            Experienced <span class="slide-highlight-gold">FoSTaC</span><br>Trainers
+                        </h1>
+                        <p class="slide-subtext">Our trainers bring global field experience from Almarai &amp; NADEC (Saudi Arabia) directly into the classroom — combining practical rigor with world-class pedagogy.</p>
+                        <div class="slide-actions">
+                            <a href="company.html#founder" class="btn-hero-primary">Meet Our Expert</a>
+                            <a href="trainings/index.html" class="btn-hero-ghost">View Programs</a>
                         </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="visual-overlap">
-                            <video src="assets/videos/10101926-hd_3840_2160_30fps.mp4" class="main-video slide-in-video" muted loop playsinline preload="none"></video>
+                        <div class="slide-stats">
+                            <div class="slide-stat"><span class="s-num">22+</span><span class="s-lbl">Years Expertise</span></div>
+                            <div class="slide-stat-divider"></div>
+                            <div class="slide-stat"><span class="s-num">160+</span><span class="s-lbl">FoSTaC Sessions</span></div>
+                            <div class="slide-stat-divider"></div>
+                            <div class="slide-stat"><span class="s-num">100%</span><span class="s-lbl">Satisfaction Rate</span></div>
                         </div>
                     </div>
                 </div>
+                <div class="slide-accent-ring slide-accent-2"></div>
             </div>
 
-            <!-- Slide 3 -->
-            <div class="slide">
-                <div class="container hero-grid">
-                    <div class="hero-text">
-                        <span class="pre-heading" style="color: #1a1a1a; font-weight: 800;">FoSTaC Authorized · Trained 1600+</span>
-                        <h1 >Empowering the <br><span class="text-primary" >Future of Food.</span></h1>
-                        <p class="text-lead mb-xl" style="color: #4a4a4a; max-width: 560px; font-weight: 500;">
-                            Over 900+ technical training sessions delivered with an average participant rating of 4.75/5.0.
-                        </p>
-                        <div class="flex" style="gap: var(--sp-md); flex-wrap: wrap;">
-                            <a href="trainings/index.html" class="btn btn-primary btn-large">Enroll Now</a>
-                            <a href="company.html" class="btn btn-outline btn-large" style="border-color: var(--clr-primary); color: var(--clr-primary);">Our Team</a>
+            <!-- ─── Slide 3: BRCGS Approved Training Partner (ATP) ─── -->
+            <div class="slide" data-bg="assets/images/stock/pexels-king-36825840.jpg">
+                <div class="slide-bg-kenburns" style="background-image: url('assets/images/stock/pexels-king-36825840.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content-wrap container">
+                    <div class="elite-slide-inner">
+                        <span class="slide-eyebrow slide-eyebrow-brcgs"><i class="fas fa-certificate"></i>&nbsp; Officially Approved · Global Standards</span>
+                        <h1 class="slide-headline">
+                            BRCGS Approved<br><span class="slide-highlight">Training Partner</span> (ATP)
+                        </h1>
+                        <p class="slide-subtext">One of India's only BRCGS Approved Training Partners — delivering world-class BRCGS courses that enable organizations to achieve top-tier safety gradings globally.</p>
+                        <div class="slide-actions">
+                            <a href="trainings/index.html#brcgs" class="btn-hero-primary">BRCGS Programs</a>
+                            <a href="contact.html" class="btn-hero-ghost">Enquire Now</a>
                         </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="visual-overlap">
-                            <video src="assets/videos/5866123-uhd_3840_2160_25fps.mp4" class="main-video slide-in-video" muted loop playsinline preload="none"></video>
+                        <div class="slide-cred-logos">
+                            <img src="assets/images/BRCGS_SB_APPROVEDTRAININGPARTNER_LOGO_RGB.png" alt="BRCGS Approved Training Partner" class="slide-cred-logo" style="height: 56px; border-radius: 8px; background: white; padding: 4px;">
                         </div>
                     </div>
                 </div>
+                <div class="slide-accent-ring slide-accent-3"></div>
+            </div>
+
+            <!-- ─── Slide 4: Leaders in BRCGS Consultancy ─── -->
+            <div class="slide" data-bg="assets/images/stock/amoon-ra-n8vDuIpGb0c-unsplash.jpg">
+                <div class="slide-bg-kenburns slide-kb-reverse" style="background-image: url('assets/images/stock/amoon-ra-n8vDuIpGb0c-unsplash.jpg');"></div>
+                <div class="slide-overlay slide-overlay-deep"></div>
+                <div class="slide-content-wrap container">
+                    <div class="elite-slide-inner">
+                        <span class="slide-eyebrow slide-eyebrow-brcgs"><i class="fas fa-shield-alt"></i>&nbsp; Strategic Advisory · Gap Analysis · Implementation</span>
+                        <h1 class="slide-headline">
+                            Leaders in<br><span class="slide-highlight-gold">BRCGS</span> Consultancy
+                        </h1>
+                        <p class="slide-subtext">End-to-end BRCGS implementation and audit preparation — from gap analysis to achieving AA/A grade certification — backed by hands-on global expertise.</p>
+                        <div class="slide-actions">
+                            <a href="services/iso22000.html" class="btn-hero-primary">BRCGS Consulting</a>
+                            <a href="contact.html" class="btn-hero-ghost">Free Assessment</a>
+                        </div>
+                        <div class="slide-cred-logos">
+                            <img src="assets/images/BRCGS_SB_CONSULTANT_LOGO_RGB.jpg" alt="BRCGS Consultant" class="slide-cred-logo" style="height: 52px; border-radius: 8px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-accent-ring slide-accent-2"></div>
+            </div>
+
+            <!-- ─── Slide 5: Leading ISO/FSSC 22000 Consultants ─── -->
+            <div class="slide" data-bg="assets/images/stock/pexels-nc-farm-bureau-mark-11679687.jpg">
+                <div class="slide-bg-kenburns" style="background-image: url('assets/images/stock/pexels-nc-farm-bureau-mark-11679687.jpg');"></div>
+                <div class="slide-overlay slide-overlay-teal"></div>
+                <div class="slide-content-wrap container">
+                    <div class="elite-slide-inner">
+                        <span class="slide-eyebrow"><i class="fas fa-globe"></i>&nbsp; ISO 22000 · FSSC 22000 · HACCP · EHEDG</span>
+                        <h1 class="slide-headline">
+                            Leading <span class="slide-highlight">ISO / FSSC 22000</span><br>Consultants
+                        </h1>
+                        <p class="slide-subtext">Architecting robust Food Safety Management Systems aligned with ISO 22000 &amp; FSSC 22000 — trusted by dairy, F&amp;B, and export-focused enterprises across India.</p>
+                        <div class="slide-actions">
+                            <a href="services/iso22000.html" class="btn-hero-primary">ISO/FSSC Services</a>
+                            <a href="contact.html" class="btn-hero-ghost">Consult Us</a>
+                        </div>
+                        <div class="slide-stats">
+                            <div class="slide-stat"><span class="s-num">1200+</span><span class="s-lbl">Audits Conducted</span></div>
+                            <div class="slide-stat-divider"></div>
+                            <div class="slide-stat"><span class="s-num">150+</span><span class="s-lbl">Projects Completed</span></div>
+                            <div class="slide-stat-divider"></div>
+                            <div class="slide-stat"><span class="s-num">135+</span><span class="s-lbl">Industry Partners</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-accent-ring slide-accent-1"></div>
             </div>
 
         </div>
 
-        <!-- Slider Controls -->
+        <!-- ─── Nav Dots ─── -->
         <div class="slider-nav" id="slider-nav">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+            <div class="dot active" aria-label="Slide 1"></div>
+            <div class="dot" aria-label="Slide 2"></div>
+            <div class="dot" aria-label="Slide 3"></div>
+            <div class="dot" aria-label="Slide 4"></div>
+            <div class="dot" aria-label="Slide 5"></div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <div class="scroll-down" aria-hidden="true">
-            <div class="line"></div>
-            <span>Discover</span>
+        <!-- ─── Prev/Next Arrows ─── -->
+        <button class="hero-arrow hero-arrow-prev" id="hero-prev" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-arrow hero-arrow-next" id="hero-next" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- ─── Scroll Indicator ─── -->
+        <div class="scroll-down" aria-hidden="true" style="bottom: 50px;">
+            <div class="line" style="background-color: rgba(255,255,255,0.5);"></div>
+            <span style="color: rgba(255,255,255,0.6);">Scroll</span>
+        </div>
+
+        <!-- ─── Wave Bottom ─── -->
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#ffffff"></path>
+            </svg>
         </div>
     </section>
 
     <!-- Floral Divider -->
     <div class="floral-divider"></div>
 
-    <!-- ═══ INTERACTIVE HIGHLIGHTS ═══ -->
-    <section style="padding: var(--sp-xl) 0; position: relative; z-index: 100;">
+    <!-- ═══ GLOBAL PERFORMANCE STATS ═══ -->
+    <section style="padding: var(--sp-xl) 0; position: relative; z-index: 100; background: white;">
         <div class="container">
-            <div class="grid grid-2" style="align-items: center; gap: var(--sp-2xl);">
-
-                <!-- LEFT: Action Cards -->
-                <div class="flex flex-column reveal" style="gap: var(--sp-md); align-items: stretch;">
-                    <h3 style="color: var(--clr-secondary); font-size: 1.25rem; font-weight: 800; margin-bottom: var(--sp-sm); letter-spacing: -0.02em;">Quick Actions</h3>
-
-                    <div class="side-verify-card" style="background: var(--grad-primary); border-radius: var(--radius-md); padding: var(--sp-lg); position: relative; overflow: hidden; box-shadow: var(--shadow-elite);">
-                        <div class="hero-bg-accent" style="opacity: 0.15; background: radial-gradient(circle at top right, white 0%, transparent 60%);"></div>
-                        <div style="position: relative; z-index: 2;">
-                            <div class="flex mb-sm" style="justify-content: space-between; align-items: center;">
-                                <h4 class="mb-0" style="color: white; font-weight: 700;">Verify Certification</h4>
-                                <i class="fas fa-certificate" style="color: rgba(255,255,255,0.8);"></i>
-                            </div>
-                            <p class="text-small mb-md" style="color: rgba(255,255,255,0.9); line-height: 1.6;">Validate the authenticity of training certificates instantly.</p>
-                            <a href="verify.html" class="btn-link" style="color: white; font-weight: 700; font-size: 0.85rem; text-decoration: none; border-bottom: 2px solid white; padding-bottom: 2px;">Enter Certificate ID <i class="fas fa-arrow-right ml-xs"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="side-verify-card" style="background: var(--clr-secondary); border-radius: var(--radius-md); padding: var(--sp-lg); position: relative; overflow: hidden; box-shadow: var(--shadow-elite);">
-                        <div class="hero-bg-accent" style="opacity: 0.1; background: radial-gradient(circle at top right, var(--clr-primary) 0%, transparent 60%);"></div>
-                        <div style="position: relative; z-index: 2;">
-                            <div class="flex mb-sm" style="justify-content: space-between; align-items: center;">
-                                <h4 class="mb-0" style="color: white; font-weight: 700;">Upcoming Trainings</h4>
-                                <i class="fas fa-calendar-alt" style="color: var(--clr-primary);"></i>
-                            </div>
-                            <p class="text-small mb-md" style="color: rgba(255,255,255,0.9); line-height: 1.6;">Book your seat for the next FoSTaC or ISO batch.</p>
-                            <a href="trainings/index.html" class="btn-link" style="color: var(--clr-primary); font-weight: 700; font-size: 0.85rem; text-decoration: none; border-bottom: 2px solid var(--clr-primary); padding-bottom: 2px;">View Calendar <i class="fas fa-arrow-right ml-xs"></i></a>
-                        </div>
-                    </div>
+            <div class="grid grid-4" style="gap: var(--sp-lg);">
+                <div class="stat-card reveal" style="--card-color: var(--clr-coral);">
+                    <div class="stat-number"><span class="counter" data-target="22+">0</span></div>
+                    <div class="stat-label">Years of Experience</div>
                 </div>
-
-                <!-- RIGHT: Education Video -->
-                <div class="reveal" style="transition-delay: 0.15s;">
-                    <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-elite);">
-                        <video
-                            src="assets/videos/0_Education_Books_3840x2160.mp4"
-                            autoplay muted loop playsinline preload="auto"
-                            style="width: 100%; height: 340px; object-fit: cover; display: block; border-radius: var(--radius-lg);"
-                        ></video>
-                        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,137,123,0.18) 0%, rgba(251,140,0,0.10) 100%); border-radius: var(--radius-lg); pointer-events: none;"></div>
-                    </div>
+                <div class="stat-card reveal" style="--card-color: var(--clr-mint); transition-delay: 0.1s;">
+                    <div class="stat-number"><span class="counter" data-target="1200+">0</span></div>
+                    <div class="stat-label">Trainings</div>
                 </div>
+                <div class="stat-card reveal" style="--card-color: var(--clr-yellow); transition-delay: 0.2s;">
+                    <div class="stat-number"><span class="counter" data-target="1200+">0</span></div>
+                    <div class="stat-label">Audits</div>
+                </div>
+                <div class="stat-card reveal" style="--card-color: var(--clr-purple); transition-delay: 0.3s;">
+                    <div class="stat-number"><span class="counter" data-target="150+">0</span></div>
+                    <div class="stat-label">Consultancy Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ═══ FOSTAC STATS ═══ -->
+    <section style="background: linear-gradient(135deg, #00897B 0%, #00695C 100%); padding: var(--sp-xl) 0; position: relative; z-index: 100;">
+        <div class="container text-center">
+            <h3 class="mb-lg" style="color: white;">FoSTaC Training Stats</h3>
+            <div class="grid grid-4" style="gap: var(--sp-lg);">
+                <div class="reveal" style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-family: 'Outfit', sans-serif; font-weight: 800; color: #80DEEA;"><span class="counter" data-target="160+">0</span></div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: rgba(255,255,255,0.8); margin-top: 8px;">Trainings</div>
+                </div>
+                <div class="reveal" style="text-align: center; transition-delay: 0.1s;">
+                    <div style="font-size: 2.5rem; font-family: 'Outfit', sans-serif; font-weight: 800; color: #80DEEA;"><span class="counter" data-target="3700+">0</span></div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: rgba(255,255,255,0.8); margin-top: 8px;">Participants</div>
+                </div>
+                <div class="reveal" style="text-align: center; transition-delay: 0.2s;">
+                    <div style="font-size: 2.5rem; font-family: 'Outfit', sans-serif; font-weight: 800; color: #80DEEA;"><span class="counter" data-target="1500+">0</span></div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: rgba(255,255,255,0.8); margin-top: 8px;">Training Hours</div>
+                </div>
+                <div class="reveal" style="text-align: center; transition-delay: 0.3s;">
+                    <div style="font-size: 2.5rem; font-family: 'Outfit', sans-serif; font-weight: 800; color: #80DEEA;">4.84 / 5</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: rgba(255,255,255,0.8); margin-top: 8px;">Customer Feedback Score</div>
+                </div>
             </div>
         </div>
     </section>
@@ -244,37 +314,12 @@
         </div>
     </section>
 
-    <!-- ═══ CLIENTELE MARQUEE (Dual-Track Hub) ═══ -->
+    <!-- ═══ CLIENTELE MARQUEE ═══ -->
     <section class="marquee-container reveal">
         <div class="container" style="margin-bottom: var(--sp-lg); text-align: center;">
-            <span class="pre-heading" style="margin-bottom: 0;">Global Standards & Industry Authority</span>
+            <a href="clientele.html" class="text-primary text-bold" style="font-size: 0.85rem; border-bottom: 1.5px solid var(--clr-primary); padding-bottom: 2px;">Explore Our 135+ Industry Partners <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <!-- Track 1: Quality Authorities (Right-to-Left) -->
-        <div class="marquee-track">
-            <div class="marquee-content" style="display: flex;">
-                <!-- First Set -->
-                <img src="assets/images/BRCGS_SB_CONSULTANT_LOGO_RGB.jpg" alt="BRCGS" class="marquee-item">
-                <img src="assets/images/EHEDG_member_logo_RGB_1350x1350_210210.png" alt="EHEDG" class="marquee-item">
-                <img src="assets/images/BRCGS_SB_APPROVEDTRAININGPARTNER_LOGO_RGB.png" alt="BRCGS Training" class="marquee-item">
-                <div class="marquee-item" style="font-weight: 800; font-size: 1.6rem; color: #00897B; letter-spacing: 0.05em;">QCI</div>
-                <div class="marquee-item" style="font-weight: 800; font-size: 1.6rem; color: #E65100; letter-spacing: 0.05em;">APEDA</div>
-                <div class="marquee-item" style="font-weight: 900; font-size: 1.8rem; color: #1A237E; letter-spacing: 0.02em;">FSSAI</div>
-                <!-- Duplicate for loop -->
-                <img src="assets/images/BRCGS_SB_CONSULTANT_LOGO_RGB.jpg" alt="BRCGS" class="marquee-item">
-                <img src="assets/images/EHEDG_member_logo_RGB_1350x1350_210210.png" alt="EHEDG" class="marquee-item">
-                <img src="assets/images/BRCGS_SB_APPROVEDTRAININGPARTNER_LOGO_RGB.png" alt="BRCGS Training" class="marquee-item">
-                <div class="marquee-item" style="font-weight: 800; font-size: 1.6rem; color: #00897B; letter-spacing: 0.05em;">QCI</div>
-                <div class="marquee-item" style="font-weight: 800; font-size: 1.6rem; color: #E65100; letter-spacing: 0.05em;">APEDA</div>
-                <div class="marquee-item" style="font-weight: 900; font-size: 1.8rem; color: #1A237E; letter-spacing: 0.02em;">FSSAI</div>
-            </div>
-        </div>
-
-        <div class="container" style="margin: var(--sp-xl) auto var(--sp-sm); text-align: center;">
-            <a href="clientele.html" class="text-primary text-bold" style="font-size: 0.85rem; border-bottom: 1.5px solid var(--clr-primary); padding-bottom: 2px;">Explore Our 135+ Partners <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <!-- Track 2: Client Portfolio (Left-to-Right) -->
         <div class="marquee-track" style="margin-top: 0;">
             <div class="marquee-content reverse" style="display: flex;">
                 <!-- First Set -->
@@ -309,8 +354,8 @@
     <!-- ═══ CORE SERVICES ═══ -->
     <section class="capabilities-section section-xl">
         <!-- Background Decorations -->
-        <div class="vibrant-node" style="top: 0%; left: -5%; background: rgba(0,137,123,0.4);"></div>
-        <div class="vibrant-node" style="bottom: 10%; right: -5%; background: rgba(251,140,0,0.3);"></div>
+        <div class="vibrant-node" style="top: 0%; left: -5%; background: rgba(90, 79, 207, 0.4);"></div>
+        <div class="vibrant-node" style="bottom: 10%; right: -5%; background: rgba(251, 140, 0, 0.3);"></div>
 
         <div class="container">
             <div class="centered-heading reveal">
@@ -324,7 +369,7 @@
 
             <div class="grid grid-3" style="gap: var(--sp-xl);">
                 <!-- Regulatory Compliance -->
-                <div class="card capability-card card-regulatory reveal">
+                <div class="card capability-card reveal" style="--card-color: var(--clr-coral); --card-color-rgb: 255,107,107;">
                     <div class="capability-icon-box">
                         <i class="fas fa-file-invoice" style="font-size: 1.4rem;"></i>
                     </div>
@@ -334,72 +379,89 @@
                         <li style="margin-bottom: 8px;"><i class="fas fa-check text-primary" style="font-size: 0.75rem; margin-right: 10px;"></i> Label Verification</li>
                         <li style="margin-bottom: 8px;"><i class="fas fa-check text-primary" style="font-size: 0.75rem; margin-right: 10px;"></i> Import/Export Support</li>
                     </ul>
-                    <a href="services/fssai.html" class="text-primary text-bold" style="font-size: 0.85rem;">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="services/fssai.html" class="text-bold" style="font-size: 0.85rem; color: var(--clr-coral);">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Food Safety & Quality -->
-                <div class="card capability-card card-consultancy reveal" style="transition-delay: 0.1s;">
+                <div class="card capability-card reveal" style="transition-delay: 0.1s; --card-color: var(--clr-mint); --card-color-rgb: 78,205,196;">
                     <div class="capability-icon-box">
                         <i class="fas fa-shield-alt" style="font-size: 1.4rem;"></i>
                     </div>
                     <h4 class="mb-sm">FSMS Consultancy</h4>
                     <ul class="text-small mb-lg" style="list-style: none; padding: 0; color: var(--clr-text-soft);">
-                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: #FB8C00;"></i> ISO 22000 / FSSC</li>
-                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: #FB8C00;"></i> BRCGS & EHEDG</li>
-                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: #FB8C00;"></i> GAP Analysis</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: var(--clr-mint);"></i> ISO 22000 / FSSC</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: var(--clr-mint);"></i> BRCGS & EHEDG</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: var(--clr-mint);"></i> GAP Analysis</li>
                     </ul>
-                    <a href="services/iso22000.html" style="color: #FB8C00; font-weight: 700; font-size: 0.85rem;">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="services/iso22000.html" style="color: var(--clr-mint); font-weight: 700; font-size: 0.85rem;">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Technical Support -->
-                <div class="card capability-card card-technical reveal" style="transition-delay: 0.2s;">
+                <div class="card capability-card reveal" style="transition-delay: 0.2s; --card-color: var(--clr-ocean); --card-color-rgb: 17,138,178;">
                     <div class="capability-icon-box">
                         <i class="fas fa-microscope" style="font-size: 1.4rem;"></i>
                     </div>
                     <h4 class="mb-sm">Technical Support</h4>
                     <ul class="text-small mb-lg" style="list-style: none; padding: 0; color: var(--clr-text-soft);">
-                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: #3949AB;"></i> Product Development</li>
-                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: #3949AB;"></i> Shelf Life Study</li>
-                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: #3949AB;"></i> Root Cause Analysis</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: var(--clr-ocean);"></i> Product Development</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: var(--clr-ocean);"></i> Shelf Life Study</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="font-size: 0.75rem; margin-right: 10px; color: var(--clr-ocean);"></i> Root Cause Analysis</li>
                     </ul>
-                    <a href="services/technical.html" style="color: #3949AB; font-weight: 700; font-size: 0.85rem;">Explore <i class="fas fa-arrow-right"></i></a>
+                    <a href="services/technical.html" style="color: var(--clr-ocean); font-weight: 700; font-size: 0.85rem;">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ═══ FOUNDER AUTHORITY BLOCK ═══ -->
-    <section class="founder-section section-xl" style="padding: var(--sp-2xl) 0;">
+    <section class="founder-section section-xl tex-bg" style="padding: var(--sp-2xl) 0; overflow: hidden; position: relative;">
         <div class="founder-glow"></div>
+        <div class="floral-bg-bold"></div>
+        
+        <!-- Decorative Background Orbs -->
+        <div class="founder-bg-element" style="width: 400px; height: 400px; background: var(--clr-primary); top: -100px; left: -100px;"></div>
+        <div class="founder-bg-element" style="width: 300px; height: 300px; background: #FB8C00; bottom: -50px; right: -50px;"></div>
+
         <div class="container">
             <div class="grid grid-2" style="gap: var(--sp-3xl); align-items: center;">
                 <div class="reveal" style="text-align: center;">
-                    <div class="founder-portrait-container">
-                        <img src="assets/images/Founder-Portrait-Clean.webp" alt="Mr. Thammaiah ND - Founder, Swasthya Food Consulting" style="width: 100%; max-width: 400px; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite); display: block;" loading="lazy">
+                    <div class="founder-portrait-container" style="position: relative; display: inline-block;">
+                        <!-- Rotating Decorative Rings -->
+                        <div class="rotating-ring rotateme" style="width: 110%; height: 110%; top: -5%; left: -5%;"></div>
+                        <div class="rotating-ring rotating-ring-accent rotatemetwo" style="width: 120%; height: 120%; top: -10%; left: -10%;"></div>
+                        
+                        <img src="assets/images/Founder-Portrait-Clean.webp" alt="Mr. Thammaiah ND - Founder, Swasthya Food Consulting" style="width: 100%; max-width: 480px; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite); display: block; position: relative; z-index: 2;" loading="lazy">
                     </div>
                 </div>
                 <div class="reveal" style="transition-delay: 0.1s;">
-                    <span class="pre-heading" style="color: var(--clr-primary);">The Expert Behind the Brand</span>
+                    <span class="pre-heading" style="color: var(--clr-primary);">The Expert Behind the Firm</span>
                     <h2 class="mb-sm">Mr. Thammaiah ND</h2>
-                    <p class="text-bold mb-md" style="color: var(--clr-primary); font-size: 1.1rem;">Founder &amp; Principal Consultant</p>
-                    <p class="mb-xl text-soft" style="line-height: 1.8;">A Master's graduate in Dairy Science from the University of Agricultural Sciences, Mr. Thammaiah brings over 20 years of hands-on experience across Processed Foods, Dairy, Beverages, Bakery, Catering, Hospitality, and E-Commerce sectors — empowering food businesses to build robust, internationally recognized safety systems.</p>
+                    <p class="text-bold mb-md" style="color: var(--clr-primary); font-size: 1.1rem;">Managing Director</p>
+                    <div class="mb-xl text-soft" style="line-height: 1.8;">
+                        <p class="mb-sm"><strong>Mr. Thammaiah ND</strong>, a Master Graduate in Dairy Science (M. Tech) with over 22 years of global expertise is the Founder and Managing director of our company.</p>
+                        <p class="mb-sm">Thammaiah’s distinguished career includes a decade in Saudi Arabia at premier organizations such as Almarai (World’s largest vertically integrated Dairy company) and NADEC.</p>
+                        <p class="mb-sm">He is one of the top 100 performing FoSTaC Trainer in India and holds top performer FoSTaC Trainer on Advance Manufacturing - Milk and Milk Products Course. He is also BRCGS Approved Training Partner (ATP) for Food Safety Courses across the globe.</p>
+                        <p class="mb-sm">He is FoSTaC Trainer for Advance Manufacturing – Milk and Milk Products, Advance Manufacturing, Advance Catering, Advance Storage &amp; Transport, Advance Retail &amp; Distribution, Basic Catering, Basic Retail &amp; Distribution and Street Food Vending.</p>
+                        <p class="mb-sm">He is one of the renowned BRCGS and Food Safety Consultant in India and successfully consulted more than 150+ food industry and food service establishments across the country.</p>
+                        <p class="mb-0">As of April 2026, Swasthya Food Consulting partners with more than 135 leading organizations by bridging the gap between international best practices and local regulatory requirements, the firm provides all the necessary support to clients with the strategic framework necessary to achieve world-class food safety and operational excellence.</p>
+                    </div>
 
                     <div class="grid grid-2" style="gap: var(--sp-md);">
-                        <div class="reveal" style="transition-delay: 0.2s; background: linear-gradient(135deg, #001f3f 0%, #003366 100%); border-radius: var(--radius-lg); padding: var(--sp-xl); border: 1px solid rgba(0,150,136,0.3); text-align: center;">
-                            <p style="font-size: 1.6rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 6px 0; line-height: 1;">ASQ</p>
-                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin: 0; font-weight: 600; line-height: 1.3;">Certified Quality Manager</p>
+                        <div class="reveal" style="transition-delay: 0.2s; background: linear-gradient(135deg, white 0%, #f5f3ff 100%); border-radius: var(--radius-lg); padding: var(--sp-xl); border: 1px solid rgba(90, 79, 207, 0.1); text-align: center;">
+                            <p style="font-size: 1.6rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 6px 0; line-height: 1;">8+</p>
+                            <p style="font-size: 0.8rem; color: var(--clr-text-soft); margin: 0; font-weight: 600; line-height: 1.3;">FoSTaC Categories Administered</p>
                         </div>
-                        <div class="reveal" style="transition-delay: 0.3s; background: linear-gradient(135deg, #001f3f 0%, #003366 100%); border-radius: var(--radius-lg); padding: var(--sp-xl); border: 1px solid rgba(0,150,136,0.3); text-align: center;">
-                            <p style="font-size: 1.6rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 6px 0; line-height: 1;">25+</p>
-                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin: 0; font-weight: 600; line-height: 1.3;">National Certifications</p>
+                        <div class="reveal" style="transition-delay: 0.3s; background: linear-gradient(135deg, white 0%, #f5f3ff 100%); border-radius: var(--radius-lg); padding: var(--sp-xl); border: 1px solid rgba(90, 79, 207, 0.1); text-align: center;">
+                            <p style="font-size: 1.6rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 6px 0; line-height: 1;">150+</p>
+                            <p style="font-size: 0.8rem; color: var(--clr-text-soft); margin: 0; font-weight: 600; line-height: 1.3;">Micro &amp; Nano Businesses Supported</p>
                         </div>
-                        <div class="reveal" style="transition-delay: 0.4s; background: linear-gradient(135deg, #001f3f 0%, #003366 100%); border-radius: var(--radius-lg); padding: var(--sp-xl); border: 1px solid rgba(0,150,136,0.3); text-align: center;">
+                        <div class="reveal" style="transition-delay: 0.4s; background: linear-gradient(135deg, white 0%, #f5f3ff 100%); border-radius: var(--radius-lg); padding: var(--sp-xl); border: 1px solid rgba(90, 79, 207, 0.1); text-align: center;">
                             <p style="font-size: 1.6rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 6px 0; line-height: 1;">QCI</p>
-                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin: 0; font-weight: 600; line-height: 1.3;">Registered Consultant</p>
+                            <p style="font-size: 0.8rem; color: var(--clr-text-soft); margin: 0; font-weight: 600; line-height: 1.3;">Registered Consultant</p>
                         </div>
-                        <div class="reveal" style="transition-delay: 0.5s; background: linear-gradient(135deg, #001f3f 0%, #003366 100%); border-radius: var(--radius-lg); padding: var(--sp-xl); border: 1px solid rgba(0,150,136,0.3); text-align: center;">
+                        <div class="reveal" style="transition-delay: 0.5s; background: linear-gradient(135deg, white 0%, #f5f3ff 100%); border-radius: var(--radius-lg); padding: var(--sp-xl); border: 1px solid rgba(90, 79, 207, 0.1); text-align: center;">
                             <p style="font-size: 1.6rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 6px 0; line-height: 1;">APEDA</p>
-                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin: 0; font-weight: 600; line-height: 1.3;">Approved Consultant</p>
+                            <p style="font-size: 0.8rem; color: var(--clr-text-soft); margin: 0; font-weight: 600; line-height: 1.3;">Approved Consultant</p>
                         </div>
                     </div>
                     <div class="mt-2xl">
@@ -411,7 +473,7 @@
     </section>
 
     <!-- ═══ INDUSTRIES SERVED ═══ -->
-    <section class="industry-expertise-section section-xl">
+    <section class="industry-expertise-section section-xl tex-bg">
         <div class="industry-glow-orange"></div>
         <div class="container">
             <div class="centered-heading reveal">
@@ -420,35 +482,35 @@
                 <p class="text-balance" style="color: var(--clr-text-soft);">Our cross-sector experience ensures that your specific operational challenges are met with industry-best practices.</p>
             </div>
             <div class="grid grid-4" style="gap: var(--sp-md);">
-                <div class="industry-item-card reveal">
+                <div class="industry-item-card reveal" style="--card-color: var(--clr-coral);">
                     <i class="fas fa-cheese"></i>
                     <p>Dairy &amp; Milk Products</p>
                 </div>
-                <div class="industry-item-card reveal" style="transition-delay: 0.05s;">
+                <div class="industry-item-card reveal" style="transition-delay: 0.05s; --card-color: var(--clr-mint);">
                     <i class="fas fa-box-open"></i>
                     <p>Processed Foods</p>
                 </div>
-                <div class="industry-item-card reveal" style="transition-delay: 0.1s;">
+                <div class="industry-item-card reveal" style="transition-delay: 0.1s; --card-color: var(--clr-yellow);">
                     <i class="fas fa-wine-bottle"></i>
                     <p>Beverages</p>
                 </div>
-                <div class="industry-item-card reveal" style="transition-delay: 0.15s;">
+                <div class="industry-item-card reveal" style="transition-delay: 0.15s; --card-color: var(--clr-purple);">
                     <i class="fas fa-bread-slice"></i>
                     <p>Bakery</p>
                 </div>
-                <div class="industry-item-card reveal" style="transition-delay: 0.2s;">
+                <div class="industry-item-card reveal" style="transition-delay: 0.2s; --card-color: var(--clr-ocean);">
                     <i class="fas fa-utensils"></i>
                     <p>Catering &amp; Hospitality</p>
                 </div>
-                <div class="industry-item-card reveal" style="transition-delay: 0.25s;">
+                <div class="industry-item-card reveal" style="transition-delay: 0.25s; --card-color: var(--clr-pink);">
                     <i class="fas fa-store"></i>
                     <p>Retail &amp; Distribution</p>
                 </div>
-                <div class="industry-item-card reveal" style="transition-delay: 0.3s;">
+                <div class="industry-item-card reveal" style="transition-delay: 0.3s; --card-color: var(--clr-coral);">
                     <i class="fas fa-laptop"></i>
                     <p>E-Commerce &amp; Cloud Kitchens</p>
                 </div>
-                <div class="industry-item-card reveal" style="transition-delay: 0.35s;">
+                <div class="industry-item-card reveal" style="transition-delay: 0.35s; --card-color: var(--clr-mint);">
                     <i class="fas fa-ship"></i>
                     <p>Import &amp; Export</p>
                 </div>
@@ -495,18 +557,23 @@
 
                     <div class="mt-2xl flex" style="gap: var(--sp-lg); justify-content: center;">
                         <div style="text-align: center;">
-                            <span class="counter" data-target="6863+" style="display: block; font-size: 1.5rem; font-weight: 800; color: var(--clr-primary);">0</span>
-                            <span style="font-size: 0.65rem; font-weight: 700; color: var(--clr-text-muted); text-transform: uppercase;">Participants Trained</span>
+                            <span class="counter" data-target="160+" style="display: block; font-size: 1.5rem; font-weight: 800; color: var(--clr-primary);">0</span>
+                            <span style="font-size: 0.65rem; font-weight: 700; color: var(--clr-text-muted); text-transform: uppercase;">Trainings</span>
                         </div>
                         <div style="width: 1px; height: 40px; background: var(--clr-border);"></div>
                         <div style="text-align: center;">
-                            <span class="counter" data-target="279+" style="display: block; font-size: 1.5rem; font-weight: 800; color: var(--clr-primary);">0</span>
-                            <span style="font-size: 0.65rem; font-weight: 700; color: var(--clr-text-muted); text-transform: uppercase;">Trainings Conducted</span>
+                            <span class="counter" data-target="3700+" style="display: block; font-size: 1.5rem; font-weight: 800; color: var(--clr-primary);">0</span>
+                            <span style="font-size: 0.65rem; font-weight: 700; color: var(--clr-text-muted); text-transform: uppercase;">Participants</span>
                         </div>
                         <div style="width: 1px; height: 40px; background: var(--clr-border);"></div>
                         <div style="text-align: center;">
-                            <span class="counter" data-target="96.7%" style="display: block; font-size: 1.5rem; font-weight: 800; color: var(--clr-primary);">0</span>
-                            <span style="font-size: 0.65rem; font-weight: 700; color: var(--clr-text-muted); text-transform: uppercase;">Excellent Rating</span>
+                            <span class="counter" data-target="1500+" style="display: block; font-size: 1.5rem; font-weight: 800; color: var(--clr-primary);">0</span>
+                            <span style="font-size: 0.65rem; font-weight: 700; color: var(--clr-text-muted); text-transform: uppercase;">Hours</span>
+                        </div>
+                        <div style="width: 1px; height: 40px; background: var(--clr-border);"></div>
+                        <div style="text-align: center;">
+                            <span class="counter" data-target="4.84" style="display: block; font-size: 1.5rem; font-weight: 800; color: var(--clr-primary);">0</span>
+                            <span style="font-size: 0.65rem; font-weight: 700; color: var(--clr-text-muted); text-transform: uppercase;">Score / 5</span>
                         </div>
                     </div>
                 </div>
@@ -529,24 +596,7 @@
         </div>
     </section>
 
-    <!-- ═══ ACCREDITATION (Floating Badges) ═══ -->
-    <section class="section container">
-        <div class="text-center mb-2xl reveal">
-            <span class="pre-heading">Accreditations &amp; Affiliations</span>
-            <h3 class="text-small text-muted mt-xs">Recognized by Global Food Safety Authorities</h3>
-        </div>
-        <div class="flex flex-center" style="gap: var(--sp-3xl); flex-wrap: wrap;">
-            <div class="reveal logo-float-item" style="transition-delay: 0.1s;">
-                <img src="assets/images/BRCGS_SB_CONSULTANT_LOGO_RGB.jpg" alt="BRCGS Approved Consultant" style="height: 75px;" loading="lazy">
-            </div>
-            <div class="reveal logo-float-item" style="transition-delay: 0.2s;">
-                <img src="assets/images/BRCGS_SB_APPROVEDTRAININGPARTNER_LOGO_RGB.png" alt="BRCGS Approved Training Partner" style="height: 75px;" loading="lazy">
-            </div>
-            <div class="reveal logo-float-item" style="transition-delay: 0.3s;">
-                <img src="assets/images/EHEDG_member_logo_RGB_1350x1350_210210.png" alt="EHEDG Member" style="height: 75px;" loading="lazy">
-            </div>
-        </div>
-    </section>
+    
 
     <div id="footer-placeholder"></div>
     <div id="floating-placeholder"></div>
