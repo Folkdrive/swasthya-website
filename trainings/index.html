@@ -21,134 +21,331 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Mobile-First Futuristic Trainings Styles -->
+    <style>
+        @media (max-width: 768px) {
+            /* Collapse Grids */
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; gap: var(--sp-xl) !important; }
+            
+            /* Typography Scaling */
+            .hero-elite { padding-top: 120px !important; padding-bottom: 60px !important; }
+            h1 { font-size: clamp(2.2rem, 6vw, 4.5rem) !important; }
+            h2 { font-size: clamp(1.8rem, 6vw, 2.2rem) !important; }
+            .section-xl { padding: var(--sp-2xl) 0 !important; }
+
+            /* Stats Mobile Fix */
+            .counter { font-size: 2.5rem !important; }
+
+            /* Button fixes */
+            .btn { width: 100%; text-align: center; }
+            .hero-wave { height: 40px; }
+            
+            /* Training specific fixes */
+            .course-meta { flex-direction: column; gap: 8px; align-items: flex-start !important; }
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
     <!-- Hero (Elite Academy Version) -->
-    <section class="hero-elite" style="min-height: 55vh; position: relative; overflow: hidden;">
-        <div class="hero-bg-accent" style="background: radial-gradient(circle at 70% 30%, rgba(90, 79, 207, 0.2) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.15) 0%, transparent 40%);"></div>
+    <section class="hero-elite" style="min-height: 55vh; background: linear-gradient(135deg, #06061a 0%, #0a1f1f 60%, #12113a 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(90, 79, 207, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.1) 0%, transparent 40%); pointer-events: none;"></div>
+        
         <div class="container reveal">
-            <nav aria-label="breadcrumb" style="font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: var(--sp-lg);">
-                <a href="../index.html" style="color: white; opacity: 0.8; text-decoration: none;">Home</a> <span style="margin: 0 8px;">/</span> Training Programs
+            <nav aria-label="breadcrumb" style="font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: var(--sp-lg);">
+                <a href="../index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a> <span style="margin: 0 8px; opacity: 0.4;">/</span> <span style="color: #00f2ff;">Training Programs</span>
             </nav>
-            <span class="pre-heading" style="color: var(--clr-primary); brightness: 1.3;">#1 National Milk Products Trainer · FSSAI Authorized</span>
-            <h1 class="mb-lg radiant-text" style="color: white; line-height: 1.1; font-size: clamp(2.5rem, 8vw, 4.2rem);">Elite Food Safety <br>Training Academy.</h1>
-            <p class="text-lead" style="max-width: 720px; color: rgba(255,255,255,0.9); line-height: 1.8;">Transforming compliance into capability. We deliver government-recognized FoSTaC certifications and advanced technical workshops led by national-rank experts.</p>
+            <span class="pre-heading" style="color: #4DB6AC; letter-spacing: 0.2em;">#1 National Milk Products Trainer · FSSAI Authorized</span>
+            <h1 class="mb-lg radiant-text" style="color: white; line-height: 1.1; font-size: clamp(2.5rem, 8vw, 4.2rem);">Elite Food Safety <br><span style="background: linear-gradient(135deg, #00f2ff, #3949AB); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Training Academy.</span></h1>
+            <p class="text-lead" style="max-width: 720px; color: rgba(255,255,255,0.8); line-height: 1.8; font-size: clamp(1rem, 2.5vw, 1.2rem);">Transforming compliance into capability. We deliver government-recognized FoSTaC certifications and advanced technical workshops led by national-rank experts.</p>
+        </div>
+
+        <!-- ─── Wave Bottom (Animated Elite) ─── -->
+        <div class="hero-wave">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(6, 6, 26, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(6, 6, 26, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(6, 6, 26, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#06061a" />
+                </g>
+            </svg>
         </div>
     </section>
 
     <!-- Trust Metrics (Glass Mesh Section) -->
-    <section style="padding: var(--sp-2xl) 0; background: var(--clr-secondary); position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 15% 50%, rgba(90, 79, 207, 0.15) 0%, transparent 40%), radial-gradient(circle at 85% 50%, rgba(251, 140, 0, 0.1) 0%, transparent 40%);"></div>
+    <section style="padding: var(--sp-2xl) 0; background: #06061a; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <!-- Subtle grid overlay -->
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
+        
         <div class="container">
             <div class="grid grid-4" style="text-align: center; gap: var(--sp-xl); position: relative; z-index: 2;">
                 <div class="reveal">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="6863+">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #4DB6AC; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(77, 182, 172, 0.4));" class="counter" data-target="6863">0</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Professionals Trained</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.1s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="2763+">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #FB8C00; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(251, 140, 0, 0.4));" class="counter" data-target="2763">0</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Training Hours</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="96.7%">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #7c3aed; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.4));"><span class="counter" data-target="96">0</span>.7%</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Satisfaction Rating</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.3s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="279">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #00f2ff; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(0, 242, 255, 0.4));" class="counter" data-target="279">0</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Academy Batches</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- FoSTaC Programs (Elite Grid) -->
+    <!-- Academy Training Portfolio -->
     <section class="section-xl" style="position: relative; overflow: hidden; background: #fafafa;">
-        <div class="industry-glow-teal" style="bottom: -150px; left: -150px; opacity: 0.2;"></div>
+        <div class="industry-glow-teal" style="top: -150px; right: -150px; opacity: 0.15;"></div>
         <div class="container">
             <div class="text-center mb-3xl reveal">
-                <span class="pre-heading">Academy Portfolio</span>
-                <h2 class="mb-md">FSSAI FoSTaC Certification</h2>
-                <p style="max-width: 620px; margin: 0 auto; color: var(--clr-text-soft);">Fulfilling government-mandated requirements with elite technical sovereignity across all food sectors.</p>
+                <span class="pre-heading" style="color: var(--clr-primary);">Academy Portfolio</span>
+                <h2 class="mb-md">Certification & Technical Mastery</h2>
+                <p style="max-width: 620px; margin: 0 auto; color: var(--clr-text-soft);">Authorized FSSAI certifications and advanced technical workshops for food professionals.</p>
             </div>
             
             <div class="grid grid-3" style="gap: var(--sp-xl);">
-                <!-- Program 1 -->
-                <div id="fostac-milk" class="card capability-card reveal" style="padding: var(--sp-2xl); --card-color: var(--clr-mint);">
-                    <div style="width: 60px; height: 60px; background: rgba(0, 137, 123, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-lg);">
-                        <i class="fas fa-cheese" style="font-size: 1.8rem; color: var(--clr-mint);"></i>
+                <!-- Card 1-15 (Refined versions for space) -->
+                <div id="fostac" class="card capability-card reveal" style="padding: var(--sp-lg); --card-color: var(--clr-primary);">
+                    <div style="width: 45px; height: 45px; background: rgba(0, 137, 123, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-certificate" style="font-size: 1.3rem; color: var(--clr-primary);"></i>
                     </div>
-                    <h3 style="font-size: 1.4rem;" class="mb-sm">Milk & Milk Products</h3>
-                    <p class="text-small mb-xl" style="color: var(--clr-text-soft); line-height: 1.8; min-height: 70px;">Led by India's #1 Ranked National Trainer. Specialized focus on pasteurization, cold-chain integrity, and FSSAI standards.</p>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">FoSTaC (All Categories)</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Mandatory FSSAI certification equipping food handlers with regulatory knowledge across all sectors.</p>
                     <div class="flex flex-between" style="align-items: center;">
-                        <span class="badge badge-accent" style="padding: 6px 14px; font-weight: 700; border-radius: 5px;">Certified</span>
-                        <a href="../contact.html?subject=Milk+Training" class="text-primary text-bold text-small" style="text-decoration: none;">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                        <span class="badge" style="background: var(--clr-primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">FSSAI Auth</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none;">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
                     </div>
                 </div>
 
-                <!-- Program 2 -->
-                <div id="fostac-catering" class="card capability-card reveal" style="padding: var(--sp-2xl); transition-delay: 0.1s; --card-color: var(--clr-coral);">
-                    <div style="width: 60px; height: 60px; background: rgba(0, 137, 123, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-lg);">
-                        <i class="fas fa-concierge-bell" style="font-size: 1.8rem; color: var(--clr-coral);"></i>
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.05s; --card-color: var(--clr-coral);">
+                    <div style="width: 45px; height: 45px; background: rgba(255, 111, 97, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-user-shield" style="font-size: 1.3rem; color: var(--clr-coral);"></i>
                     </div>
-                    <h3 style="font-size: 1.4rem;" class="mb-sm">Catering</h3>
-                    <p class="text-small mb-xl" style="color: var(--clr-text-soft); line-height: 1.8; min-height: 70px;">Elite hygiene management for hotels and cloud kitchens. Covers FSSAI Schedule 4 norms and consumer protection.</p>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">Basic Food Safety & GMP</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Bilingual session (Kannada/English) simplifying GMP for shop-floor operators and hygiene leads.</p>
                     <div class="flex flex-between" style="align-items: center;">
-                        <span class="badge badge-accent" style="padding: 6px 14px; font-weight: 700; border-radius: 5px;">Certified</span>
-                        <a href="../contact.html?subject=Catering+Training" class="text-primary text-bold text-small" style="text-decoration: none;">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                        <span class="badge" style="background: var(--clr-coral); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Bilingual</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-coral);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
                     </div>
                 </div>
 
-                <!-- Program 3 -->
-                <div id="fostac-manufacturing" class="card capability-card reveal" style="padding: var(--sp-2xl); transition-delay: 0.2s; --card-color: var(--clr-primary);">
-                    <div style="width: 60px; height: 60px; background: rgba(0, 137, 123, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-lg);">
-                        <i class="fas fa-industry" style="font-size: 1.8rem; color: var(--clr-primary);"></i>
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.1s; --card-color: var(--clr-mint);">
+                    <div style="width: 45px; height: 45px; background: rgba(0, 150, 136, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-layer-group" style="font-size: 1.3rem; color: var(--clr-mint);"></i>
                     </div>
-                    <h3 style="font-size: 1.4rem;" class="mb-sm">General Manufacturing</h3>
-                    <p class="text-small mb-xl" style="color: var(--clr-text-soft); line-height: 1.8; min-height: 70px;">Standard-setting GMP & HACCP implementation for food processing units. Mandatory for safety supervisors.</p>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">TQM & 5S Methodology</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Optimizing efficiency through Sort, Set, Shine, Standardize, and Sustain in local languages.</p>
                     <div class="flex flex-between" style="align-items: center;">
-                        <span class="badge badge-accent" style="padding: 6px 14px; font-weight: 700; border-radius: 5px;">Certified</span>
-                        <a href="../contact.html?subject=Manufacturing+Training" class="text-primary text-bold text-small" style="text-decoration: none;">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                        <span class="badge" style="background: var(--clr-mint); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Lean Ops</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-mint);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
                     </div>
                 </div>
 
-                <!-- Program 4 -->
-                <div id="fostac-storage" class="card capability-card reveal" style="padding: var(--sp-2xl); transition-delay: 0.3s; --card-color: var(--clr-ocean);">
-                    <div style="width: 60px; height: 60px; background: rgba(10, 31, 31, 0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-lg);">
-                        <i class="fas fa-warehouse" style="font-size: 1.8rem; color: var(--clr-ocean);"></i>
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.15s; --card-color: var(--clr-yellow);">
+                    <div style="width: 45px; height: 45px; background: rgba(251, 140, 0, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-tools" style="font-size: 1.3rem; color: var(--clr-yellow);"></i>
                     </div>
-                    <h3 style="font-size: 1.4rem;" class="mb-sm">Storage & Transport</h3>
-                    <p class="text-small mb-xl" style="color: var(--clr-text-soft); line-height: 1.8; min-height: 70px;">Logistics excellence. Focuses on cold-chain management, Pest Risk assessment, and temperature traceability.</p>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">7 Basic Quality Tools</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Analytical training using Fishbone and Pareto analysis for data-driven production trends.</p>
                     <div class="flex flex-between" style="align-items: center;">
-                        <span class="badge" style="background: var(--clr-ocean); color: white; padding: 6px 14px; border-radius: 5px;">Certified</span>
-                        <a href="../contact.html?subject=Logistics+Training" class="text-secondary text-bold text-small" style="color: var(--clr-ocean); text-decoration: none;">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                        <span class="badge" style="background: var(--clr-yellow); color: var(--clr-text-main); padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Analytics</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-yellow);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
                     </div>
                 </div>
 
-                <!-- Program 5 -->
-                <div id="fostac-retail" class="card capability-card reveal" style="padding: var(--sp-2xl); transition-delay: 0.4s; --card-color: var(--clr-purple);">
-                    <div style="width: 60px; height: 60px; background: rgba(10, 31, 31, 0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-lg);">
-                        <i class="fas fa-store" style="font-size: 1.8rem; color: var(--clr-purple);"></i>
+                <div id="iso" class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.2s; --card-color: var(--clr-ocean);">
+                    <div style="width: 45px; height: 45px; background: rgba(30, 136, 229, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-book-open" style="font-size: 1.3rem; color: var(--clr-ocean);"></i>
                     </div>
-                    <h3 style="font-size: 1.4rem;" class="mb-sm">Retail & Distribution</h3>
-                    <p class="text-small mb-xl" style="color: var(--clr-text-soft); line-height: 1.8; min-height: 70px;">Shelf management and consumer hygiene protocols for supermarkets, outlets, and distribution hubs.</p>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">ISO 22000 Awareness</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Overview of the FSMS framework, covering PDCA and risk-based thinking for food safety.</p>
                     <div class="flex flex-between" style="align-items: center;">
-                        <span class="badge" style="background: var(--clr-purple); color: white; padding: 6px 14px; border-radius: 5px;">Certified</span>
-                        <a href="../contact.html?subject=Retail+Training" class="text-secondary text-bold text-small" style="color: var(--clr-purple); text-decoration: none;">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                        <span class="badge" style="background: var(--clr-ocean); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">ISO Intro</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-ocean);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
                     </div>
                 </div>
 
-                <!-- Program 6 -->
-                <div id="fostac-corporate" class="card capability-card reveal" style="padding: var(--sp-2xl); transition-delay: 0.5s; --card-color: var(--clr-yellow);">
-                    <div style="width: 60px; height: 60px; background: rgba(0, 137, 123, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-lg);">
-                        <i class="fas fa-building" style="font-size: 1.8rem; color: var(--clr-yellow);"></i>
+                <div id="fssc" class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.25s; --card-color: var(--clr-primary);">
+                    <div style="width: 45px; height: 45px; background: rgba(0, 137, 123, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-lightbulb" style="font-size: 1.3rem; color: var(--clr-primary);"></i>
                     </div>
-                    <h3 style="font-size: 1.4rem;" class="mb-sm">Corporate & Custom</h3>
-                    <p class="text-small mb-xl" style="color: var(--clr-text-soft); line-height: 1.8; min-height: 70px;">Tailored programs designed for entire organizations, addressing specific operational risks and site requirements.</p>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">FSSC 22000 Awareness</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Focusing on FSSC V6.0 updates, integrating ISO 22000 with sector-specific PRPs.</p>
                     <div class="flex flex-between" style="align-items: center;">
-                        <span class="badge badge-accent" style="padding: 6px 14px; font-weight: 700; border-radius: 5px; color: var(--clr-text-main); background: var(--clr-yellow);">Bespoke</span>
-                        <a href="../contact.html?subject=Corporate+Training" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-yellow);">Enquire <i class="fas fa-arrow-right ml-xs"></i></a>
+                        <span class="badge" style="background: var(--clr-primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">V6.0 Awareness</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none;">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div id="audit" class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.3s; --card-color: var(--clr-purple);">
+                    <div style="width: 45px; height: 45px; background: rgba(156, 39, 176, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-user-check" style="font-size: 1.3rem; color: var(--clr-purple);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">ISO 22000 Internal Auditor</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Audit planning and NC reporting. Learn to gather objective evidence for safety systems.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-purple); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Certified Audit</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-purple);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.35s; --card-color: var(--clr-purple);">
+                    <div style="width: 45px; height: 45px; background: rgba(156, 39, 176, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-shield-alt" style="font-size: 1.3rem; color: var(--clr-purple);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">FSSC 22000 Internal Auditor</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Auditing technical specifications (ISO/TS) and Food Fraud/Defense plans for global safety.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-purple); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">FSSC Auditor</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-purple);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div id="brcgs" class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.4s; --card-color: var(--clr-yellow);">
+                    <div style="width: 45px; height: 45px; background: rgba(251, 140, 0, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-award" style="font-size: 1.3rem; color: var(--clr-yellow);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">BRCGS Food Safety Awareness</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Introduction to BRCGS Issue 9.0, focusing on senior management commitment and HACCP plans.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-yellow); color: var(--clr-text-main); padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">BRCGS 9.0</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-yellow);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div id="haccp" class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.45s; --card-color: var(--clr-mint);">
+                    <div style="width: 45px; height: 45px; background: rgba(0, 150, 136, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-flask" style="font-size: 1.3rem; color: var(--clr-mint);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">HACCP Implementation</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Hands-on workshop on the 12 steps and 7 principles. Conducting real Hazard Analysis and CCPs.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-mint); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Practical HACCP</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-mint);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div id="regulatory" class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.5s; --card-color: var(--clr-primary);">
+                    <div style="width: 45px; height: 45px; background: rgba(0, 137, 123, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-file-invoice" style="font-size: 1.3rem; color: var(--clr-primary);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">FSS (Licensing) Regulation</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Legal complexities of FSSAI licenses. Petty FBOs, State and Central licenses, and annual returns.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">FSSAI Rules</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none;">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.55s; --card-color: var(--clr-coral);">
+                    <div style="width: 45px; height: 45px; background: rgba(255, 111, 97, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-box" style="font-size: 1.3rem; color: var(--clr-coral);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">FSS Labelling & Packaging</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Mandatory consumer info declarations and 2018 Packaging Regulations for contact safety.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-coral); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Packaging Rules</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-coral);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.6s; --card-color: var(--clr-ocean);">
+                    <div style="width: 45px; height: 45px; background: rgba(30, 136, 229, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-shield-virus" style="font-size: 1.3rem; color: var(--clr-ocean);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">Food Defense (TACCP/VACCP)</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Protecting the supply chain from intentional harm. Threats (TACCP) and Fraud (VACCP) assessments.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-ocean); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Safety Defense</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-ocean);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.65s; --card-color: var(--clr-purple);">
+                    <div style="width: 45px; height: 45px; background: rgba(156, 39, 176, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-allergies" style="font-size: 1.3rem; color: var(--clr-purple);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">Allergen Management</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Strategy for managing allergens. Risk assessment, cross-contact, and cleaning validation protocols.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-purple); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Allergen Mgmt</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-purple);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.7s; --card-color: var(--clr-primary);">
+                    <div style="width: 45px; height: 45px; background: rgba(0, 137, 123, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-users" style="font-size: 1.3rem; color: var(--clr-primary);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">Supervisory Development</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Soft skills for floor leads: communication, conflict resolution, and leadership for food safety culture.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Soft Skills</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none;">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div id="engineering" class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.75s; --card-color: var(--clr-coral);">
+                    <div style="width: 45px; height: 45px; background: rgba(255, 111, 97, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-drafting-compass" style="font-size: 1.3rem; color: var(--clr-coral);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">Design of Food Plant Systems</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Hygienic engineering principles: zoning, equipment materials, drainage, and ventilation design.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-coral); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Engineering</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-coral);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.8s; --card-color: var(--clr-mint);">
+                    <div style="width: 45px; height: 45px; background: rgba(0, 150, 136, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-file-signature" style="font-size: 1.3rem; color: var(--clr-mint);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">FSMS Documentation Guidance</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Create lean, effective SOPs and policies for ISO/FSSC without being "paper-heavy." Templates included.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-mint); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Documentation</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-mint);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+
+                <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.85s; --card-color: var(--clr-yellow);">
+                    <div style="width: 45px; height: 45px; background: rgba(251, 140, 0, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-md);">
+                        <i class="fas fa-search-plus" style="font-size: 1.3rem; color: var(--clr-yellow);"></i>
+                    </div>
+                    <h3 style="font-size: 1.15rem;" class="mb-xs">RCA & CAPA Course</h3>
+                    <p class="text-small mb-lg" style="color: var(--clr-text-soft); line-height: 1.6; min-height: 80px;">Master 5 Whys and Fishbone diagrams to find underlying causes and ensure non-recurrence.</p>
+                    <div class="flex flex-between" style="align-items: center;">
+                        <span class="badge" style="background: var(--clr-yellow); color: var(--clr-text-main); padding: 4px 8px; border-radius: 4px; font-size: 0.65rem;">Problem Solving</span>
+                        <a href="../contact.html" class="text-primary text-bold text-small" style="text-decoration: none; color: var(--clr-yellow);">Enrol <i class="fas fa-arrow-right ml-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customized Auditor - Special Full Width Highlight -->
+            <div class="reveal mt-xl" style="max-width: 1000px; margin-left: auto; margin-right: auto; transition-delay: 0.9s;">
+                <div id="custom" class="card capability-card" style="padding: var(--sp-xl); --card-color: var(--clr-primary); background: #fff; border-left: 5px solid var(--clr-primary);">
+                    <div class="grid grid-2" style="gap: var(--sp-xl); align-items: center;">
+                        <div>
+                            <div style="font-size: 0.75rem; font-weight: 800; color: var(--clr-primary); letter-spacing: 0.1em; margin-bottom: 8px; text-transform: uppercase;">Immersive Experience</div>
+                            <h3 style="font-size: 1.5rem;" class="mb-md">Customized Internal Auditor (with Onsite Demo)</h3>
+                            <span class="badge" style="background: var(--grad-primary); color: white; padding: 6px 14px; border-radius: 5px; display: inline-block;">Premium Technical Program</span>
+                        </div>
+                        <div>
+                            <p class="text-small" style="color: var(--clr-text-soft); line-height: 1.8; margin-bottom: var(--sp-md);">Hands-on course bridging theory and practice with a live audit demonstration at your facility. trainee auditors practice interviewing and evidence gathering in their actual working environment.</p>
+                            <a href="../contact.html" class="btn btn-primary btn-small">Book Onsite Workshop</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,20 +421,17 @@
     </section>
 
     <!-- Academy CTA -->
-    <section class="vibrant-cta-section" style="background: white; padding: var(--sp-2xl) 0;">
-        <div class="container">
-            <div class="glass-cta-container reveal" style="background: var(--grad-primary); padding: var(--sp-3xl); border-radius: var(--radius-2xl); text-align: center; color: white; box-shadow: 0 30px 60px rgba(0, 137, 123, 0.2);">
-                <span class="pre-heading" style="color: white; opacity: 0.8;">Enroll in Excellence</span>
-                <h2 style="color: white; margin-bottom: var(--sp-md); font-size: clamp(2rem, 5vw, 2.8rem);">Start Your Academy Journey Today.</h2>
-                <p class="mb-xl" style="color: rgba(255,255,255,0.9); font-size: 1.12rem; max-width: 600px; margin-left: auto; margin-right: auto;">Check available batch dates, request corporate pricing, or verify technical credentials.</p>
-                <div class="flex flex-center" style="gap: var(--sp-lg); flex-wrap: wrap;">
-                    <a href="../contact.html" class="btn btn-white btn-large" style="background: white; color: var(--clr-primary); padding: 16px 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">Enrol / Request Batch Dates</a>
-                    <a href="../verify.html" class="btn btn-outline-white btn-large" style="border: 1px solid rgba(255,255,255,0.4); color: white; padding: 16px 40px;">Verify Certificate</a>
-                </div>
+    <section class="section-xl" style="background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-ocean) 100%);">
+        <div class="container text-center reveal">
+            <span class="pre-heading" style="color: white; opacity: 0.8; letter-spacing: 0.2em; display: block; margin-bottom: var(--sp-sm);">Enroll in Excellence</span>
+            <h2 style="color: white; margin-bottom: var(--sp-md); font-size: clamp(2rem, 5vw, 2.8rem);">Start Your Academy Journey Today.</h2>
+            <p class="mb-xl" style="color: rgba(255,255,255,0.85); font-size: 1.12rem; max-width: 600px; margin-left: auto; margin-right: auto;">Check available batch dates, request corporate pricing, or verify technical credentials.</p>
+            <div class="flex flex-center" style="gap: var(--sp-lg); flex-wrap: wrap;">
+                <a href="../contact.html" class="btn" style="background: white; color: var(--clr-primary); font-weight: 800; padding: 16px 40px;">Enrol / Request Batch Dates</a>
+                <a href="../verify.html" class="btn btn-outline-white" style="padding: 16px 40px;">Verify Certificate</a>
             </div>
         </div>
     </section>
-n>
 
     <div id="footer-placeholder"></div>
     <div id="floating-placeholder"></div>

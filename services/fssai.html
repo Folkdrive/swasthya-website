@@ -21,43 +21,85 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Mobile-First Futuristic FSSAI Styles -->
+    <style>
+        @media (max-width: 768px) {
+            /* Collapse Grids */
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; gap: var(--sp-xl) !important; }
+            
+            /* Typography Scaling */
+            .hero-elite { padding-top: 120px !important; padding-bottom: 60px !important; }
+            h1 { font-size: clamp(2.2rem, 6vw, 4.5rem) !important; }
+            h2 { font-size: clamp(1.8rem, 6vw, 2.2rem) !important; }
+            .section-xl { padding: var(--sp-2xl) 0 !important; }
+
+            /* Stats Mobile Fix */
+            .counter { font-size: 2.5rem !important; }
+
+            /* Button fixes */
+            .btn { width: 100%; text-align: center; box-sizing: border-box; }
+            .hero-wave { height: 40px; }
+            
+            /* Reorder text to top for mobile reading */
+            .section-xl .grid-2 > div:last-child { margin-top: var(--sp-lg); }
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
     <!-- Hero (Elite Regulatory Version) -->
-    <section class="hero-elite" style="min-height: 55vh; position: relative; overflow: hidden;">
-        <div class="hero-bg-accent" style="background: radial-gradient(circle at 70% 30%, rgba(0, 150, 136, 0.2) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(48, 79, 254, 0.15) 0%, transparent 40%);"></div>
+    <section class="hero-elite" style="min-height: 55vh; background: linear-gradient(135deg, #06061a 0%, #0a1f1f 60%, #12113a 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(90, 79, 207, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.1) 0%, transparent 40%); pointer-events: none;"></div>
+        
         <div class="container reveal">
-            <nav aria-label="breadcrumb" style="font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: var(--sp-lg);">
-                <a href="../index.html" style="color: white; opacity: 0.8; text-decoration: none;">Home</a> <span style="margin: 0 8px;">/</span>
-                <a href="index.html" style="color: white; opacity: 0.8; text-decoration: none;">Services</a> <span style="margin: 0 8px;">/</span> FSSAI
+            <nav aria-label="breadcrumb" style="font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: var(--sp-lg);">
+                <a href="../index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a> <span style="margin: 0 8px; opacity: 0.4;">/</span>
+                <a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Services</a> <span style="margin: 0 8px; opacity: 0.4;">/</span> <span style="color: #00f2ff;">FSSAI</span>
             </nav>
-            <span class="pre-heading" style="color: var(--clr-primary); brightness: 1.3;">Regulatory Sovereignty</span>
-            <h1 class="mb-lg radiant-text" style="color: white; line-height: 1.1; font-size: clamp(2.5rem, 8vw, 4.2rem);">FSSAI Licensing & <br>Regulatory Support.</h1>
-            <p class="text-lead" style="max-width: 680px; color: rgba(255,255,255,0.9); line-height: 1.8;">Comprehensive guidance through India's food law — ensuring your business is <strong>perfectly licensed</strong> and protected from regulatory risk.</p>
+            <span class="pre-heading" style="color: #4DB6AC; letter-spacing: 0.2em;">Regulatory Sovereignty</span>
+            <h1 class="mb-lg radiant-text" style="color: white; line-height: 1.1; font-size: clamp(2.5rem, 8vw, 4.2rem);">FSSAI Licensing & <br><span style="background: linear-gradient(135deg, #00f2ff, #3949AB); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Regulatory Support.</span></h1>
+            <p class="text-lead" style="max-width: 680px; color: rgba(255,255,255,0.8); line-height: 1.8; font-size: clamp(1rem, 2.5vw, 1.2rem);">Comprehensive guidance through India's food law — ensuring your business is <strong>perfectly licensed</strong> and protected from regulatory risk.</p>
+        </div>
+
+        <!-- ─── Wave Bottom (Animated Elite) ─── -->
+        <div class="hero-wave">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(6, 6, 26, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(6, 6, 26, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(6, 6, 26, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#06061a" />
+                </g>
+            </svg>
         </div>
     </section>
 
     <!-- Metrics Bar (Regulatory High-Precision) -->
-    <section style="padding: var(--sp-xl) 0; background: var(--clr-secondary); position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 15% 50%, rgba(0, 137, 123, 0.15) 0%, transparent 40%), radial-gradient(circle at 85% 50%, rgba(48, 79, 254, 0.1) 0%, transparent 40%);"></div>
+    <section style="padding: var(--sp-2xl) 0; background: #06061a; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <!-- Subtle grid overlay -->
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
+        
         <div class="container">
             <div class="grid grid-4" style="text-align: center; gap: var(--sp-xl); position: relative; z-index: 2;">
                 <div class="reveal">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="500+">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #4DB6AC; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(77, 182, 172, 0.4));" class="counter" data-target="500">0</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Licences Issued</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.1s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="1000+">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #FB8C00; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(251, 140, 0, 0.4));" class="counter" data-target="1000">0</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">FoSTaC Trained</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="15+">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #7c3aed; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.4));" class="counter" data-target="15">0</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Central Licences</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.3s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="100%">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #00f2ff; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(0, 242, 255, 0.4));"><span class="counter" data-target="100">0</span>%</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Audit Readiness</p>
                 </div>
             </div>
@@ -115,37 +157,56 @@
         </div>
     </section>
 
-    <!-- Special Modules -->
+    <!-- FSSAI Regulatory Support Modules -->
     <section class="section-xl" style="background: #fafafa; position: relative; overflow: hidden;">
         <div class="container">
-            <div class="grid grid-2" style="gap: var(--sp-2xl);">
-                <!-- FoSTaC Panel -->
+            <div class="centered-heading reveal mb-3xl">
+                <span class="pre-heading" style="color: var(--clr-primary);">Elite Regulatory Services</span>
+                <h2>Detailed Compliance Modules</h2>
+            </div>
+            
+            <div class="grid grid-2" style="gap: var(--sp-xl);">
+                <!-- FoSTaC Training -->
                 <div class="reveal">
-                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; border-radius: var(--radius-2xl); background: #0A1F1F; color: white; --card-color: var(--clr-purple);">
+                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; border-radius: var(--radius-2xl); background: #0A1F1F; color: white; --card-color: var(--clr-mint);">
                          <div style="width: 55px; height: 55px; background: var(--clr-primary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-xl);">
                              <i class="fas fa-graduation-cap" style="font-size: 1.5rem;"></i>
                          </div>
-                         <h3 class="mb-md" style="color: white; font-size: 1.8rem;">FoSTaC Mandatory Training</h3>
-                         <p class="mb-xl" style="color: rgba(255,255,255,0.8); line-height: 1.8;">As an authorized training partner, we provide government-recognized certification for General Manufacturing, Catering, and Retail sectors.</p>
-                         <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--sp-md);">
-                             <li class="flex" style="gap: var(--sp-md);"><i class="fas fa-check-circle" style="color: var(--clr-primary); margin-top: 4px;"></i> <span>Special & Advanced Manufacturing</span></li>
-                             <li class="flex" style="gap: var(--sp-md);"><i class="fas fa-check-circle" style="color: var(--clr-primary); margin-top: 4px;"></i> <span>Catering, Retail & Distribution</span></li>
-                         </ul>
+                         <h3 class="mb-md" style="color: white; font-size: 1.6rem;">FoSTaC Training</h3>
+                         <p style="color: rgba(255,255,255,0.85); line-height: 1.8; font-size: 0.95rem;">Food Safety Training and Certification (FoSTaC) is a large-scale initiative by FSSAI aimed at ensuring that every food business has at least one trained and certified Food Safety Supervisor (FSS) for every 25 handlers. These training programs are tailored to specific industry sectors—such as catering, manufacturing, or retail—and cover best practices in hygiene, sanitation, and hazard management. By educating personnel on the ground, FoSTaC shifts the focus from mere reactive compliance to a proactive culture of food safety, significantly reducing the likelihood of foodborne illnesses and regulatory violations.</p>
                     </div>
                 </div>
                 
-                <!-- Advisory Panel -->
+                <!-- Artwork and Label Verification -->
                 <div class="reveal" style="transition-delay: 0.1s;">
-                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; --card-color: var(--clr-primary);">
+                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; --card-color: var(--clr-coral); border-radius: var(--radius-2xl); background: white;">
+                         <div style="width: 55px; height: 55px; background: #fff5f5; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--clr-coral); margin-bottom: var(--sp-xl);">
+                             <i class="fas fa-tags" style="font-size: 1.5rem;"></i>
+                         </div>
+                         <h3 class="mb-md" style="font-size: 1.6rem;">Artwork and Label Verification</h3>
+                         <p style="color: var(--clr-text-soft); line-height: 1.8; font-size: 0.95rem;">Artwork and Label Verification involves a meticulous review of packaging elements, including the list of ingredients, nutritional facts, allergen warnings, veg/non-veg logos, and the placement of the FSSAI logo. This service ensures that all mandatory declarations are present and technically accurate according to the Food Safety and Standards (Labelling and Display) Regulations. Proper verification prevents costly product recalls, legal penalties, and the rejection of batches during market surveillance or regulatory inspections.</p>
+                    </div>
+                </div>
+
+                <!-- FSSAI Regulatory Trainings -->
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; --card-color: var(--clr-primary); border-radius: var(--radius-2xl); background: white;">
                          <div style="width: 55px; height: 55px; background: #e0f2f1; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--clr-primary); margin-bottom: var(--sp-xl);">
-                             <i class="fas fa-balance-scale" style="font-size: 1.5rem;"></i>
+                             <i class="fas fa-chalkboard-teacher" style="font-size: 1.5rem;"></i>
                          </div>
-                         <h3 class="mb-md" style="font-size: 1.8rem;">Regulatory Strategy</h3>
-                         <p class="mb-xl" style="color: var(--clr-text-soft); line-height: 1.8;">Beyond filing applications, we act as your regulatory proxy — managing liaisons, answering technical notices, and ensuring 100% compliance during audits.</p>
-                         <div style="padding: var(--sp-lg); background: #f1f8f7; border-radius: var(--radius-md); margin-bottom: var(--sp-lg);">
-                             <p class="text-small mb-0" style="color: var(--clr-primary); font-weight: 600;">"Legal compliance isn't just about obtaining a license; it's about staying compliant every day of the operation."</p>
+                         <h3 class="mb-md" style="font-size: 1.6rem;">FSSAI Regulatory Trainings</h3>
+                         <p style="color: var(--clr-text-soft); line-height: 1.8; font-size: 0.95rem;">Our expert-led training programs about FSSAI Regulations provide a deep understanding about various regulatory framework, including licensing, labelling and display, packaging, advertising and claims as well as licensing and registration. We empower your team with the technical knowledge needed to get a solid grasp of various requirements applicable to all Food Business Operators.</p>
+                    </div>
+                </div>
+
+                <!-- USFDA Registration -->
+                <div class="reveal" style="transition-delay: 0.3s;">
+                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; --card-color: var(--clr-ocean); border-radius: var(--radius-2xl); background: #0c1a3d; color: white;">
+                         <div style="width: 55px; height: 55px; background: var(--clr-ocean); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; margin-bottom: var(--sp-xl);">
+                             <i class="fas fa-globe-americas" style="font-size: 1.5rem;"></i>
                          </div>
-                         <a href="../contact.html" class="text-primary text-bold" style="text-decoration: none;">Request a Bespoke Advisory <i class="fas fa-arrow-right ml-sm"></i></a>
+                         <h3 class="mb-md" style="color: white; font-size: 1.6rem;">USFDA Registration</h3>
+                         <p style="color: rgba(255,255,255,0.85); line-height: 1.8; font-size: 0.95rem;">For food, beverage, and dietary supplement companies looking to enter the United States market, USFDA Registration is mandatory under the Bioterrorism Act. This process involves registering the facility with the U.S. Food and Drug Administration and, for foreign entities, appointing a U.S. Agent as a local point of contact. Registration ensures that the FDA can track facilities and notify them of inspections or safety concerns. Beyond the legal mandate, it signifies that the facility is prepared to meet stringent American safety standards, which is vital for passing U.S. Customs and Border Protection checks.</p>
                     </div>
                 </div>
             </div>
@@ -153,16 +214,12 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="vibrant-cta-section" style="background: white; padding: var(--sp-2xl) 0;">
-        <div class="container">
-            <div class="glass-cta-container reveal" style="background: var(--grad-primary); padding: var(--sp-3xl); border-radius: var(--radius-2xl); text-align: center; color: white;">
-                <span class="pre-heading" style="color: white; opacity: 0.8;">Regulatory Resilience</span>
-                <h2 style="color: white; margin-bottom: var(--sp-md); font-size: clamp(2rem, 5vw, 2.8rem);">Compliant today. Confident tomorrow.</h2>
-                <p class="mb-xl" style="color: rgba(255,255,255,0.9); font-size: 1.12rem; max-width: 630px; margin-left: auto; margin-right: auto;">Don't wait for a regulatory notice. Build your compliance foundation the right way with expert liaison.</p>
-                <div class="flex flex-center" style="gap: var(--sp-lg); flex-wrap: wrap;">
-                    <a href="../contact.html" class="btn btn-white btn-large">Talk to an Expert</a>
-                </div>
-            </div>
+    <section class="section-xl" style="background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-ocean) 100%);">
+        <div class="container text-center reveal">
+            <span class="pre-heading" style="color: white; opacity: 0.8; letter-spacing: 0.2em; display: block; margin-bottom: var(--sp-sm);">Regulatory Resilience</span>
+            <h2 style="color: white; margin-bottom: var(--sp-md); font-size: clamp(2rem, 5vw, 2.8rem);">Compliant today. Confident tomorrow.</h2>
+            <p class="mb-xl" style="color: rgba(255,255,255,0.85); font-size: 1.12rem; max-width: 630px; margin-left: auto; margin-right: auto;">Don't wait for a regulatory notice. Build your compliance foundation the right way with expert liaison.</p>
+            <a href="../contact.html" class="btn" style="background: white; color: var(--clr-primary); font-weight: 800; padding: 16px 36px;">Talk to an Expert</a>
         </div>
     </section>
 

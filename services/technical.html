@@ -21,43 +21,85 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Mobile-First Futuristic Technical Styles -->
+    <style>
+        @media (max-width: 768px) {
+            /* Collapse Grids */
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; gap: var(--sp-xl) !important; }
+            
+            /* Typography Scaling */
+            .hero-elite { padding-top: 120px !important; padding-bottom: 60px !important; }
+            h1 { font-size: clamp(2.2rem, 6vw, 4.5rem) !important; }
+            h2 { font-size: clamp(1.8rem, 6vw, 2.2rem) !important; }
+            .section-xl { padding: var(--sp-2xl) 0 !important; }
+
+            /* Stats Mobile Fix */
+            .counter { font-size: 2.5rem !important; }
+
+            /* Button fixes */
+            .btn { width: 100%; text-align: center; }
+            .hero-wave { height: 40px; }
+            
+            /* Reorder text to top for mobile reading */
+            .section-xl .grid-2 > div:last-child { order: -1; margin-bottom: var(--sp-lg); }
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
     <!-- Hero (Elite Technical Version) -->
-    <section class="hero-elite" style="min-height: 55vh; position: relative; overflow: hidden;">
-        <div class="hero-bg-accent" style="background: radial-gradient(circle at 70% 30%, rgba(0, 150, 136, 0.2) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(48, 79, 254, 0.15) 0%, transparent 40%);"></div>
+    <section class="hero-elite" style="min-height: 55vh; background: linear-gradient(135deg, #06061a 0%, #0a1f1f 60%, #12113a 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(90, 79, 207, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.1) 0%, transparent 40%); pointer-events: none;"></div>
+        
         <div class="container reveal">
-            <nav aria-label="breadcrumb" style="font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: var(--sp-lg);">
-                <a href="../index.html" style="color: white; opacity: 0.8; text-decoration: none;">Home</a> <span style="margin: 0 8px;">/</span>
-                <a href="index.html" style="color: white; opacity: 0.8; text-decoration: none;">Services</a> <span style="margin: 0 8px;">/</span> Engineering & Technical
+            <nav aria-label="breadcrumb" style="font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: var(--sp-lg);">
+                <a href="../index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a> <span style="margin: 0 8px; opacity: 0.4;">/</span>
+                <a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Services</a> <span style="margin: 0 8px; opacity: 0.4;">/</span> <span style="color: #00f2ff;">Engineering & Technical</span>
             </nav>
-            <span class="pre-heading" style="color: var(--clr-primary); brightness: 1.3;">Infrastructure & Product Sovereignty</span>
-            <h1 class="mb-lg radiant-text" style="color: white; line-height: 1.1; font-size: clamp(2.5rem, 8vw, 4.2rem);">Engineering & Technical <br>Operations.</h1>
-            <p class="text-lead" style="max-width: 720px; color: rgba(255,255,255,0.9); line-height: 1.8;">Formulating future-ready food facilities and developing market-winning products with <strong>20+ years</strong> of technical depth.</p>
+            <span class="pre-heading" style="color: #4DB6AC; letter-spacing: 0.2em;">Infrastructure & Product Sovereignty</span>
+            <h1 class="mb-lg radiant-text" style="color: white; line-height: 1.1; font-size: clamp(2.5rem, 8vw, 4.2rem);">Engineering & <br><span style="background: linear-gradient(135deg, #00f2ff, #3949AB); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Technical Operations.</span></h1>
+            <p class="text-lead" style="max-width: 720px; color: rgba(255,255,255,0.8); line-height: 1.8; font-size: clamp(1rem, 2.5vw, 1.2rem);">Formulating future-ready food facilities and developing market-winning products with <strong>20+ years</strong> of technical depth.</p>
+        </div>
+
+        <!-- ─── Wave Bottom (Animated Elite) ─── -->
+        <div class="hero-wave">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(6, 6, 26, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(6, 6, 26, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(6, 6, 26, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#06061a" />
+                </g>
+            </svg>
         </div>
     </section>
 
     <!-- Metrics Bar (Technical High-Precision) -->
-    <section style="padding: var(--sp-xl) 0; background: var(--clr-secondary); position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 15% 50%, rgba(0, 137, 123, 0.15) 0%, transparent 40%), radial-gradient(circle at 85% 50%, rgba(48, 79, 254, 0.1) 0%, transparent 40%);"></div>
+    <section style="padding: var(--sp-2xl) 0; background: #06061a; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <!-- Subtle grid overlay -->
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
+        
         <div class="container">
             <div class="grid grid-4" style="text-align: center; gap: var(--sp-xl); position: relative; z-index: 2;">
                 <div class="reveal">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="250+">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #4DB6AC; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(77, 182, 172, 0.4));" class="counter" data-target="250">0</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Products Developed</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.1s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="50+">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #FB8C00; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(251, 140, 0, 0.4));" class="counter" data-target="50">0</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">New Facilities</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="20+">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #7c3aed; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.4));" class="counter" data-target="20">0</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Years Technical Exp</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.3s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--clr-primary); margin: 0; line-height: 1;" class="counter" data-target="100%">0</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: #00f2ff; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(0, 242, 255, 0.4));"><span class="counter" data-target="100">0</span>%</p>
                     <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Project Success</p>
                 </div>
             </div>
@@ -73,17 +115,17 @@
                     <h2 class="mb-xl">Designed right. <br>Built safe.</h2>
                     
                     <div style="display: flex; flex-direction: column; gap: var(--sp-md);">
-                        <div class="card capability-card reveal" style="padding: var(--sp-lg); --card-color: var(--clr-yellow);">
-                            <h4 class="mb-xs" style="font-size: 1.1rem;">Design of Food & Dairy Plants</h4>
-                            <p class="text-small mb-0" style="color: var(--clr-text-soft);">Hygienic facility layout using EHEDG principles with unidirectional flow to eliminate contamination.</p>
+                        <div class="card capability-card reveal" style="padding: var(--sp-xl); --card-color: var(--clr-yellow);">
+                            <h4 class="mb-sm" style="font-size: 1.2rem;">Design of Food and Dairy Plants</h4>
+                            <p class="text-small mb-0" style="color: var(--clr-text-soft); line-height: 1.7;">Professional plant design integrates hygienic engineering with efficient workflow to prevent cross-contamination. It involves strategic space planning, selecting food-grade materials, and ensuring proper ventilation and drainage. A well-designed facility optimizes utility consumption and meets global safety standards, providing a robust foundation for high-quality production and future scalability.</p>
                         </div>
-                        <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.1s; --card-color: var(--clr-primary);">
-                            <h4 class="mb-xs" style="font-size: 1.1rem;">Plant Commissioning & Validation</h4>
-                            <p class="text-small mb-0" style="color: var(--clr-text-soft);">Performance validation of mission-critical equipment before official production commencement.</p>
+                        <div class="card capability-card reveal" style="padding: var(--sp-xl); transition-delay: 0.1s; --card-color: var(--clr-primary);">
+                            <h4 class="mb-sm" style="font-size: 1.2rem;">Plant Commissioning and Validation</h4>
+                            <p class="text-small mb-0" style="color: var(--clr-text-soft); line-height: 1.7;">Commissioning ensures that all equipment and systems are installed and functioning according to the intended design specifications. Validation follows to provide documented evidence that processes consistently produce results meeting safety and quality standards. This critical phase bridges the gap between construction and full-scale production, ensuring regulatory compliance from day one.</p>
                         </div>
-                        <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.2s; --card-color: var(--clr-purple);">
-                            <h4 class="mb-xs" style="font-size: 1.1rem;">CIP Validation & Verification</h4>
-                            <p class="text-small mb-0" style="color: var(--clr-text-soft);">Verifying microbial reduction cycles against global hygiene benchmarks and SOPs.</p>
+                        <div class="card capability-card reveal" style="padding: var(--sp-xl); transition-delay: 0.2s; --card-color: var(--clr-purple);">
+                            <h4 class="mb-sm" style="font-size: 1.2rem;">CIP Validation and Verification</h4>
+                            <p class="text-small mb-0" style="color: var(--clr-text-soft); line-height: 1.7;">Clean-in-Place (CIP) validation confirms that automated cleaning cycles effectively remove chemical and microbiological residues. Verification involves ongoing monitoring through conductivity, temperature, and swab testing to ensure each cycle remains effective. This process is vital in dairy and food plants to prevent batch contamination and ensure consumer safety.</p>
                         </div>
                     </div>
                 </div>
@@ -110,57 +152,59 @@
         <div class="industry-glow-cyan" style="bottom: -150px; right: -150px; opacity: 0.2;"></div>
         <div class="container">
             <div class="text-center mb-3xl reveal">
-                <span class="pre-heading">Technical Support</span>
+                <span class="pre-heading" style="color: var(--clr-primary);">Technical Support</span>
                 <h2 class="mb-md">Solving High-Complexity Challenges</h2>
                 <p style="max-width: 620px; margin: 0 auto; color: var(--clr-text-soft);">Thorough advisory addressing the technical nuances beyond traditional paperwork.</p>
             </div>
             
             <div class="grid grid-3" style="gap: var(--sp-xl);">
-                <div class="card capability-card reveal" style="padding: var(--sp-xl); text-align: center; --card-color: var(--clr-coral);">
-                    <i class="fas fa-microscope mb-lg" style="font-size: 2rem; color: var(--clr-coral);"></i>
-                    <h3 style="font-size: 1.25rem;" class="mb-sm">Root Cause Analysis</h3>
-                    <p class="text-small mb-0" style="color: var(--clr-text-soft); line-height: 1.7;">Investigation of incidents, quality failures, and complaints — identifying root causes and CAPA.</p>
+                <!-- Root Cause Analysis -->
+                <div class="card capability-card reveal" style="padding: var(--sp-2xl); text-align: center; --card-color: var(--clr-coral);">
+                    <i class="fas fa-microscope mb-lg" style="font-size: 2.2rem; color: var(--clr-coral);"></i>
+                    <h3 style="font-size: 1.4rem;" class="mb-md">Root Cause Analysis (RCA)</h3>
+                    <p style="color: var(--clr-text-soft); line-height: 1.8; font-size: 0.95rem;">RCA is a systematic process used to identify the underlying cause of a non-conformity or safety failure rather than just treating the symptoms. By utilizing tools like the 5 Whys or Fishbone Diagram, businesses can implement permanent corrective actions.</p>
                 </div>
-                <div class="card capability-card reveal" style="padding: var(--sp-xl); text-align: center; transition-delay: 0.1s; --card-color: var(--clr-mint);">
-                    <i class="fas fa-flask mb-lg" style="font-size: 2rem; color: var(--clr-mint);"></i>
-                    <h3 style="font-size: 1.25rem;" class="mb-sm">Product Development</h3>
-                    <p class="text-small mb-0" style="color: var(--clr-text-soft); line-height: 1.7;">Formulation, process design, and scale-up — ensuring market-ready safety from launch.</p>
+
+                <!-- IPM System Design -->
+                <div class="card capability-card reveal" style="padding: var(--sp-2xl); text-align: center; transition-delay: 0.1s; --card-color: var(--clr-primary);">
+                    <i class="fas fa-bug mb-lg" style="font-size: 2.2rem; color: var(--clr-primary);"></i>
+                    <h3 style="font-size: 1.4rem;" class="mb-md">Design and Implementation of IPM</h3>
+                    <p style="color: var(--clr-text-soft); line-height: 1.8; font-size: 0.95rem;">An Integrated Pest Management (IPM) system focuses on long-term prevention through a combination of techniques such as sanitation, exclusion, and monitoring. This proactive approach protects food integrity and ensures compliance with safety audits.</p>
                 </div>
-                <div class="card capability-card reveal" style="padding: var(--sp-xl); text-align: center; transition-delay: 0.2s; --card-color: var(--clr-primary);">
-                    <i class="fas fa-bug mb-lg" style="font-size: 2rem; color: var(--clr-primary);"></i>
-                    <h3 style="font-size: 1.25rem;" class="mb-sm">IPM System Design</h3>
-                    <p class="text-small mb-0" style="color: var(--clr-text-soft); line-height: 1.7;">Implementation of Integrated Pest Management systems tailored to high-risk food facilities.</p>
+
+                <!-- Continual Improvement Projects -->
+                <div class="card capability-card reveal" style="padding: var(--sp-2xl); text-align: center; transition-delay: 0.2s; --card-color: var(--clr-mint);">
+                    <i class="fas fa-chart-line mb-lg" style="font-size: 2.2rem; color: var(--clr-mint);"></i>
+                    <h3 style="font-size: 1.4rem;" class="mb-md">Continual Improvement Projects</h3>
+                    <p style="color: var(--clr-text-soft); line-height: 1.8; font-size: 0.95rem;">These projects utilize data-driven methodologies like Lean Six Sigma to enhance efficiency and product quality incrementally. By identifying bottlenecks and reducing process variability, businesses can lower operational costs.</p>
                 </div>
-                <div class="card capability-card reveal" style="padding: var(--sp-xl); text-align: center; transition-delay: 0.3s; --card-color: var(--clr-yellow);">
-                    <i class="fas fa-calendar-check mb-lg" style="font-size: 2rem; color: var(--clr-yellow);"></i>
-                    <h3 style="font-size: 1.25rem;" class="mb-sm">Shelf Life Validation</h3>
-                    <p class="text-small mb-0" style="color: var(--clr-text-soft); line-height: 1.7;">Scientific study design and validation supporting accurate and safe date declarations.</p>
+            </div>
+
+            <div class="grid grid-2 mt-xl" style="gap: var(--sp-xl); max-width: 850px; margin-left: auto; margin-right: auto;">
+                <!-- Cloud Kitchen Layout Design -->
+                <div class="card capability-card reveal" style="padding: var(--sp-2xl); text-align: center; transition-delay: 0.3s; --card-color: var(--clr-purple);">
+                    <i class="fas fa-utensils mb-lg" style="font-size: 2.2rem; color: var(--clr-purple);"></i>
+                    <h3 style="font-size: 1.4rem;" class="mb-md">Cloud Kitchen Layout Design</h3>
+                    <p style="color: var(--clr-text-soft); line-height: 1.8; font-size: 0.95rem;">Unlike traditional restaurants, cloud kitchen design prioritizes delivery efficiency and throughput in compact spaces. The layout focuses on optimized workstations, seamless packing flows, and dedicated dispatch zones to maximize equipment utilization.</p>
                 </div>
-                <div class="card capability-card reveal" style="padding: var(--sp-xl); text-align: center; transition-delay: 0.4s; --card-color: var(--clr-purple);">
-                    <i class="fas fa-utensils mb-lg" style="font-size: 2rem; color: var(--clr-purple);"></i>
-                    <h3 style="font-size: 1.25rem;" class="mb-sm">Cloud Kitchen Layouts</h3>
-                    <p class="text-small mb-0" style="color: var(--clr-text-soft); line-height: 1.7;">Efficient facility designs for delivery-focused businesses ensuring FSSAI compliance.</p>
-                </div>
-                <div class="card capability-card reveal" style="padding: var(--sp-xl); text-align: center; transition-delay: 0.5s; --card-color: var(--clr-ocean);">
-                    <i class="fas fa-users mb-lg" style="font-size: 2rem; color: var(--clr-ocean);"></i>
-                    <h3 style="font-size: 1.25rem;" class="mb-sm">Technical Recruitment</h3>
-                    <p class="text-small mb-0" style="color: var(--clr-text-soft); line-height: 1.7;">Expert consultation on building high-performance in-house food safety and quality teams.</p>
+
+                <!-- Shelf-Life Validation -->
+                <div class="card capability-card reveal" style="padding: var(--sp-2xl); text-align: center; transition-delay: 0.4s; --card-color: var(--clr-yellow);">
+                    <i class="fas fa-calendar-check mb-lg" style="font-size: 2.2rem; color: var(--clr-yellow);"></i>
+                    <h3 style="font-size: 1.4rem;" class="mb-md">Shelf-Life Validation</h3>
+                    <p style="color: var(--clr-text-soft); line-height: 1.8; font-size: 0.95rem;">This process determines the period during which a food product remains safe and retains its quality. Through real-time or accelerated stability testing, validation provides the scientific evidence required for accurate "Best Before" dating.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Technical CTA -->
-    <section class="vibrant-cta-section" style="background: white; padding: var(--sp-2xl) 0;">
-        <div class="container">
-            <div class="glass-cta-container reveal" style="background: var(--grad-primary); padding: var(--sp-3xl); border-radius: var(--radius-2xl); text-align: center; color: white;">
-                <span class="pre-heading" style="color: white; opacity: 0.8;">Infrastructure Mastery</span>
-                <h2 style="color: white; margin-bottom: var(--sp-md); font-size: clamp(2rem, 5vw, 2.8rem);">Building for Food Safety from Day One.</h2>
-                <p class="mb-xl" style="color: rgba(255,255,255,0.9); font-size: 1.12rem; max-width: 600px; margin-left: auto; margin-right: auto;">Whether you're setting up a new facility or solving a complex operational challenge — our technical team is ready.</p>
-                <div class="flex flex-center" style="gap: var(--sp-lg); flex-wrap: wrap;">
-                    <a href="../contact.html" class="btn btn-white btn-large">Discuss Your Project</a>
-                </div>
-            </div>
+    <section class="section-xl" style="background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-ocean) 100%);">
+        <div class="container text-center reveal">
+            <span class="pre-heading" style="color: white; opacity: 0.8; letter-spacing: 0.2em; display: block; margin-bottom: var(--sp-sm);">Infrastructure Mastery</span>
+            <h2 style="color: white; margin-bottom: var(--sp-md); font-size: clamp(2rem, 5vw, 2.8rem);">Building for Food Safety from Day One.</h2>
+            <p class="mb-xl" style="color: rgba(255,255,255,0.85); font-size: 1.12rem; max-width: 600px; margin-left: auto; margin-right: auto;">Whether you're setting up a new facility or solving a complex operational challenge — our technical team is ready.</p>
+            <a href="../contact.html" class="btn" style="background: white; color: var(--clr-primary); font-weight: 800; padding: 16px 36px;">Discuss Your Project</a>
         </div>
     </section>
 

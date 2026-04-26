@@ -74,10 +74,11 @@ function getHeaderTemplate(prefix) {
                                 <span class="nav-art-symbol"><i class="fas fa-chalkboard-teacher"></i></span> Trainings
                             </a>
                             <div class="nav-dropdown">
-                                <a href="${prefix}trainings/index.html">FoSTaC Trainings</a>
-                                <a href="${prefix}trainings/index.html#haccp">HACCP Trainings</a>
-                                <a href="${prefix}trainings/index.html#iso">ISO Trainings</a>
-                                <a href="${prefix}trainings/index.html#fssc">FSSC Trainings</a>
+                                <a href="${prefix}trainings/index.html#regulatory">Regulatory Trainings</a>
+                                <a href="${prefix}trainings/index.html#iso">FSMS Trainings</a>
+                                <a href="${prefix}trainings/index.html#audit">Audit Trainings</a>
+                                <a href="${prefix}trainings/index.html#engineering">Engineering Trainings</a>
+                                <a href="${prefix}trainings/index.html#fostac">FoSTaC Trainings</a>
                                 <a href="${prefix}trainings/index.html#brcgs">BRCGS Trainings</a>
                                 <a href="${prefix}trainings/index.html#custom">Custom Tailored</a>
                             </div>
@@ -307,136 +308,484 @@ function getHeaderTemplate(prefix) {
             </style>
         </header>
 
-        <!-- Mobile Overlay -->
-        <div class="mobile-menu-overlay-glass" id="mobile-menu-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(255, 183, 77, 0.95), rgba(255, 138, 101, 0.98)); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); z-index: 999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: all 0.5s ease;">
-            <div class="mobile-menu-content" style="padding: 80px 0; text-align: center; overflow-y: auto; max-height: 100vh; width: 100%;">
-                <nav style="display: flex; flex-direction: column; gap: var(--sp-lg); padding-bottom: 50px;">
-                    <a href="${prefix}index.html" style="font-size: 1.5rem; font-weight: 800; color: white; text-decoration: none;">HOME</a>
-                    
-                    <div style="color: white;">
-                        <span style="font-size: 1.5rem; font-weight: 800; display: block; margin-bottom: 10px;">ABOUT US</span>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <a href="${prefix}company.html" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Overview</a>
-                            <a href="${prefix}company.html#founder" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Founder</a>
-                            <a href="${prefix}company.html#vision" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Vision, Mission & Values</a>
-                            <a href="${prefix}company.html#timeline" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Our Evolution</a>
-                            <a href="${prefix}company.html#accreditations" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Accreditations & Affiliations</a>
-                            <a href="${prefix}clientele.html" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Esteemed Clients</a>
-                        </div>
-                    </div>
+        <!-- Mobile Cyber-Grid Menu -->
+        <div class="cyber-menu-overlay" id="mobile-menu-overlay">
+            <!-- Animated background mesh -->
+            <div class="cyber-mesh-bg"></div>
+            <div class="cyber-grid-lines"></div>
 
-                    <div style="color: white;">
-                        <span style="font-size: 1.5rem; font-weight: 800; display: block; margin-bottom: 10px;">CORE SERVICES</span>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <a href="${prefix}services/fssai.html" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">FSSAI Regulatory Support</a>
-                            <a href="${prefix}services/iso22000.html" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">FSMS Consultancy</a>
-                            <a href="${prefix}services/audits.html" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Audits</a>
-                            <a href="${prefix}services/technical.html" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Engineering Services</a>
-                            <a href="${prefix}services/technical.html#technical" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Technical Support</a>
-                        </div>
-                    </div>
+            <!-- Close button -->
+            <button class="cyber-close-btn" id="cyber-close-btn" aria-label="Close Menu">
+                <span></span><span></span>
+            </button>
 
-                    <div style="color: white;">
-                        <span style="font-size: 1.5rem; font-weight: 800; display: block; margin-bottom: 10px;">TRAININGS</span>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <a href="${prefix}trainings/index.html" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">FoSTaC Trainings</a>
-                            <a href="${prefix}trainings/index.html#haccp" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">HACCP Trainings</a>
-                            <a href="${prefix}trainings/index.html#iso" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">ISO Trainings</a>
-                            <a href="${prefix}trainings/index.html#fssc" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">FSSC Trainings</a>
-                            <a href="${prefix}trainings/index.html#brcgs" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">BRCGS Trainings</a>
-                            <a href="${prefix}trainings/index.html#custom" style="font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none;">Custom Tailored Trainings</a>
-                        </div>
-                    </div>
+            <!-- Logo at top -->
+            <div class="cyber-menu-logo">
+                <img src="${prefix}assets/images/Swasthya-Food-Consulting.png" alt="Swasthya">
+                <span>Swasthya</span>
+            </div>
 
-                    <a href="${prefix}blog.html" style="font-size: 1.5rem; font-weight: 800; color: white; text-decoration: none;">BLOG</a>
-                    <div style="margin-top: 10px;">
-                        <a href="${prefix}contact.html" style="font-size: 1.2rem; font-weight: 800; color: white; text-decoration: none; padding: 12px 30px; border: 2px solid white; border-radius: 50px; display: inline-block;">CONTACT US</a>
-                    </div>
-                </nav>
+            <!-- Main nav tiles -->
+            <div class="cyber-tiles-grid">
+                <a href="${prefix}index.html" class="cyber-tile" style="--tile-color: #00f2ff; --delay: 0.05s">
+                    <div class="cyber-tile-glow"></div>
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="${prefix}company.html" class="cyber-tile" style="--tile-color: #FB8C00; --delay: 0.1s">
+                    <div class="cyber-tile-glow"></div>
+                    <i class="fas fa-users"></i>
+                    <span>About Us</span>
+                </a>
+                <a href="${prefix}services/index.html" class="cyber-tile" style="--tile-color: #7c3aed; --delay: 0.15s">
+                    <div class="cyber-tile-glow"></div>
+                    <i class="fas fa-layer-group"></i>
+                    <span>Services</span>
+                </a>
+                <a href="${prefix}trainings/index.html" class="cyber-tile" style="--tile-color: #10b981; --delay: 0.2s">
+                    <div class="cyber-tile-glow"></div>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Trainings</span>
+                </a>
+                <a href="${prefix}clientele.html" class="cyber-tile" style="--tile-color: #f43f5e; --delay: 0.25s">
+                    <div class="cyber-tile-glow"></div>
+                    <i class="fas fa-building"></i>
+                    <span>Clients</span>
+                </a>
+                <a href="${prefix}blog.html" class="cyber-tile" style="--tile-color: #f59e0b; --delay: 0.3s">
+                    <div class="cyber-tile-glow"></div>
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+            </div>
+
+            <!-- Sub links row -->
+            <div class="cyber-sub-links">
+                <a href="${prefix}company.html#founder">Founder</a>
+                <a href="${prefix}company.html#timeline">Our Evolution</a>
+                <a href="${prefix}services/fssai.html">FSSAI</a>
+                <a href="${prefix}services/audits.html">Audits</a>
+                <a href="${prefix}company.html#accreditations">Accreditations</a>
+            </div>
+
+            <!-- CTA + social -->
+            <div class="cyber-footer-cta">
+                <a href="${prefix}contact.html" class="cyber-contact-btn">
+                    <i class="fas fa-paper-plane"></i> Contact Us
+                </a>
+                <div class="cyber-social">
+                    <a href="https://www.linkedin.com/in/thammaiah-n-d-b9468925" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/919980182600" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
+
+        <style>
+        /* =============================================
+           CYBER-GRID MOBILE MENU
+        ============================================= */
+        .cyber-menu-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: #04040f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            overflow: hidden;
+        }
+        .cyber-menu-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Animated mesh bg */
+        .cyber-mesh-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(-45deg, #04040f, #0a0a2a, #06061a, #0d0d20);
+            background-size: 400% 400%;
+            animation: cyberMeshFlow 12s ease infinite;
+            z-index: 0;
+        }
+        @keyframes cyberMeshFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Grid lines overlay */
+        .cyber-grid-lines {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,242,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,242,255,0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+
+        /* Close button */
+        .cyber-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(0,242,255,0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .cyber-close-btn:hover { background: rgba(0,242,255,0.15); border-color: #00f2ff; }
+        .cyber-close-btn span {
+            position: absolute;
+            width: 18px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+        }
+        .cyber-close-btn span:first-child { transform: rotate(45deg); }
+        .cyber-close-btn span:last-child  { transform: rotate(-45deg); }
+
+        /* Logo */
+        .cyber-menu-logo {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cyber-menu-logo img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+        .cyber-menu-logo span {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Main tile grid */
+        .cyber-tiles-grid {
+            position: relative;
+            z-index: 5;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .cyber-tile {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 22px 10px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            text-decoration: none;
+            color: white;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            /* Spring pop animation on open */
+            opacity: 0;
+            transform: scale(0.7) translateY(20px);
+        }
+        .cyber-menu-overlay.active .cyber-tile {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            transition-delay: var(--delay, 0s);
+        }
+        .cyber-tile:hover, .cyber-tile:active {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--tile-color);
+            transform: scale(1.06);
+            box-shadow: 0 0 20px rgba(0,0,0,0.4), 0 0 30px var(--tile-color), inset 0 0 15px rgba(255,255,255,0.03);
+        }
+
+        .cyber-tile-glow {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--tile-color);
+            filter: blur(20px);
+            opacity: 0.3;
+            border-radius: 50%;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .cyber-tile:hover .cyber-tile-glow { opacity: 0.6; }
+
+        .cyber-tile i {
+            font-size: 1.6rem;
+            color: var(--tile-color);
+            filter: drop-shadow(0 0 8px var(--tile-color));
+            transition: transform 0.3s ease;
+        }
+        .cyber-tile:hover i { transform: scale(1.2) rotate(-5deg); }
+
+        .cyber-tile span {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.85);
+        }
+
+        /* Sub links */
+        .cyber-sub-links {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            max-width: 380px;
+        }
+        .cyber-sub-links a {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            padding: 5px 14px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 100px;
+            transition: all 0.25s ease;
+            letter-spacing: 0.05em;
+        }
+        .cyber-sub-links a:hover {
+            color: #00f2ff;
+            border-color: rgba(0,242,255,0.4);
+            background: rgba(0,242,255,0.06);
+        }
+
+        /* Footer CTA */
+        .cyber-footer-cta {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+        .cyber-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, #FB8C00, #FF6B6B);
+            color: white;
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 100px;
+            letter-spacing: 0.05em;
+            box-shadow: 0 8px 25px rgba(251,140,0,0.35);
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .cyber-menu-overlay.active .cyber-contact-btn {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.4s;
+        }
+        .cyber-contact-btn:hover { transform: scale(1.05); box-shadow: 0 12px 35px rgba(251,140,0,0.5); }
+
+        .cyber-social {
+            display: flex;
+            gap: 12px;
+        }
+        .cyber-social a {
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .cyber-social a:hover {
+            background: rgba(0,242,255,0.1);
+            border-color: #00f2ff;
+            color: #00f2ff;
+        }
+        </style>
     `;
 }
 
 function getFooterTemplate(prefix) {
     return `
-        <footer class="footer-elite tex-bg" style="background-color: #12113a; padding: var(--sp-3xl) 0 var(--sp-xl); color: white; margin-top: auto; position: relative;">
-            <div class="container" style="position: relative; z-index: 2;">
-                <div class="footer-grid-elite" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: var(--sp-2xl);">
-                     <div class="footer-brand">
-                        <img src="${prefix}assets/images/Swasthya-Food-Consulting.png" alt="Swasthya" style="filter: brightness(0) invert(1); height: 50px; margin-bottom: var(--sp-md);">
-                        <p class="text-small" style="color: rgba(255,255,255,0.7); max-width: 300px; font-size: 0.85rem; line-height: 1.8;">
-                            A premium one-stop solution for food manufacturers and food service establishments. Established 2022 in Bengaluru. Guiding organizations through complex compliance and quality assurance.
-                        </p>
-                        <div style="margin-top: 1.8rem; display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span style="font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border: 1px solid rgba(255,255,255,0.15); border-radius: 100px; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.05);">QCI</span>
-                            <span style="font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border: 1px solid rgba(255,255,255,0.15); border-radius: 100px; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.05);">APEDA</span>
-                            <span style="font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border: 1px solid rgba(255,255,255,0.15); border-radius: 100px; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.05);">FoSTaC</span>
-                            <span style="font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border: 1px solid rgba(255,255,255,0.15); border-radius: 100px; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.05);">BRCGS</span>
+        <footer style="background: #0d0c2e; color: white; padding: 40px 0 0; font-family: var(--ff-body, sans-serif);">
+            <div class="container">
+
+                <!-- Top row -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1.4fr; gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.07);">
+
+                    <!-- Brand -->
+                    <div>
+                        <img src="${prefix}assets/images/Swasthya-Food-Consulting.png" alt="Swasthya" style="filter: brightness(0) invert(1); height: 38px; margin-bottom: 10px; display: block;">
+                        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin: 0 0 12px;">Bengaluru's premier BRCGS &amp; FoSTaC partner.<br>Est. 2022 &nbsp;·&nbsp; 135+ global partners.</p>
+                        <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+                            <span style="font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: rgba(255,255,255,0.55);">QCI</span>
+                            <span style="font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: rgba(255,255,255,0.55);">APEDA</span>
+                            <span style="font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: rgba(255,255,255,0.55);">FoSTaC</span>
+                            <span style="font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: rgba(255,255,255,0.55);">BRCGS</span>
                         </div>
                     </div>
-                    
-                    <div class="footer-links">
-                        <h4 style="color: white; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--sp-lg);">Solutions</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem;"><a href="${prefix}services/fssai.html" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--clr-mint)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">FSSAI Regulatory</a></li>
-                            <li style="margin-bottom: 0.8rem;"><a href="${prefix}services/iso22000.html" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--clr-mint)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">FSMS Consultancy</a></li>
-                            <li style="margin-bottom: 0.8rem;"><a href="${prefix}services/audits.html" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--clr-mint)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Audits</a></li>
-                            <li style="margin-bottom: 0.8rem;"><a href="${prefix}services/technical.html" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--clr-mint)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Engineering Services</a></li>
-                        </ul>
+
+                    <!-- Solutions -->
+                    <div>
+                        <p style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); margin: 0 0 12px;">Solutions</p>
+                        <div style="display: flex; flex-direction: column; gap: 7px;">
+                            <a href="${prefix}services/fssai.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">FSSAI Regulatory</a>
+                            <a href="${prefix}services/iso22000.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">FSMS Consultancy</a>
+                            <a href="${prefix}services/audits.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Audits</a>
+                            <a href="${prefix}services/technical.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Engineering</a>
+                            <a href="${prefix}trainings/index.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">FoSTaC Trainings</a>
+                            <a href="${prefix}trainings/index.html#brcgs" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">BRCGS Trainings</a>
+                        </div>
                     </div>
-                    
-                    <div class="footer-links">
-                        <h4 style="color: white; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--sp-lg);">Trainings</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem;"><a href="${prefix}trainings/index.html" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--clr-yellow)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">FoSTaC Trainings</a></li>
-                            <li style="margin-bottom: 0.8rem;"><a href="${prefix}trainings/index.html#haccp" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--clr-yellow)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">HACCP Trainings</a></li>
-                            <li style="margin-bottom: 0.8rem;"><a href="${prefix}trainings/index.html#iso" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--clr-yellow)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">ISO &amp; FSSC Trainings</a></li>
-                            <li style="margin-bottom: 0.8rem;"><a href="${prefix}trainings/index.html#brcgs" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--clr-yellow)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">BRCGS Trainings</a></li>
-                        </ul>
+
+                    <!-- Company -->
+                    <div>
+                        <p style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); margin: 0 0 12px;">Company</p>
+                        <div style="display: flex; flex-direction: column; gap: 7px;">
+                            <a href="${prefix}company.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">About Us</a>
+                            <a href="${prefix}company.html#founder" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Founder</a>
+                            <a href="${prefix}company.html#timeline" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Our Evolution</a>
+                            <a href="${prefix}clientele.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Clients</a>
+                            <a href="${prefix}blog.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a>
+                            <a href="${prefix}contact.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Contact</a>
+                        </div>
                     </div>
-                    
-                    <div class="footer-contact">
-                        <h4 style="color: white; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--sp-lg);">Contact HQ</h4>
-                        <p class="text-small" style="font-size: 0.85rem; margin-bottom: var(--sp-sm); line-height: 1.6; color: rgba(255,255,255,0.85);">
-                            <i class="fas fa-map-marker-alt" style="margin-right: 8px; color: var(--clr-coral);"></i>
-                            #102, Bluejay Atmosphere-2, Karihobanahalli, Andrahalli Main Road, Bengaluru, 560073
+
+                    <!-- Contact -->
+                    <div>
+                        <p style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); margin: 0 0 12px;">Contact HQ</p>
+                        <p style="font-size: 0.78rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0 0 8px;">
+                            <i class="fas fa-map-marker-alt" style="color: #FB8C00; margin-right: 6px;"></i>
+                            Karihobanahalli, Bengaluru – 560073
                         </p>
-                        <p class="text-small" style="font-size: 0.85rem; margin-bottom: var(--sp-sm); color: rgba(255,255,255,0.85);"><i class="fas fa-envelope" style="margin-right: 8px; color: var(--clr-coral);"></i> thammaiah.nd@swasthyafoodconsulting.com</p>
-                        <p class="text-small" style="font-size: 0.8rem; margin-bottom: var(--sp-sm); color: rgba(255,255,255,0.5); padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1);">
-                            <i class="fas fa-file-invoice" style="margin-right: 8px; color: var(--clr-text-muted);"></i> GSTIN: 29AJFPD0474P1ZV
+                        <p style="font-size: 0.78rem; color: rgba(255,255,255,0.6); margin: 0 0 8px; word-break: break-all;">
+                            <i class="fas fa-envelope" style="color: #FB8C00; margin-right: 6px;"></i>
+                            thammaiah.nd@swasthyafoodconsulting.com
                         </p>
-                        <div class="flex" style="gap: 12px; margin-top: var(--sp-md); display: flex;">
-                             <a href="https://www.linkedin.com/in/thammaiah-n-d-b9468925" target="_blank" style="width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: white; transition: background 0.3s ease;" onmouseover="this.style.background='var(--clr-ocean)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'"><i class="fab fa-linkedin-in"></i></a>
-                             <a href="#" style="width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: white; transition: background 0.3s ease;" onmouseover="this.style.background='var(--clr-ocean)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'"><i class="fab fa-facebook-f"></i></a>
+                        <p style="font-size: 0.72rem; color: rgba(255,255,255,0.35); margin: 0 0 14px;">
+                            <i class="fas fa-file-invoice" style="margin-right: 6px;"></i>GSTIN: 29AJFPD0474P1ZV
+                        </p>
+                        <div style="display: flex; gap: 8px;">
+                            <a href="https://www.linkedin.com/in/thammaiah-n-d-b9468925" target="_blank" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.background='rgba(10,102,194,0.3)';this.style.color='white'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.6)'">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/919980182600" target="_blank" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.background='rgba(37,211,102,0.3)';this.style.color='white'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.6)'">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--sp-xl); margin-top: var(--sp-2xl); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
-                    <div class="flex" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-md);">
-                        <p>&copy; 2026 Swasthya Food Consulting. Bengaluru, India. <br> <span style="font-size: 0.75rem; opacity: 0.7; margin-top: 6px; display: inline-block;">Designed and Developed by <a href="https://www.folkdrive.in" target="_blank" style="color: var(--clr-mint); text-decoration: none; font-weight: 600;">Folkdrive India Pvt Ltd</a></span></p>
-                        <div class="flex" style="display: flex; gap: var(--sp-lg);">
-                            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Privacy Policy</a>
-                            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Terms of Service</a>
-                        </div>
+
+                <!-- Bottom bar -->
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 16px 0;">
+                    <p style="font-size: 0.72rem; color: rgba(255,255,255,0.3); margin: 0;">
+                        &copy; 2026 Swasthya Food Consulting &nbsp;·&nbsp;
+                        <a href="https://www.folkdrive.in" target="_blank" style="color: #4DB6AC; text-decoration: none; font-weight: 600;">Folkdrive India Pvt Ltd</a>
+                    </p>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="#" style="font-size: 0.72rem; color: rgba(255,255,255,0.3); text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Privacy Policy</a>
+                        <a href="#" style="font-size: 0.72rem; color: rgba(255,255,255,0.3); text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Terms</a>
                     </div>
                 </div>
+
             </div>
+
+            <!-- Mobile responsive footer -->
+            <style>
+            @media (max-width: 768px) {
+                .container > div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+                    grid-template-columns: 1fr 1fr !important;
+                    gap: 24px !important;
+                }
+            }
+            @media (max-width: 480px) {
+                .container > div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+            </style>
         </footer>
     `;
 }
 
 function getFloatingActionsTemplate(prefix) {
     return `
-        <div class="floating-actions-elite" style="position: fixed; bottom: 30px; right: 30px; z-index: 100; display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
-            <a href="https://wa.me/918105787342" target="_blank" style="position: relative; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; box-shadow: 0 8px 24px rgba(37,211,102,0.4); transition: var(--transition-smooth);" title="Chat on WhatsApp: +91 81057 87342">
-                <span class="fab-ring"></span>
-                <i class="fab fa-whatsapp" style="position: relative; z-index: 2;"></i>
+        <div class="floating-actions-elite" style="position: fixed; bottom: 30px; left: 30px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+            <a href="https://wa.me/918105787342" target="_blank" class="whatsapp-btn-animated" title="Chat on WhatsApp: +91 81057 87342">
+                <span class="whatsapp-pulse"></span>
+                <i class="fab fa-whatsapp"></i>
             </a>
         </div>
         <style>
-            .floating-actions-elite a:hover { transform: scale(1.12) translateY(-3px); box-shadow: 0 14px 32px rgba(37,211,102,0.5) !important; }
+            .whatsapp-btn-animated {
+                position: relative;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: #25D366;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.85rem;
+                box-shadow: 0 10px 25px rgba(37,211,102,0.3);
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                text-decoration: none;
+                z-index: 2;
+            }
+            .whatsapp-btn-animated:hover {
+                transform: scale(1.15) rotate(10deg);
+                box-shadow: 0 15px 35px rgba(37,211,102,0.45);
+            }
+            .whatsapp-pulse {
+                position: absolute;
+                top: 0; left: 0; width: 100%; height: 100%;
+                background: #25D366;
+                border-radius: 50%;
+                z-index: -1;
+                opacity: 0.7;
+                animation: waPulse 2.5s infinite;
+            }
+            @keyframes waPulse {
+                0% { transform: scale(1); opacity: 0.7; }
+                50% { transform: scale(1.5); opacity: 0; }
+                100% { transform: scale(1); opacity: 0; }
+            }
         </style>
     `;
 }
@@ -465,51 +814,49 @@ function initHeader() {
     const header = document.getElementById('main-header');
     const mobileToggle = document.getElementById('mobile-toggle');
     const overlay = document.getElementById('mobile-menu-overlay');
+    const cyberCloseBtn = document.getElementById('cyber-close-btn');
 
     if (!header) return;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        header.classList.toggle('scrolled', window.scrollY > 40);
     });
+
+    function openMenu() {
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        const spans = mobileToggle ? mobileToggle.querySelectorAll('span') : [];
+        if (spans[0]) spans[0].style.transform = 'translateY(8px) rotate(45deg)';
+        if (spans[1]) spans[1].style.opacity = '0';
+        if (spans[2]) spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+    }
+
+    function closeMenu() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        const spans = mobileToggle ? mobileToggle.querySelectorAll('span') : [];
+        if (spans[0]) spans[0].style.transform = 'none';
+        if (spans[1]) { spans[1].style.opacity = '1'; spans[1].style.transform = 'none'; }
+        if (spans[2]) spans[2].style.transform = 'none';
+    }
 
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
-            overlay.classList.toggle('active');
-            const spans = mobileToggle.querySelectorAll('span');
-            if (overlay.classList.contains('active')) {
-                overlay.style.opacity = '1';
-                overlay.style.pointerEvents = 'all';
-                if (spans[0]) spans[0].style.transform = 'translateY(8px) rotate(45deg)';
-                if (spans[1]) spans[1].style.opacity = '0';
-                if (spans[2]) spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
-                document.body.style.overflow = 'hidden';
-            } else {
-                overlay.style.opacity = '0';
-                overlay.style.pointerEvents = 'none';
-                if (spans[0]) spans[0].style.transform = 'none';
-                if (spans[1]) { spans[1].style.opacity = '1'; spans[1].style.transform = 'none'; }
-                if (spans[2]) spans[2].style.transform = 'none';
-                document.body.style.overflow = 'auto';
-            }
+            overlay.classList.contains('active') ? closeMenu() : openMenu();
         });
     }
 
-    overlay.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            overlay.classList.remove('active');
-            overlay.style.opacity = '0';
-            overlay.style.pointerEvents = 'none';
-            document.body.style.overflow = 'auto';
-            const spans = mobileToggle.querySelectorAll('span');
-            if (spans[0]) spans[0].style.transform = 'none';
-            if (spans[1]) spans[1].style.opacity = '1';
-            if (spans[2]) spans[2].style.transform = 'none';
+    // Close via the dedicated X button inside the cyber menu
+    if (cyberCloseBtn) {
+        cyberCloseBtn.addEventListener('click', closeMenu);
+    }
+
+    // Close when any link inside the overlay is clicked
+    if (overlay) {
+        overlay.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
-    });
+    }
 }
 
 // Run injection

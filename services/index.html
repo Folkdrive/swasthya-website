@@ -21,20 +21,58 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Mobile-First Futuristic Services Styles -->
+    <style>
+        @media (max-width: 768px) {
+            /* Collapse Service Grids */
+            .grid-2 { grid-template-columns: 1fr !important; gap: var(--sp-xl) !important; }
+            
+            /* Typography Scaling */
+            .hero-elite { padding-top: 120px !important; padding-bottom: 60px !important; }
+            h1 { font-size: clamp(2.2rem, 6vw, 4.5rem) !important; }
+            h2 { font-size: clamp(1.8rem, 6vw, 2.2rem) !important; }
+            .section-xl { padding: var(--sp-2xl) 0 !important; }
+
+            /* Reorder text to top for mobile reading */
+            .section-xl .grid-2 > div[style*="order: 2"] { order: 1 !important; }
+            .section-xl .grid-2 > div[style*="order: 1"] { order: 2 !important; }
+
+            /* Button fixes */
+            .btn { width: 100%; text-align: center; }
+            .hero-wave { height: 40px; }
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
     <!-- Page Header (Radiant & Atmospheric) -->
-    <section class="hero-elite" style="min-height: 50vh;">
-        <div class="hero-bg-accent" style="background: radial-gradient(circle at 70% 30%, rgba(0, 137, 123, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.1) 0%, transparent 40%);"></div>
+    <section class="hero-elite" style="min-height: 50vh; background: linear-gradient(135deg, #06061a 0%, #0a1f1f 60%, #12113a 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(90, 79, 207, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.1) 0%, transparent 40%); pointer-events: none;"></div>
+        
         <div class="container reveal">
-            <nav aria-label="breadcrumb" style="font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: var(--sp-lg);">
-                <a href="../index.html" style="color: white; opacity: 0.8; text-decoration: none;">Home</a> <span style="margin: 0 8px;">/</span> Services
+            <nav aria-label="breadcrumb" style="font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: var(--sp-lg);">
+                <a href="../index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a> <span style="margin: 0 8px; opacity: 0.4;">/</span> <span style="color: #00f2ff;">Services</span>
             </nav>
-            <span class="pre-heading" style="color: var(--clr-primary); brightness: 1.3;">Our Service Portfolio</span>
-            <h1 class="mb-lg radiant-text" style="color: white; line-height: 1.1;">Complete Food Safety.</h1>
-            <p class="text-lead" style="max-width: 700px; color: rgba(255,255,255,0.9); line-height: 1.8;">From FSSAI registration to global standards, Swasthya is your single partner for all food safety needs.</p>
+            <span class="pre-heading" style="color: #4DB6AC; letter-spacing: 0.2em;">Our Service Portfolio</span>
+            <h1 class="mb-lg radiant-text" style="color: white; line-height: 1.1; font-size: clamp(2.2rem, 6vw, 4.5rem);">Complete <br><span style="background: linear-gradient(135deg, #00f2ff, #3949AB); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Food Safety.</span></h1>
+            <p class="text-lead" style="max-width: 680px; color: rgba(255,255,255,0.8); line-height: 1.8; font-size: clamp(1rem, 2.5vw, 1.2rem);">From FSSAI registration to global standards, Swasthya is your single partner for all food safety needs.</p>
+        </div>
+
+        <!-- ─── Wave Bottom (Animated Elite) ─── -->
+        <div class="hero-wave">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255, 255, 255, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255, 255, 255, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255, 255, 255, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                </g>
+            </svg>
         </div>
     </section>
 
@@ -169,16 +207,12 @@
     </section>
 
     <!-- Final CTA Banner (Synced with Index) -->
-    <section class="vibrant-cta-section">
-        <div class="container">
-            <div class="glass-cta-container reveal">
-                <span class="pre-heading" style="color: var(--clr-primary); brightness: 1.5;">Personalized Compliance Solutions</span>
-                <h2 style="color: white; margin-bottom: var(--sp-md); font-size: 2.5rem;">Which service does your business need?</h2>
-                <p class="text-balance mb-xl" style="color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Our experts are ready to assess your requirements and recommend the best path to operational excellence.</p>
-                <div class="flex flex-center" style="gap: var(--sp-lg); flex-wrap: wrap;">
-                    <a href="../contact.html" class="btn btn-primary btn-large" style="padding: 16px 40px; box-shadow: 0 10px 30px rgba(0, 150, 136, 0.4);">Request a Consultation</a>
-                </div>
-            </div>
+    <section class="section-xl" style="background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-ocean) 100%);">
+        <div class="container text-center reveal">
+            <span class="pre-heading" style="color: white; opacity: 0.8; letter-spacing: 0.2em; display: block; margin-bottom: var(--sp-sm);">Personalized Compliance Solutions</span>
+            <h2 style="color: white; margin-bottom: var(--sp-md); font-size: 2.5rem;">Which service does your business need?</h2>
+            <p class="text-balance mb-xl" style="color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Our experts are ready to assess your requirements and recommend the best path to operational excellence.</p>
+            <a href="../contact.html" class="btn" style="background: white; color: var(--clr-primary); font-weight: 800; padding: 16px 36px;">Request a Consultation</a>
         </div>
     </section>
 
