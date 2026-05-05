@@ -39,7 +39,9 @@
             }
 
             /* Our Story & Founder Sections */
+            .hero-elite { padding-top: 130px !important; padding-bottom: 60px !important; }
             .section-xl { padding: var(--sp-2xl) 0 !important; }
+
             h2 { font-size: clamp(1.8rem, 6vw, 2.2rem) !important; }
             .founder-badge-top { position: relative !important; top: 0 !important; right: 0 !important; margin-top: -20px; display: inline-block; margin-bottom: var(--sp-md); }
 
@@ -88,7 +90,9 @@
     <div id="header-placeholder"></div>
 
     <!-- Page Hero -->
-    <section style="min-height: 50vh; background: linear-gradient(135deg, #06061a 0%, #0a1f1f 60%, #12113a 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
+    <section class="hero-elite" style="min-height: 50vh; background: linear-gradient(135deg, #0f2b44 0%, #0d3535 60%, #1e2060 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
+
+
         <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(90, 79, 207, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.1) 0%, transparent 40%); pointer-events: none;"></div>
         <div class="container reveal">
             <nav aria-label="breadcrumb" style="font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: var(--sp-lg);">
@@ -141,7 +145,7 @@
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s;">
                     <div style="position: relative;">
-                        <img src="assets/images/stock/amoon-ra-n8vDuIpGb0c-unsplash.jpg" alt="Food safety consultation in progress" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite);" loading="lazy">
+                        <img src="assets/images/stock/Food_Industry_1_optimized.jpg" alt="Food safety consultation in progress" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite);" loading="lazy">
                         <div style="position: absolute; bottom: -20px; right: -20px; width: 150px; height: 150px; background: rgba(90, 79, 207, 0.1); border-radius: 50%; filter: blur(30px);"></div>
                     </div>
                 </div>
@@ -373,55 +377,61 @@
     </section>
 
     <!-- Founder Authority Block (Synced with Index) -->
-    <section id="founder" class="founder-section section-xl tex-bg" style="position: relative; overflow: hidden;">
-        <div class="founder-glow"></div>
+    <section id="founder" class="founder-section section-xl tex-bg" style="padding: var(--sp-3xl) 0; overflow: hidden; position: relative; background: #fff;">
+        <div class="elite-mesh-bg"></div>
+        <div class="floral-bg-bold" style="opacity: 0.12;"></div>
+        
+        <!-- ─── Folkdrive Inspired Side Decoration (Right Aligned) ─── -->
+        <div class="side-half-circle-wrap">
+            <div class="side-half-circle rotateme"></div>
+            <div class="side-half-circle-inner rotatemetwo"></div>
+        </div>
 
-        <!-- Decorative Background Orbs -->
-        <div class="founder-bg-element" style="width: 400px; height: 400px; background: var(--clr-primary); top: -100px; left: -100px;"></div>
-        <div class="founder-bg-element" style="width: 300px; height: 300px; background: #FB8C00; bottom: -50px; right: -50px;"></div>
+        <!-- Vibrant Animated Orbs -->
+        <div class="founder-bg-element rotateme" style="width: 500px; height: 500px; background: radial-gradient(circle, rgba(0, 150, 136, 0.2) 0%, transparent 70%); top: -150px; left: -100px; animation-duration: 40s;"></div>
+        <div class="founder-bg-element rotatemetwo" style="width: 400px; height: 400px; background: radial-gradient(circle, rgba(251, 140, 0, 0.15) 0%, transparent 70%); bottom: -100px; right: -50px; animation-duration: 35s;"></div>
+        <div class="founder-bg-element float_up_down" style="width: 200px; height: 200px; background: radial-gradient(circle, rgba(90, 79, 207, 0.2) 0%, transparent 70%); top: 20%; right: 10%; animation-duration: 8s;"></div>
 
-        <div class="container">
-            <div class="grid grid-2" style="gap: var(--sp-3xl); align-items: center;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="grid grid-2" style="gap: var(--sp-3xl); align-items: flex-start;">
                 <div class="reveal" style="text-align: center;">
-                    <div class="founder-portrait-container" style="position: relative; display: inline-block; margin-bottom: var(--sp-xl);">
+                    <div class="founder-portrait-container" style="position: relative; display: inline-block; margin-bottom: var(--sp-lg);">
+                        <!-- Glowing Aura behind portrait -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 110%; height: 110%; background: radial-gradient(circle, rgba(0, 150, 136, 0.1) 0%, transparent 70%); z-index: -1; filter: blur(30px);"></div>
+                        
                         <!-- Rotating Decorative Rings -->
-                        <div class="rotating-ring rotateme" style="width: 110%; height: 110%; top: -5%; left: -5%;"></div>
-                        <div class="rotating-ring rotating-ring-accent rotatemetwo" style="width: 120%; height: 120%; top: -10%; left: -10%;"></div>
+                        <div class="rotating-ring rotateme" style="width: 115%; height: 115%; top: -7.5%; left: -7.5%; border-width: 2px; border-color: rgba(0, 150, 136, 0.3);"></div>
+                        <div class="rotating-ring rotating-ring-accent rotatemetwo" style="width: 125%; height: 125%; top: -12.5%; left: -12.5%; border-width: 1px; opacity: 0.5;"></div>
+                        
+                        <img src="assets/images/Founder-Portrait-Clean.webp" alt="Mr. Thammaiah ND - Founder, Swasthya Food Consulting" style="width: 100%; max-width: 500px; border-radius: var(--radius-lg); box-shadow: 0 30px 60px rgba(0,0,0,0.15), 0 10px 20px rgba(0, 150, 136, 0.1); display: block; position: relative; z-index: 2;" loading="lazy">
 
-                        <img src="assets/images/Founder-Portrait-Clean.webp" alt="Mr. Thammaiah ND - Founder, Swasthya Food Consulting" style="width: 100%; max-width: 480px; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite); display: block; position: relative; z-index: 2;" loading="lazy">
-
-                        <!-- Above Photo Badge -->
-                        <div class="founder-badge-top reveal" style="position: absolute; top: -15px; right: -20px; z-index: 10; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); padding: 8px 16px; border-radius: 40px; border: 1px solid var(--clr-primary); box-shadow: 0 8px 20px rgba(0,0,0,0.1); white-space: nowrap;">
-                            <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--clr-secondary);"><i class="fas fa-certificate" style="color: var(--clr-primary); margin-right: 6px;"></i> Industry Veteran · 22+ Years</span>
+                        <!-- Floating Badges -->
+                        <div class="founder-badge-top reveal" style="position: absolute; top: -20px; right: -30px; z-index: 10; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); padding: 10px 20px; border-radius: 40px; border: 1px solid var(--clr-primary); box-shadow: 0 10px 25px rgba(0,0,0,0.1); white-space: nowrap;">
+                            <span style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--clr-secondary);"><i class="fas fa-certificate" style="color: var(--clr-primary); margin-right: 8px;"></i> Industry Veteran · 22+ Years</span>
                         </div>
                     </div>
 
-                    <!-- ─── REBALANCED STATS GRID (NOW ON LEFT) ─── -->
-                    <div class="grid grid-2" style="gap: var(--sp-md); max-width: 480px; margin: 0 auto;">
-                        <div class="reveal" style="transition-delay: 0.2s; background: linear-gradient(135deg, white 0%, #f0fdfa 100%); border-radius: var(--radius-lg); padding: var(--sp-lg); border: 1px solid rgba(0,150,136,0.1); text-align: center;">
-                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 4px 0; line-height: 1;"><span class="counter" data-target="8+">0</span></p>
-                            <p style="font-size: 0.75rem; color: var(--clr-text-soft); margin: 0; font-weight: 700; line-height: 1.2;">Training Categories</p>
+                    <h3 class="mb-xs" style="color: var(--clr-secondary); font-weight: 800; font-size: 1.8rem;">Mr. Thammaiah ND</h3>
+                    <p class="mb-xl" style="color: var(--clr-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Managing Director</p>
+
+                    <!-- ─── CREDENTIALS LIST (VIBRANT & ANIMATED) ─── -->
+                    <div style="max-width: 480px; margin: 0 auto; text-align: left;">
+                        <div class="reveal credential-box credential-box-teal mb-sm" style="transition-delay: 0.1s; padding: var(--sp-sm) var(--sp-md); border-left-color: #00897B; background: linear-gradient(to right, #f0fdfa, #ffffff); box-shadow: 0 8px 24px rgba(0, 137, 123, 0.1);">
+                            <p style="font-size: 1.05rem; margin-bottom: 0; color: #00695C; font-weight: 700;"><i class="fas fa-award mr-sm" style="color: #00897B;"></i> Top 100 Performing FoSTaC Trainer</p>
                         </div>
-                        <div class="reveal" style="transition-delay: 0.3s; background: linear-gradient(135deg, white 0%, #f0fdfa 100%); border-radius: var(--radius-lg); padding: var(--sp-lg); border: 1px solid rgba(0,150,136,0.1); text-align: center;">
-                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 4px 0; line-height: 1;"><span class="counter" data-target="150+">0</span></p>
-                            <p style="font-size: 0.75rem; color: var(--clr-text-soft); margin: 0; font-weight: 700; line-height: 1.2;">Projects Supported</p>
+                        <div class="reveal credential-box credential-box-orange mb-sm" style="transition-delay: 0.2s; padding: var(--sp-sm) var(--sp-md); border-left-color: #FB8C00; background: linear-gradient(to right, #fff7ed, #ffffff); box-shadow: 0 8px 24px rgba(251, 140, 0, 0.1);">
+                            <p style="font-size: 1.05rem; margin-bottom: 0; color: #9A3412; font-weight: 700;"><i class="fas fa-check-circle mr-sm" style="color: #FB8C00;"></i> BRCGS Approved Training Partner</p>
                         </div>
-                        <div class="reveal" style="transition-delay: 0.4s; background: linear-gradient(135deg, white 0%, #f0fdfa 100%); border-radius: var(--radius-lg); padding: var(--sp-lg); border: 1px solid rgba(0,150,136,0.1); text-align: center;">
-                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 4px 0; line-height: 1;">QCI</p>
-                            <p style="font-size: 0.75rem; color: var(--clr-text-soft); margin: 0; font-weight: 700; line-height: 1.2;">Registered Expert</p>
-                        </div>
-                        <div class="reveal" style="transition-delay: 0.5s; background: linear-gradient(135deg, white 0%, #f0fdfa 100%); border-radius: var(--radius-lg); padding: var(--sp-lg); border: 1px solid rgba(0,150,136,0.1); text-align: center;">
-                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--clr-primary); margin: 0 0 4px 0; line-height: 1;">APEDA</p>
-                            <p style="font-size: 0.75rem; color: var(--clr-text-soft); margin: 0; font-weight: 700; line-height: 1.2;">Approved Agency</p>
+                        <div class="reveal credential-box credential-box-indigo mb-sm" style="transition-delay: 0.3s; padding: var(--sp-sm) var(--sp-md); border-left-color: #5A4FCF; background: linear-gradient(to right, #f5f3ff, #ffffff); box-shadow: 0 8px 24px rgba(90, 79, 207, 0.1);">
+                            <p style="font-size: 1.05rem; margin-bottom: 0; color: #4338CA; font-weight: 700;"><i class="fas fa-shield-alt mr-sm" style="color: #5A4FCF;"></i> BRCGS Consultant</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="reveal" style="transition-delay: 0.1s;">
                     <span class="pre-heading" style="color: var(--clr-primary);">The Expert Behind the Firm</span>
-                    <h2 class="mb-sm">Mr. Thammaiah ND</h2>
-                    <p class="text-bold mb-md" style="color: var(--clr-primary); font-size: 1.12rem;">Managing Director</p>
-                    <div class="mb-xl text-soft" style="line-height: 1.9; font-size: 1.05rem;">
+                    <h2 class="mb-md">Visionary Leadership</h2>
+                    <div class="mb-xl text-soft" style="line-height: 1.8;">
                         <p class="mb-sm"><strong>Mr. Thammaiah ND</strong>, a Master Graduate in Dairy Science (M. Tech) with over 22 years of global expertise is the Founder and Managing director of our company.</p>
                         <p class="mb-sm">Thammaiah’s distinguished career includes a decade in Saudi Arabia at premier organizations such as Almarai (World’s largest vertically integrated Dairy company) and NADEC.</p>
                         <p class="mb-sm">He is one of the top 100 performing FoSTaC Trainer in India and holds top performer FoSTaC Trainer on Advance Manufacturing - Milk and Milk Products Course. He is also BRCGS Approved Training Partner (ATP) for Food Safety Courses across the globe.</p>
@@ -443,44 +453,46 @@
                 <p class="text-balance" style="color: var(--clr-text-soft);">Beyond our founder, Swasthya is powered by a network of registered consultants and subject matter experts across India.</p>
             </div>
             <div class="grid grid-3" style="gap: var(--sp-xl);">
-                <!-- Expert 1 -->
-                <div class="card glass-card reveal" style="padding: var(--sp-xl); border-radius: var(--radius-lg); border-top: 4px solid var(--clr-primary);">
-                    <div class="flex mb-lg" style="align-items: center; gap: var(--sp-md);">
-                        <div style="width: 50px; height: 50px; background: rgba(0,137,123,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--clr-primary);">
-                            <i class="fas fa-user-shield" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <div>
-                            <h4 class="mb-0">Quality Specialists</h4>
-                            <p class="text-small mb-0" style="color: var(--clr-text-muted);">FSMS & QMS Experts</p>
-                        </div>
-                    </div>
-                    <p class="text-small" style="line-height: 1.7; color: var(--clr-text-soft);">Dedicated consultants specialized in ISO 22000, FSSC, and BRCGS implementation for manufacturing units.</p>
-                </div>
-                <!-- Expert 2 -->
-                <div class="card glass-card reveal" style="padding: var(--sp-xl); border-radius: var(--radius-lg); border-top: 4px solid var(--clr-organic-gold); transition-delay: 0.1s;">
-                    <div class="flex mb-lg" style="align-items: center; gap: var(--sp-md);">
-                        <div style="width: 50px; height: 50px; background: rgba(251, 140, 0, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--clr-organic-gold);">
-                            <i class="fas fa-microscope" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <div>
-                            <h4 class="mb-0">Technical Analysts</h4>
-                            <p class="text-small mb-0" style="color: var(--clr-text-muted);">Process & Lab Experts</p>
-                        </div>
-                    </div>
-                    <p class="text-small" style="line-height: 1.7; color: var(--clr-text-soft);">M.Tech and PhD graduates handling shelf-life studies, root cause analysis, and product development.</p>
-                </div>
-                <!-- Expert 3 -->
-                <div class="card glass-card reveal" style="padding: var(--sp-xl); border-radius: var(--radius-lg); border-top: 4px solid #3949AB; transition-delay: 0.2s;">
+                <!-- Expert 1: Trainers (Moved from 3rd) -->
+                <div class="card glass-card reveal" style="padding: var(--sp-xl); border-radius: var(--radius-lg); border-top: 4px solid #3949AB;">
                     <div class="flex mb-lg" style="align-items: center; gap: var(--sp-md);">
                         <div style="width: 50px; height: 50px; background: rgba(57, 73, 171, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #3949AB;">
                             <i class="fas fa-chalkboard-teacher" style="font-size: 1.5rem;"></i>
                         </div>
                         <div>
                             <h4 class="mb-0">Certified Trainers</h4>
-                            <p class="text-small mb-0" style="color: var(--clr-text-muted);">FoSTaC & GMP Educators</p>
+                            <p class="text-small mb-0" style="color: var(--clr-text-muted);">Fostac & Food safety trainers</p>
                         </div>
                     </div>
                     <p class="text-small" style="line-height: 1.7; color: var(--clr-text-soft);">FSSAI authorized trainers delivering multi-lingual sessions for workers and management alike.</p>
+                </div>
+
+                <!-- Expert 2: Consultants (Moved from 1st) -->
+                <div class="card glass-card reveal" style="padding: var(--sp-xl); border-radius: var(--radius-lg); border-top: 4px solid var(--clr-primary); transition-delay: 0.1s;">
+                    <div class="flex mb-lg" style="align-items: center; gap: var(--sp-md);">
+                        <div style="width: 50px; height: 50px; background: rgba(0,137,123,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--clr-primary);">
+                            <i class="fas fa-user-shield" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-0">Quality Specialists</h4>
+                            <p class="text-small mb-0" style="color: var(--clr-text-muted);">Food safety consultant</p>
+                        </div>
+                    </div>
+                    <p class="text-small" style="line-height: 1.7; color: var(--clr-text-soft);">Dedicated consultants specialized in ISO 22000, FSSC, and BRCGS implementation for Food manufacturing and hotel industry.</p>
+                </div>
+
+                <!-- Expert 3: Auditors (New) -->
+                <div class="card glass-card reveal" style="padding: var(--sp-xl); border-radius: var(--radius-lg); border-top: 4px solid var(--clr-organic-gold); transition-delay: 0.2s;">
+                    <div class="flex mb-lg" style="align-items: center; gap: var(--sp-md);">
+                        <div style="width: 50px; height: 50px; background: rgba(251, 140, 0, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--clr-organic-gold);">
+                            <i class="fas fa-clipboard-check" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-0">Auditors</h4>
+                            <p class="text-small mb-0" style="color: var(--clr-text-muted);">Technical Audit Experts</p>
+                        </div>
+                    </div>
+                    <p class="text-small" style="line-height: 1.7; color: var(--clr-text-soft);">Our experienced technical auditors can lead the industry to conduct first and second party customized audits to improve FSMS</p>
                 </div>
             </div>
             <div class="mt-2xl text-center reveal">
@@ -512,83 +524,254 @@
                     <div style="font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em;">Client Audits</div>
                 </div>
                 <div class="reveal" style="text-align: center; padding: var(--sp-xl) var(--sp-md); background: rgba(255,255,255,0.04); border: 1px solid rgba(124,58,237,0.2); border-radius: var(--radius-lg); transition: all 0.3s ease; transition-delay: 0.3s;">
-                    <div style="font-size: 2.8rem; font-weight: 800; color: #7c3aed; line-height: 1; margin-bottom: 8px; filter: drop-shadow(0 0 12px #7c3aed);"><span class="counter" data-target="150">0</span>+</div>
-                    <div style="font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em;">Projects Completed</div>
+                    <div style="font-size: 2.8rem; font-weight: 800; color: #7c3aed; line-height: 1; margin-bottom: 8px; filter: drop-shadow(0 0 12px #7c3aed);"><span class="counter" data-target="135">0</span>+</div>
+                    <div style="font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em;">Global clients</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Company Timeline (Premium Styles) -->
-    <section id="timeline" class="section-xl" style="padding: var(--sp-3xl) 0;">
+    <!-- Company Timeline (Redesigned) -->
+    <section id="timeline" class="section-xl" style="padding: var(--sp-3xl) 0; background: #fff; overflow: hidden;">
         <div class="container">
-            <div class="text-center mb-2xl reveal">
-                <span class="pre-heading">Our Narrative Journey</span>
-                <h2 style="font-size: 2.5rem;">Key Milestones of Excellence</h2>
+            <div class="text-center mb-3xl reveal">
+                <span class="pre-heading" style="color: var(--clr-primary);">Our Narrative Journey</span>
+                <h2 style="font-size: 3rem; font-weight: 800;">Key Milestones of Excellence</h2>
             </div>
             
-            <div class="timeline-track" style="margin-left: max(0px, 8%); max-width: 800px;">
-                <div class="timeline-rocket">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                
-                <div class="timeline-item reveal" style="padding-bottom: var(--sp-lg);">
-                    <div style="font-weight: 800; color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 4px;">Feb 2022</div>
-                    <h4 style="margin-bottom: 8px;">Start of the company</h4>
-                    <p style="color: var(--clr-text-soft);">Swasthya Food Consulting established in Bengaluru to bridge the gap in world-class safety systems.</p>
-                    <img src="assets/images/Swasthya-Food-Consulting.png" alt="Start of company" style="height: 60px; margin-top: 15px; border-radius: 8px; object-fit: contain; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                </div>
-                
-                <div class="timeline-item reveal" style="padding-bottom: var(--sp-lg);">
-                    <div style="font-weight: 800; color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 4px;">Feb 2022</div>
-                    <h4 style="margin-bottom: 8px;">Quality Council of India Registered FSMS Consultant</h4>
-                    <p style="color: var(--clr-text-soft);">Officially approved and registered as a Quality Consultant by QCI.</p>
-                    <div style="font-size: 3rem; color: var(--clr-coral); margin-top: 15px;"><i class="fas fa-award"></i></div>
+            <div class="modern-timeline-container">
+                <!-- Central Track -->
+                <div class="timeline-central-track"></div>
+
+                <!-- Milestone 1: Start (Left) -->
+                <div class="timeline-row row-left reveal">
+                    <div class="milestone-content-box">
+                        <div class="milestone-date-node" style="--node-bg: #004D40;">
+                            <span class="m-date">Feb<br>2022</span>
+                            <div class="node-connector"></div>
+                        </div>
+                        <div class="milestone-text-card">
+                            <h4 class="mb-xs">Start of the company</h4>
+                            <p class="text-small text-soft mb-0">Swasthya Food Consulting established in Bengaluru to bridge the gap in world-class safety systems.</p>
+                            <img src="assets/images/Swasthya-Food-Consulting.png" alt="Start" style="height: 40px; margin-top: 12px; opacity: 0.8;">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline-item reveal" style="padding-bottom: var(--sp-lg);">
-                    <div style="font-weight: 800; color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 4px;">March 2022</div>
-                    <h4 style="margin-bottom: 8px;">FoSTaC Trainer</h4>
-                    <p style="color: var(--clr-text-soft);">Commenced authorized FSSAI FoSTaC training across the food sector.</p>
-                    <img src="assets/images/FoSTac Logo.png" alt="FoSTaC Trainer" style="height: 60px; margin-top: 15px; object-fit: contain;">
+                <!-- Milestone 2: QCI (Right) -->
+                <div class="timeline-row row-right reveal" style="transition-delay: 0.1s;">
+                    <div class="milestone-content-box">
+                        <div class="milestone-date-node" style="--node-bg: #FB8C00;">
+                            <span class="m-date">Feb<br>2022</span>
+                            <div class="node-connector"></div>
+                        </div>
+                        <div class="milestone-text-card">
+                            <h4 class="mb-xs">QCI Registered Consultant</h4>
+                            <p class="text-small text-soft mb-0">Officially approved and registered as a Quality Consultant by the Quality Council of India (QCI).</p>
+                            <div style="font-size: 1.5rem; color: #FB8C00; margin-top: 10px;"><i class="fas fa-award"></i></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline-item reveal" style="padding-bottom: var(--sp-lg);">
-                    <div style="font-weight: 800; color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 4px;">June 2022</div>
-                    <h4 style="margin-bottom: 8px;">APEDA Registered HACCP Implementation Agency</h4>
-                    <p style="color: var(--clr-text-soft);">Recognized by APEDA for leading HACCP implementations.</p>
-                    <div style="font-size: 3rem; color: var(--clr-mint); margin-top: 15px;"><i class="fas fa-leaf"></i></div>
+                <!-- Milestone 3: FoSTaC Trainer (Left) -->
+                <div class="timeline-row row-left reveal" style="transition-delay: 0.2s;">
+                    <div class="milestone-content-box">
+                        <div class="milestone-date-node" style="--node-bg: #4DB6AC;">
+                            <span class="m-date">March<br>2022</span>
+                            <div class="node-connector"></div>
+                        </div>
+                        <div class="milestone-text-card">
+                            <h4 class="mb-xs">FoSTaC Trainer</h4>
+                            <p class="text-small text-soft mb-0">Commenced authorized FSSAI FoSTaC training across the food sector.</p>
+                            <img src="assets/images/FoSTac Logo.png" alt="FoSTaC" style="height: 40px; margin-top: 12px;">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline-item reveal" style="padding-bottom: var(--sp-lg);">
-                    <div style="font-weight: 800; color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 4px;">April 2024</div>
-                    <h4 style="margin-bottom: 8px;">FoSTaC Training Partner</h4>
-                    <p style="color: var(--clr-text-soft);">Upgraded to an official Training Partner for FSSAI's FoSTaC initiatives.</p>
-                    <img src="assets/images/FoSTac Logo.png" alt="FoSTaC Training Partner" style="height: 60px; margin-top: 15px; object-fit: contain;">
+                <!-- Milestone 4: APEDA (Right) -->
+                <div class="timeline-row row-right reveal" style="transition-delay: 0.3s;">
+                    <div class="milestone-content-box">
+                        <div class="milestone-date-node" style="--node-bg: #FF6B6B;">
+                            <span class="m-date">June<br>2022</span>
+                            <div class="node-connector"></div>
+                        </div>
+                        <div class="milestone-text-card">
+                            <h4 class="mb-xs">APEDA HACCP Agency</h4>
+                            <p class="text-small text-soft mb-0">Recognized by APEDA for leading HACCP implementations across the industry.</p>
+                            <div style="font-size: 1.5rem; color: #FF6B6B; margin-top: 10px;"><i class="fas fa-leaf"></i></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline-item reveal" style="padding-bottom: var(--sp-lg);">
-                    <div style="font-weight: 800; color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 4px;">Aug 2024</div>
-                    <h4 style="margin-bottom: 8px;">BRCGS Food Safety Consultant</h4>
-                    <p style="color: var(--clr-text-soft);">Gained the prestigious status as an Official Consultant for BRCGS.</p>
-                    <img src="assets/images/BRCGS_SB_CONSULTANT_LOGO_RGB.jpg" alt="BRCGS Consultant" style="height: 60px; margin-top: 15px; border-radius: 4px; object-fit: contain;">
+                <!-- Milestone 5: FoSTaC Partner (Left) -->
+                <div class="timeline-row row-left reveal" style="transition-delay: 0.4s;">
+                    <div class="milestone-content-box">
+                        <div class="milestone-date-node" style="--node-bg: #5A4FCF;">
+                            <span class="m-date">April<br>2024</span>
+                            <div class="node-connector"></div>
+                        </div>
+                        <div class="milestone-text-card">
+                            <h4 class="mb-xs">FoSTaC Training Partner</h4>
+                            <p class="text-small text-soft mb-0">Upgraded to an official Training Partner for FSSAI's FoSTaC initiatives.</p>
+                            <img src="assets/images/FoSTac Logo.png" alt="FoSTaC Partner" style="height: 40px; margin-top: 12px;">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline-item reveal" style="padding-bottom: var(--sp-lg);">
-                    <div style="font-weight: 800; color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 4px;">Feb 2026</div>
-                    <h4 style="margin-bottom: 8px;">Member of EHEDG (European Hygienic Engineering and Design Group)</h4>
-                    <p style="color: var(--clr-text-soft);">Joined the prestigious European Hygienic Engineering and Design Group.</p>
-                    <img src="assets/images/EHEDG_member_logo_RGB_1350x1350_210210.png" alt="EHEDG Member" style="height: 60px; margin-top: 15px; object-fit: contain;">
+                <!-- Milestone 6: BRCGS Consultant (Right) -->
+                <div class="timeline-row row-right reveal" style="transition-delay: 0.5s;">
+                    <div class="milestone-content-box">
+                        <div class="milestone-date-node" style="--node-bg: #FB8C00;">
+                            <span class="m-date">Aug<br>2024</span>
+                            <div class="node-connector"></div>
+                        </div>
+                        <div class="milestone-text-card">
+                            <h4 class="mb-xs">BRCGS Food Safety Consultant</h4>
+                            <p class="text-small text-soft mb-0">Gained the prestigious status as an Official Consultant for BRCGS globally.</p>
+                            <img src="assets/images/BRCGS_SB_CONSULTANT_LOGO_RGB.jpg" alt="BRCGS" style="height: 40px; margin-top: 12px; border-radius: 4px;">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline-item reveal" style="padding-bottom: var(--sp-lg);">
-                    <div style="font-weight: 800; color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 4px;">April 2026</div>
-                    <h4 style="margin-bottom: 8px;">BRCGS Approved Training Partner</h4>
-                    <p style="color: var(--clr-text-soft);">Officially approved as an ATP for delivering global BRCGS training.</p>
-                    <img src="assets/images/BRCGS_SB_APPROVEDTRAININGPARTNER_LOGO_RGB.png" alt="BRCGS ATP" style="height: 60px; margin-top: 15px; border-radius: 4px; object-fit: contain;">
+                <!-- Milestone 7: EHEDG (Left) -->
+                <div class="timeline-row row-left reveal" style="transition-delay: 0.6s;">
+                    <div class="milestone-content-box">
+                        <div class="milestone-date-node" style="--node-bg: #00897B;">
+                            <span class="m-date">Feb<br>2026</span>
+                            <div class="node-connector"></div>
+                        </div>
+                        <div class="milestone-text-card">
+                            <h4 class="mb-xs">EHEDG Member</h4>
+                            <p class="text-small text-soft mb-0">Joined the prestigious European Hygienic Engineering and Design Group.</p>
+                            <img src="assets/images/EHEDG_member_logo_RGB_1350x1350_210210.png" alt="EHEDG" style="height: 40px; margin-top: 12px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 8: BRCGS ATP (Right) -->
+                <div class="timeline-row row-right reveal" style="transition-delay: 0.7s;">
+                    <div class="milestone-content-box">
+                        <div class="milestone-date-node" style="--node-bg: #FFD166;">
+                            <span class="m-date">April<br>2026</span>
+                            <div class="node-connector"></div>
+                        </div>
+                        <div class="milestone-text-card">
+                            <h4 class="mb-xs">BRCGS Training Partner</h4>
+                            <p class="text-small text-soft mb-0">Officially approved as an ATP for delivering global BRCGS training.</p>
+                            <img src="assets/images/BRCGS_SB_APPROVEDTRAININGPARTNER_LOGO_RGB.png" alt="BRCGS ATP" style="height: 40px; margin-top: 12px; border-radius: 4px;">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <style>
+            .modern-timeline-container {
+                position: relative;
+                padding: 40px 0;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .timeline-central-track {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 4px;
+                background: #f1f5f9;
+                transform: translateX(-50%);
+                border-radius: 4px;
+            }
+
+            .timeline-row {
+                display: flex;
+                width: 100%;
+                margin-bottom: 60px;
+                position: relative;
+                align-items: center;
+            }
+
+            .row-left { justify-content: flex-start; }
+            .row-right { justify-content: flex-end; }
+
+            .milestone-content-box {
+                width: 50%;
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+
+            .row-left .milestone-content-box { flex-direction: row-reverse; padding-right: 60px; }
+            .row-right .milestone-content-box { flex-direction: row; padding-left: 60px; }
+
+            /* Circular Node */
+            .milestone-date-node {
+                width: 100px;
+                height: 100px;
+                background: var(--node-bg);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-family: 'Outfit', sans-serif;
+                font-weight: 800;
+                line-height: 1.1;
+                text-align: center;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                position: absolute;
+                z-index: 5;
+                border: 6px solid white;
+            }
+
+            .row-left .milestone-date-node { right: -50px; }
+            .row-right .milestone-date-node { left: -50px; }
+
+            .m-date { font-size: 0.95rem; }
+
+            /* Arm Connector */
+            .node-connector {
+                position: absolute;
+                height: 4px;
+                background: #f1f5f9;
+                width: 60px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: -1;
+            }
+
+            .row-left .node-connector { left: -60px; }
+            .row-right .node-connector { right: -60px; }
+
+            /* Text Card */
+            .milestone-text-card {
+                background: white;
+                padding: 25px;
+                border-radius: 16px;
+                box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+                border: 1px solid rgba(0,0,0,0.03);
+                width: 100%;
+                transition: all 0.3s ease;
+            }
+
+            .milestone-text-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            }
+
+            .milestone-text-card h4 { color: var(--clr-secondary); font-size: 1.15rem; font-weight: 700; }
+
+            /* Mobile Adaptation */
+            @media (max-width: 768px) {
+                .timeline-central-track { left: 30px; }
+                .milestone-content-box { width: 100%; padding-left: 80px !important; padding-right: 0 !important; flex-direction: row !important; }
+                .milestone-date-node { width: 70px; height: 70px; left: -5px !important; right: auto !important; border-width: 4px; }
+                .m-date { font-size: 0.7rem; }
+                .node-connector { display: none; }
+                .timeline-row { margin-bottom: 40px; }
+            }
+        </style>
     </section>
 
     <!-- ═══ ACCREDITATION (Floating Badges) ═══ -->

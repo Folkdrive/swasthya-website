@@ -20,28 +20,52 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        #verify-btn:hover {
+            color: white !important;
+            opacity: 0.9;
+        }
+    </style>
 </head>
+
 <body>
     <div id="header-placeholder"></div>
 
-    <!-- Hero (Radiant & Atmospheric) -->
-    <section class="hero-elite" style="min-height: 55vh;">
-        <div class="hero-bg-accent" style="background: radial-gradient(circle at 70% 30%, rgba(0, 150, 136, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(33, 150, 243, 0.1) 0%, transparent 40%);"></div>
+    <!-- Hero (Elite Atmospheric Version) -->
+    <section class="hero-elite" style="min-height: 50vh; background: linear-gradient(135deg, #0f2b44 0%, #0d3535 60%, #1e2060 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(90, 79, 207, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.1) 0%, transparent 40%); pointer-events: none;"></div>
+        
         <div class="container reveal">
-            <nav aria-label="breadcrumb" style="font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: var(--sp-lg);">
-                <a href="index.html" style="color: white; opacity: 0.8; text-decoration: none;">Home</a> <span style="margin: 0 8px;">/</span> Verify Certificate
+            <nav aria-label="breadcrumb" style="font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: var(--sp-lg);">
+                <a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a> <span style="margin: 0 8px; opacity: 0.4;">/</span> <span style="color: #00f2ff;">Verify Certificate</span>
             </nav>
-            <span class="pre-heading" style="color: var(--clr-primary); brightness: 1.3;">Credential Authentication</span>
-            <h1 class="mb-md radiant-text" style="color: white; line-height: 1.1;">Verify a Certificate.</h1>
-            <p style="color: rgba(255,255,255,0.9); max-width: 560px; line-height: 1.8;">Enter your certificate ID below to instantly authenticate credentials from our official food safety training database.</p>
+            <span class="pre-heading" style="color: #4DB6AC; letter-spacing: 0.2em;">Credential Authentication</span>
+            <h1 class="mb-lg radiant-text" style="color: white; line-height: 1.1; font-size: clamp(2.5rem, 8vw, 4.2rem);">Verify a <br><span style="background: linear-gradient(135deg, #00f2ff, #3949AB); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Certificate.</span></h1>
+            <p class="text-lead" style="max-width: 720px; color: rgba(255,255,255,0.8); line-height: 1.8; font-size: clamp(1rem, 2.5vw, 1.2rem);">Enter your certificate ID below to instantly authenticate credentials from our official food safety training database.</p>
+        </div>
+
+        <!-- ─── Wave Bottom (Animated Elite) ─── -->
+        <div class="hero-wave">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255, 255, 255, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255, 255, 255, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255, 255, 255, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                </g>
+            </svg>
         </div>
     </section>
 
     <!-- Verification Portal -->
     <section class="section-xl" style="position: relative; overflow: hidden; background: white;">
         <div class="industry-glow-teal" style="top: -100px; left: -100px; opacity: 0.2;"></div>
-        <div class="container" style="max-width: 760px; margin-top: -100px; position: relative; z-index: 10;">
-            <div class="card glass-card reveal" style="padding: var(--sp-3xl); background: white; box-shadow: var(--shadow-elite); border-top: 6px solid var(--clr-primary);">
+        <div class="container" style="max-width: 800px; position: relative; z-index: 10;">
+            <div class="card no-tilt glass-card reveal" style="padding: var(--sp-3xl); background: white; box-shadow: var(--shadow-elite); border-top: 6px solid var(--clr-primary);">
+
                 <!-- Trust Header -->
                 <div style="display: flex; align-items: center; gap: var(--sp-lg); margin-bottom: var(--sp-2xl); padding-bottom: var(--sp-xl); border-bottom: 2px solid #f8f9fa;">
                     <div style="width: 56px; height: 56px; background: rgba(0,150,136,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,150,136,0.1);">
@@ -62,12 +86,13 @@
                             name="cert_id"
                             placeholder="e.g. SWA-2024-001234"
                             style="flex: 1; min-width: 250px; padding: 16px 20px; border: 2px solid #f0f0f0; border-radius: var(--radius-md); font-family: var(--ff-body); font-size: 1.1rem; letter-spacing: 0.05em; transition: var(--transition-smooth); outline: none; background: #fafafa; font-weight: 600;">
-                        <button type="submit" class="btn btn-primary" id="verify-btn" style="padding: 16px 32px; font-weight: 700; letter-spacing: 0.05em; box-shadow: 0 10px 30px rgba(0, 150, 136, 0.3);">
+                        <button type="submit" class="btn btn-primary" id="verify-btn" style="padding: 16px 32px; font-weight: 700; letter-spacing: 0.05em; box-shadow: 0 10px 30px rgba(0, 150, 136, 0.3); color: white !important;">
                             <i class="fas fa-search" style="margin-right: 8px;"></i> VALIDATE
                         </button>
                     </div>
                     <p class="text-small mt-md" style="color: var(--clr-text-muted); opacity: 0.7;">The ID is printed on the certificate front, usually below the recipients name.</p>
                 </form>
+
 
                 <!-- Result: Valid -->
                 <div id="result-valid" style="display: none; margin-top: var(--sp-2xl);">
@@ -80,13 +105,13 @@
                                 <p class="text-small mb-0" style="color: var(--clr-text-soft);">This record is authentic and officially recognized.</p>
                             </div>
                         </div>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--sp-lg);">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--sp-lg);">
                             <div class="glass-card" style="padding: var(--sp-xl); background: white; border-radius: var(--radius-md); box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #f0f0f0;">
                                 <p style="font-size: 0.7rem; color: var(--clr-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Holder Name</p>
                                 <p class="text-bold mb-0" id="holder-name" style="font-size: 1.1rem; color: var(--clr-secondary);">—</p>
                             </div>
                             <div class="glass-card" style="padding: var(--sp-xl); background: white; border-radius: var(--radius-md); box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #f0f0f0;">
-                                <p style="font-size: 0.7rem; color: var(--clr-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Program</p>
+                                <p style="font-size: 0.7rem; color: var(--clr-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Training Program</p>
                                 <p class="text-bold mb-0" id="cert-program" style="font-size: 1.1rem; color: var(--clr-secondary);">—</p>
                             </div>
                             <div class="glass-card" style="padding: var(--sp-xl); background: white; border-radius: var(--radius-md); box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #f0f0f0;">
@@ -94,8 +119,12 @@
                                 <p class="text-bold mb-0" id="cert-date" style="font-size: 1.1rem; color: var(--clr-secondary);">—</p>
                             </div>
                             <div class="glass-card" style="padding: var(--sp-xl); background: white; border-radius: var(--radius-md); box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #f0f0f0;">
-                                <p style="font-size: 0.7rem; color: var(--clr-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Status</p>
-                                <p class="text-bold mb-0" style="font-size: 1.1rem; color: var(--clr-primary);">VALID</p>
+                                <p style="font-size: 0.7rem; color: var(--clr-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Refresher Due</p>
+                                <p class="text-bold mb-0" id="cert-refresher" style="font-size: 1.1rem; color: var(--clr-secondary);">—</p>
+                            </div>
+                            <div class="glass-card" style="grid-column: 1 / -1; padding: var(--sp-xl); background: #f0fdfa; border-radius: var(--radius-md); border: 1px solid var(--clr-primary); text-align: center;">
+                                <p style="font-size: 0.7rem; color: var(--clr-primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 800;">Verification Status</p>
+                                <p class="text-bold mb-0" id="cert-status-text" style="font-size: 1.4rem; color: var(--clr-primary); text-transform: uppercase;">VALID</p>
                             </div>
                         </div>
                     </div>
@@ -130,39 +159,63 @@
     <script src="assets/js/components.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        // Demo verification logic (replace with real API call for production)
-        const demoCerts = {
-            'SWA-2024-001234': { name: 'Rajesh Kumar', program: 'FoSTaC – Catering', date: '15 Sep 2023' },
-            'SWA-2023-000099': { name: 'Priya Sharma', program: 'FoSTaC – General Manufacturing', date: '10 Mar 2023' }
-        };
+        /**
+         * Certificate Verification Engine
+         * Connects to Google Apps Script API for real-time validation
+         */
+        const API_URL = 'https://script.google.com/macros/s/AKfycbxFHeXpTRZw6XP8OhFmoFHDdqAauHFml1OzbDWJ8a6dkdqZ8VH_4fB24-i23xi_DURi/exec';
 
-        document.getElementById('verify-form').addEventListener('submit', function(e) {
+        document.getElementById('verify-form').addEventListener('submit', async function(e) {
             e.preventDefault();
-            const id = document.getElementById('cert-id').value.trim().toUpperCase();
+            
+            const certIdInput = document.getElementById('cert-id');
+            const certId = certIdInput.value.trim();
             const btn = document.getElementById('verify-btn');
             const validEl = document.getElementById('result-valid');
             const notFoundEl = document.getElementById('result-not-found');
 
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Checking...';
+            if (!certId) return;
+
+            // Loading State
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> SECURING...';
             btn.disabled = true;
             validEl.style.display = 'none';
             notFoundEl.style.display = 'none';
 
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-search"></i> Verify';
-                btn.disabled = false;
+            try {
+                // Fetch from Google Apps Script API
+                // Redirect handling is automatic in fetch()
+                const response = await fetch(`${API_URL}?cert=${encodeURIComponent(certId)}`);
+                
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const data = await response.json();
 
-                if (demoCerts[id]) {
-                    const cert = demoCerts[id];
-                    document.getElementById('holder-name').textContent = cert.name;
-                    document.getElementById('cert-program').textContent = cert.program;
-                    document.getElementById('cert-date').textContent = cert.date;
+                if (data.status === 'valid') {
+                    // Populate Card
+                    document.getElementById('holder-name').textContent = data.name || '—';
+                    document.getElementById('cert-program').textContent = data.training || '—';
+                    document.getElementById('cert-date').textContent = data.date || '—';
+                    document.getElementById('cert-refresher').textContent = data.refresher || '—';
+                    document.getElementById('cert-status-text').textContent = data.statusText || 'VALID';
+                    
+                    // Show Card
                     validEl.style.display = 'block';
+                    validEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 } else {
+                    // Show Not Found
                     notFoundEl.style.display = 'block';
                 }
-            }, 1000);
+            } catch (error) {
+                console.error('Verification Error:', error);
+                alert('Connection error. Please try again or contact support.');
+            } finally {
+                // Reset Button
+                btn.innerHTML = '<i class="fas fa-search"></i> VALIDATE';
+                btn.disabled = false;
+            }
         });
     </script>
+
 </body>
 </html>

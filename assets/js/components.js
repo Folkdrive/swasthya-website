@@ -61,7 +61,6 @@ function getHeaderTemplate(prefix) {
 
                     <!-- CENTER HUB -->
                     <div class="logo-portal-wrap">
-                        <div class="logo-glow-ring"></div>
                         <a href="${prefix}index.html" class="logo-portal-circle-glass">
                             <img src="${prefix}assets/images/Swasthya-Food-Consulting.png" alt="Swasthya" class="logo-portal-img">
                         </a>
@@ -83,8 +82,8 @@ function getHeaderTemplate(prefix) {
                                 <a href="${prefix}trainings/index.html#custom">Custom Tailored</a>
                             </div>
                         </div>
-                        <a href="${prefix}blog.html" class="nav-link-portal">
-                            <span class="nav-art-symbol"><i class="fas fa-blog"></i></span> Blog
+                        <a href="${prefix}approvals-awards.html" class="nav-link-portal">
+                            <span class="nav-art-symbol"><i class="fas fa-award"></i></span> Approvals & Awards
                         </a>
                         <a href="${prefix}contact.html" class="nav-link-portal contact-pill">
                             <span class="nav-art-symbol"><i class="fas fa-paper-plane"></i></span> Contact
@@ -103,7 +102,22 @@ function getHeaderTemplate(prefix) {
                     z-index: 1000;
                     background: transparent;
                     padding-top: 5px;
+                    transition: all 0.4s ease;
                 }
+                
+                .header-portal.scrolled {
+                    padding-top: 0;
+                }
+                
+                .header-portal.scrolled .nav-container-svg {
+                    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.08));
+                    height: 100px;
+                }
+                
+                @media (max-width: 1024px) {
+                    .header-portal.scrolled .nav-container-svg { height: 70px; }
+                }
+
                 
                 .nav-container-svg {
                     position: relative;
@@ -267,27 +281,27 @@ function getHeaderTemplate(prefix) {
                 /* LOGO HUB */
                 .logo-portal-wrap {
                     position: absolute;
-                    top: 5px; left: 50%;
+                    top: -25px; left: 50%;
                     transform: translateX(-50%);
                     z-index: 30;
                 }
                 .logo-portal-circle-glass {
-                    width: 100px; height: 100px;
-                    background: white; border-radius: 50%;
+                    width: 145px; height: 145px;
+                    background: transparent; border-radius: 50%;
                     display: flex; align-items: center; justify-content: center;
-                    border: 4px solid #FB8C00;
+                    border: none;
                     transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-                    cursor: pointer; overflow: hidden;
+                    cursor: pointer;
                     box-sizing: border-box;
-                    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+                    box-shadow: none;
                 }
                 .logo-portal-img { 
-                    height: 60px; width: auto; 
-                    max-width: 85%;
+                    height: 125px; width: auto; 
+                    max-width: 100%;
                     object-fit: contain;
                     transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
                 }
-                .logo-portal-circle-glass:hover { transform: scale(1.05) rotate(5deg); border-color: #FF8A65; }
+                .logo-portal-circle-glass:hover { transform: scale(1.1); }
                 .logo-portal-circle-glass:hover .logo-portal-img { transform: rotate(360deg); }
 
                 .mobile-toggle-portal {
@@ -301,9 +315,9 @@ function getHeaderTemplate(prefix) {
                     .nav-group { display: none; }
                     .mobile-toggle-portal { display: flex; }
                     .nav-container-svg { height: 75px; }
-                    .logo-portal-wrap { top: 0; }
-                    .logo-portal-circle-glass { width: 85px; height: 85px; border-color: #12113a; }
-                    .logo-portal-img { height: 45px; }
+                    .logo-portal-wrap { top: -10px; }
+                    .logo-portal-circle-glass { width: 90px; height: 90px; border: none; background: transparent; }
+                    .logo-portal-img { height: 75px; }
                 }
             </style>
         </header>
@@ -377,10 +391,10 @@ function getHeaderTemplate(prefix) {
                     <i class="fas fa-building"></i>
                     <span>Clients</span>
                 </a>
-                <a href="${prefix}blog.html" class="cyber-tile" style="--tile-color: #f59e0b; --delay: 0.3s">
+                <a href="${prefix}approvals-awards.html" class="cyber-tile" style="--tile-color: #f59e0b; --delay: 0.3s">
                     <div class="cyber-tile-glow"></div>
-                    <i class="fas fa-blog"></i>
-                    <span>Blog</span>
+                    <i class="fas fa-award"></i>
+                    <span>Approvals & Awards</span>
                 </a>
             </div>
 
@@ -492,11 +506,13 @@ function getHeaderTemplate(prefix) {
             gap: 12px;
         }
         .cyber-menu-logo img {
-            width: 48px;
-            height: 48px;
+            width: 65px;
+            height: 65px;
             object-fit: contain;
             filter: brightness(0) invert(1);
+            transition: all 0.5s ease;
         }
+
         .cyber-menu-logo span {
             font-family: 'Outfit', sans-serif;
             font-size: 1.4rem;
@@ -556,12 +572,13 @@ function getHeaderTemplate(prefix) {
         .cyber-accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             flex-direction: column;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.03);
             border-radius: 12px;
         }
+
         .cyber-tile-wrapper.active .cyber-accordion-content {
             max-height: 400px;
             padding: 5px 0;
@@ -715,69 +732,63 @@ function getHeaderTemplate(prefix) {
 
 function getFooterTemplate(prefix) {
     return `
-        <footer style="background: #0d0c2e; color: white; padding: 40px 0 0; font-family: var(--ff-body, sans-serif);">
+        <footer style="background: #ffffff; color: #004D40; padding: 80px 0 0; font-family: var(--ff-body, sans-serif); border-top: 1px solid rgba(0,0,0,0.08); position: relative; z-index: 10;">
             <div class="container">
 
                 <!-- Top row -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1.4fr; gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.07);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1.4fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(0,0,0,0.08);">
 
                     <!-- Brand -->
                     <div>
-                        <img src="${prefix}assets/images/Swasthya-Food-Consulting.png" alt="Swasthya" style="filter: brightness(0) invert(1); height: 38px; margin-bottom: 10px; display: block;">
-                        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin: 0 0 12px;">Bengaluru's premier BRCGS &amp; FoSTaC partner.<br>Est. 2022 &nbsp;·&nbsp; 135+ global partners.</p>
-                        <div style="display: flex; gap: 5px; flex-wrap: wrap;">
-                            <span style="font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: rgba(255,255,255,0.55);">QCI</span>
-                            <span style="font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: rgba(255,255,255,0.55);">APEDA</span>
-                            <span style="font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: rgba(255,255,255,0.55);">FoSTaC</span>
-                            <span style="font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: rgba(255,255,255,0.55);">BRCGS</span>
-                        </div>
+                        <img src="${prefix}assets/images/Swasthya-Food-Consulting.png" alt="Swasthya" style="height: 54px; margin-bottom: 15px; display: block;">
+                        <p style="font-size: 0.78rem; color: #1e293b; line-height: 1.6; margin: 0 0 15px; font-weight: 500;">Bengaluru's premier BRCGS &amp; FoSTaC partner.<br>Est. 2022 &nbsp;·&nbsp; 135+ global partners.</p>
                     </div>
 
                     <!-- Solutions -->
                     <div>
-                        <p style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); margin: 0 0 12px;">Solutions</p>
-                        <div style="display: flex; flex-direction: column; gap: 7px;">
-                            <a href="${prefix}services/fssai.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">FSSAI Regulatory</a>
-                            <a href="${prefix}services/iso22000.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">FSMS Consultancy</a>
-                            <a href="${prefix}services/audits.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Audits</a>
-                            <a href="${prefix}services/technical.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Engineering</a>
-                            <a href="${prefix}trainings/index.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">FoSTaC Trainings</a>
-                            <a href="${prefix}trainings/index.html#brcgs" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4DB6AC'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">BRCGS Trainings</a>
+                        <p style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: #64748b; margin: 0 0 18px;">Solutions</p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <a href="${prefix}services/fssai.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">FSSAI Regulatory</a>
+                            <a href="${prefix}services/iso22000.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">FSMS Consultancy</a>
+                            <a href="${prefix}services/audits.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Audits</a>
+                            <a href="${prefix}services/technical.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Engineering</a>
+                            <a href="${prefix}trainings/index.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">FoSTaC Trainings</a>
+                            <a href="${prefix}trainings/index.html#brcgs" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">BRCGS Trainings</a>
                         </div>
                     </div>
 
                     <!-- Company -->
                     <div>
-                        <p style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); margin: 0 0 12px;">Company</p>
-                        <div style="display: flex; flex-direction: column; gap: 7px;">
-                            <a href="${prefix}company.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">About Us</a>
-                            <a href="${prefix}company.html#founder" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Founder</a>
-                            <a href="${prefix}company.html#timeline" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Our Evolution</a>
-                            <a href="${prefix}clientele.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Clients</a>
-                            <a href="${prefix}blog.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a>
-                            <a href="${prefix}contact.html" style="font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#FB8C00'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Contact</a>
+                        <p style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: #64748b; margin: 0 0 18px;">Company</p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <a href="${prefix}company.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">About Us</a>
+                            <a href="${prefix}company.html#founder" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Founder</a>
+                            <a href="${prefix}company.html#timeline" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Our Evolution</a>
+                            <a href="${prefix}clientele.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Clients</a>
+                            <a href="${prefix}approvals-awards.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Approvals & Awards</a>
+                            <a href="${prefix}contact.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Contact</a>
                         </div>
                     </div>
 
                     <!-- Contact -->
                     <div>
-                        <p style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); margin: 0 0 12px;">Contact HQ</p>
-                        <p style="font-size: 0.78rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0 0 8px;">
-                            <i class="fas fa-map-marker-alt" style="color: #FB8C00; margin-right: 6px;"></i>
-                            Karihobanahalli, Bengaluru – 560073
+                        <p style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: #64748b; margin: 0 0 18px;">Contact HQ</p>
+                        <p style="font-size: 0.85rem; color: #1e293b; line-height: 1.6; margin: 0 0 12px; font-weight: 500;">
+                            <i class="fas fa-map-marker-alt" style="color: #FB8C00; margin-right: 10px;"></i>
+                            No. 102, Bluejay Atmosphere 2, Bengaluru 560073
                         </p>
-                        <p style="font-size: 0.78rem; color: rgba(255,255,255,0.6); margin: 0 0 8px; word-break: break-all;">
-                            <i class="fas fa-envelope" style="color: #FB8C00; margin-right: 6px;"></i>
+                        <p style="font-size: 0.85rem; color: #1e293b; margin: 0 0 12px; word-break: break-all; font-weight: 500;">
+                            <i class="fas fa-envelope" style="color: #FB8C00; margin-right: 10px;"></i>
                             thammaiah.nd@swasthyafoodconsulting.com
                         </p>
-                        <p style="font-size: 0.72rem; color: rgba(255,255,255,0.35); margin: 0 0 14px;">
-                            <i class="fas fa-file-invoice" style="margin-right: 6px;"></i>GSTIN: 29AJFPD0474P1ZV
+                        <p style="font-size: 0.75rem; color: #64748b; margin: 0 0 20px; font-weight: 600;">
+                            <i class="fas fa-file-invoice" style="margin-right: 10px;"></i>GSTIN: 29AJFPD0474P1ZV
                         </p>
-                        <div style="display: flex; gap: 8px;">
-                            <a href="https://www.linkedin.com/in/thammaiah-n-d-b9468925" target="_blank" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.background='rgba(10,102,194,0.3)';this.style.color='white'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.6)'">
+                        <div style="display: flex; gap: 12px;">
+                            <a href="https://www.linkedin.com/in/thammaiah-n-d-b9468925" target="_blank" style="width: 42px; height: 42px; border-radius: 50%; background: #f1f5f9; border: 1.5px solid #cbd5e1; display: flex; align-items: center; justify-content: center; color: #475569; font-size: 1rem; text-decoration: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.background='#0077b5';this.style.color='white';this.style.borderColor='#0077b5';this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#f1f5f9';this.style.color='#475569';this.style.borderColor='#cbd5e1';this.style.transform='translateY(0)'">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://wa.me/919980182600" target="_blank" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.background='rgba(37,211,102,0.3)';this.style.color='white'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.6)'">
+                            <a href="https://wa.me/919980182600" target="_blank" style="width: 42px; height: 42px; border-radius: 50%; background: #f1f5f9; border: 1.5px solid #cbd5e1; display: flex; align-items: center; justify-content: center; color: #475569; font-size: 1rem; text-decoration: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.background='#25d366';this.style.color='white';this.style.borderColor='#25d366';this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#f1f5f9';this.style.color='#475569';this.style.borderColor='#cbd5e1';this.style.transform='translateY(0)'">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
@@ -785,14 +796,14 @@ function getFooterTemplate(prefix) {
                 </div>
 
                 <!-- Bottom bar -->
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 16px 0;">
-                    <p style="font-size: 0.72rem; color: rgba(255,255,255,0.3); margin: 0;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 30px 0;">
+                    <p style="font-size: 0.8rem; color: #475569; margin: 0; font-weight: 500;">
                         &copy; 2026 Swasthya Food Consulting &nbsp;·&nbsp;
-                        <a href="https://www.folkdrive.in" target="_blank" style="color: #4DB6AC; text-decoration: none; font-weight: 600;">Folkdrive India Pvt Ltd</a>
+                        <a href="https://www.folkdrive.in" target="_blank" style="color: #004D40; text-decoration: none; font-weight: 800;">Folkdrive India Pvt Ltd</a>
                     </p>
-                    <div style="display: flex; gap: 20px;">
-                        <a href="#" style="font-size: 0.72rem; color: rgba(255,255,255,0.3); text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Privacy Policy</a>
-                        <a href="#" style="font-size: 0.72rem; color: rgba(255,255,255,0.3); text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Terms</a>
+                    <div style="display: flex; gap: 30px;">
+                        <a href="#" style="font-size: 0.8rem; color: #475569; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='#004D40'" onmouseout="this.style.color='#475569'">Privacy Policy</a>
+                        <a href="#" style="font-size: 0.8rem; color: #475569; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='#004D40'" onmouseout="this.style.color='#475569'">Terms</a>
                     </div>
                 </div>
 
@@ -826,15 +837,56 @@ function getFloatingActionsTemplate(prefix) {
             </a>
         </div>
 
-        <!-- Right Side: Tawk.to -->
-        <div class="floating-right-elite" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
-            <a href="https://www.tawk.to/" target="_blank" class="elite-fab fab-tawk" title="Live Support (Tawk.to)">
-                <span class="fab-pulse pulse-tawk"></span>
-                <i class="fas fa-comments"></i>
+        <!-- Side Peeping Tab: Verify Certificate -->
+        <div class="peeping-tab-elite" style="position: fixed; right: 0; top: 55%; transform: translateY(-50%); z-index: 1001;">
+            <a href="${prefix}verify.html" class="verify-side-tab">
+                <i class="fas fa-shield-check"></i>
+                <span class="tab-text">Verify Certificate</span>
             </a>
         </div>
 
         <style>
+            .verify-side-tab {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-ocean) 100%);
+                color: white !important;
+                padding: 15px 24px 15px 18px;
+                border-radius: 40px 0 0 40px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 0.95rem;
+                box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
+                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                transform: translateX(calc(100% - 55px)); /* Peeps out showing just the icon */
+                border: 1px solid rgba(255,255,255,0.2);
+                border-right: none;
+                backdrop-filter: blur(10px);
+            }
+            
+            .verify-side-tab:hover {
+                transform: translateX(0); /* Slides in fully on hover */
+                padding-right: 30px;
+                box-shadow: -15px 15px 40px rgba(0,0,0,0.3);
+                color: white !important;
+            }
+
+
+            .verify-side-tab i {
+                font-size: 1.4rem;
+                filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+            }
+
+            @media (max-width: 768px) {
+                .verify-side-tab {
+                    padding: 12px 20px 12px 14px;
+                    font-size: 0.85rem;
+                    transform: translateX(calc(100% - 48px));
+                }
+                .verify-side-tab i { font-size: 1.2rem; }
+            }
+            
             .elite-fab {
                 position: relative;
                 width: 60px;
@@ -851,7 +903,6 @@ function getFloatingActionsTemplate(prefix) {
                 z-index: 5;
             }
             .fab-whatsapp { background: #25D366; }
-            .fab-tawk { background: #00897B; } /* Matching Swasthya Teal */
 
             .elite-fab:hover {
                 transform: scale(1.15) rotate(10deg);
@@ -867,7 +918,6 @@ function getFloatingActionsTemplate(prefix) {
                 animation: fabPulse 2.5s infinite;
             }
             .pulse-whatsapp { background: #25D366; }
-            .pulse-tawk { background: #00897B; }
 
             @keyframes fabPulse {
                 0% { transform: scale(1); opacity: 0.6; }
@@ -878,12 +928,11 @@ function getFloatingActionsTemplate(prefix) {
             @media (max-width: 640px) {
                 .elite-fab { width: 50px; height: 50px; font-size: 1.5rem; }
                 .floating-left-elite { bottom: 20px; left: 20px; }
-                .floating-right-elite { bottom: 20px; right: 20px; }
             }
         </style>
+
     `;
 }
-
 
 function injectComponents() {
     const prefix = getPathPrefix();

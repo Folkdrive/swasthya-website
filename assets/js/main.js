@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleActiveNav();
     initTestimonialSlider();
     initTiltEffect(); // New 3D Interaction
+    initTawkChat(); // Live Chat Support
 });
 
 /* ─────────────────────────────────────────────
@@ -172,6 +173,12 @@ function initHeroSlider() {
         if (dots[current]) {
             dots[current].classList.add('active');
         }
+
+        // Trigger counters in active slide
+        activeSlide.querySelectorAll('.counter').forEach(cnt => {
+            cnt.dataset.animated = ''; // Reset for re-animation
+            animateCounter(cnt);
+        });
     }
 
     /* ── Auto-advance ── */
@@ -305,6 +312,9 @@ function initTiltEffect() {
     const tiltCards = document.querySelectorAll('.card, .capability-card, .stat-card, .industry-item-card, .founder-portrait-container');
     
     tiltCards.forEach(card => {
+        // Skip tilt if card has 'no-tilt' class
+        if (card.classList.contains('no-tilt')) return;
+
         // Ensure parent doesn't clip the 3D pop-out
         if (card.parentElement) card.parentElement.style.perspective = "1000px";
         
@@ -320,11 +330,12 @@ function initTiltEffect() {
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
             
-            // Bold Tilt intensity (increased to 25 degrees for visibility)
-            const rotateX = ((y - centerY) / centerY) * -25;
-            const rotateY = ((x - centerX) / centerX) * 25;
+            // Subtle Tilt intensity (reduced from 25 to 10 degrees)
+            const rotateX = ((y - centerY) / centerY) * -10;
+            const rotateY = ((x - centerX) / centerX) * 10;
             
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.06, 1.06, 1.06)`;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+
         });
         
         card.addEventListener('mouseleave', () => {
@@ -332,4 +343,20 @@ function initTiltEffect() {
             card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
         });
     });
+}
+
+/* ─────────────────────────────────────────────
+   8. TAWK.TO LIVE CHAT
+───────────────────────────────────────────── */
+
+function initTawkChat() {
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/69fa1afcad369b1c32e8fbd6/1jnsfiquu';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
 }

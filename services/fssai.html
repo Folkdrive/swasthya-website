@@ -29,7 +29,8 @@
             .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; gap: var(--sp-xl) !important; }
             
             /* Typography Scaling */
-            .hero-elite { padding-top: 120px !important; padding-bottom: 60px !important; }
+            .hero-elite { padding-top: 130px !important; padding-bottom: 60px !important; }
+
             h1 { font-size: clamp(2.2rem, 6vw, 4.5rem) !important; }
             h2 { font-size: clamp(1.8rem, 6vw, 2.2rem) !important; }
             .section-xl { padding: var(--sp-2xl) 0 !important; }
@@ -50,7 +51,7 @@
     <div id="header-placeholder"></div>
 
     <!-- Hero (Elite Regulatory Version) -->
-    <section class="hero-elite" style="min-height: 55vh; background: linear-gradient(135deg, #06061a 0%, #0a1f1f 60%, #12113a 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
+    <section class="hero-elite" style="min-height: 55vh; background: linear-gradient(135deg, #0f2b44 0%, #0d3535 60%, #1e2060 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
         <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(90, 79, 207, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.1) 0%, transparent 40%); pointer-events: none;"></div>
         
         <div class="container reveal">
@@ -79,56 +80,45 @@
         </div>
     </section>
 
-    <!-- Metrics Bar (Regulatory High-Precision) -->
-    <section style="padding: var(--sp-2xl) 0; background: #06061a; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <!-- Subtle grid overlay -->
-        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
-        
-        <div class="container">
-            <div class="grid grid-4" style="text-align: center; gap: var(--sp-xl); position: relative; z-index: 2;">
-                <div class="reveal">
-                    <p style="font-size: 3rem; font-weight: 800; color: #4DB6AC; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(77, 182, 172, 0.4));" class="counter" data-target="500">0</p>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Licences Issued</p>
-                </div>
-                <div class="reveal" style="transition-delay: 0.1s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: #FB8C00; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(251, 140, 0, 0.4));" class="counter" data-target="1000">0</p>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">FoSTaC Trained</p>
-                </div>
-                <div class="reveal" style="transition-delay: 0.2s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: #7c3aed; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.4));" class="counter" data-target="15">0</p>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Central Licences</p>
-                </div>
-                <div class="reveal" style="transition-delay: 0.3s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: #00f2ff; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(0, 242, 255, 0.4));"><span class="counter" data-target="100">0</span>%</p>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Audit Readiness</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Regulatory Overview -->
     <section class="section-xl" style="background: white; position: relative; overflow: hidden;">
         <div class="container">
-            <div class="grid grid-2" style="gap: var(--sp-3xl); align-items: flex-start;">
+            <div class="grid grid-2" style="gap: var(--sp-3xl); align-items: center; margin-bottom: var(--sp-3xl);">
                 <div class="reveal">
                     <span class="pre-heading" style="color: var(--clr-secondary);">Expert Liaison</span>
                     <h2 class="mb-xl">Global Regulatory <br>Navigation.</h2>
                     <p class="mb-lg" style="color: var(--clr-text-soft); line-height: 1.9; font-size: 1.05rem;">Whether you are a startup manufacturer or a multi-state enterprise, we manage every layer of FSSAI compliance — from initial licensing to complex USFDA registrations.</p>
-                    
+                </div>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div style="position: relative; padding: 15px;">
+                        <div style="position: absolute; top: 0; left: 0; right: 30px; bottom: 30px; border: 2px solid var(--clr-primary); border-radius: var(--radius-lg); z-index: 1; opacity: 0.1;"></div>
+                        <img src="../assets/images/stock/Regulatory_3_optimized.jpg" alt="FSSAI Regulatory Consultation" style="width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite); position: relative; z-index: 2;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-3" style="gap: var(--sp-3xl); align-items: stretch;">
+
+    
                     <div style="display: flex; flex-direction: column; gap: var(--sp-lg);">
-                         <div class="card capability-card reveal" style="padding: var(--sp-lg); --card-color: var(--clr-primary);">
+                         <div class="card capability-card reveal" style="padding: var(--sp-lg); --card-color: var(--clr-primary); height: 100%;">
+
                              <p class="text-bold mb-xs" style="color: var(--clr-secondary);">Label & Artwork Compliance</p>
                              <p class="text-small mb-0" style="color: var(--clr-text-soft);">Verifying nutritional tables, claims, and packaging iconography against the latest Indian and global mandates.</p>
                          </div>
-                         <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.1s; --card-color: var(--clr-coral);">
+                         <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.1s; --card-color: var(--clr-coral); height: 100%;">
+
                              <p class="text-bold mb-xs" style="color: var(--clr-secondary);">Import/Export Sovereignty</p>
                              <p class="text-small mb-0" style="color: var(--clr-text-soft);">Smooth regulatory clearance through FSSAI and custom channels for cross-border operations.</p>
                          </div>
                     </div>
-                </div>
+
                 
                 <div class="reveal" style="transition-delay: 0.2s;">
-                    <div class="card capability-card" style="padding: var(--sp-2xl); --card-color: var(--clr-primary);">
+                    <div class="card capability-card" style="padding: var(--sp-2xl); --card-color: var(--clr-primary); height: 100%;">
+
                         <h3 class="mb-xl" style="font-size: 1.5rem;">Licensing Spectrum</h3>
                         <div style="display: flex; flex-direction: column; gap: var(--sp-md);">
                              <div class="flex" style="gap: var(--sp-md); align-items: center; padding: 12px; background: #fafafa; border-radius: var(--radius-sm);">
@@ -153,6 +143,15 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- NEW: Right-side Image to fill empty space -->
+                <div class="reveal" style="transition-delay: 0.3s;">
+                    <div style="position: relative; height: 100%;">
+                        <div style="position: absolute; top: 15px; left: 15px; right: -15px; bottom: -15px; border: 2px solid var(--clr-primary); border-radius: var(--radius-lg); z-index: 1; opacity: 0.1;"></div>
+                        <img src="../assets/images/stock/Regulatory_1_optimized.jpg" alt="Regulatory Documentation" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite); position: relative; z-index: 2; min-height: 400px;">
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

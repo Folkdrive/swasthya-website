@@ -29,7 +29,8 @@
             .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; gap: var(--sp-xl) !important; }
             
             /* Typography Scaling */
-            .hero-elite { padding-top: 120px !important; padding-bottom: 60px !important; }
+            .hero-elite { padding-top: 130px !important; padding-bottom: 60px !important; }
+
             h1 { font-size: clamp(2.2rem, 6vw, 4.5rem) !important; }
             h2 { font-size: clamp(1.8rem, 6vw, 2.2rem) !important; }
             .section-xl { padding: var(--sp-2xl) 0 !important; }
@@ -50,7 +51,7 @@
     <div id="header-placeholder"></div>
 
     <!-- Hero (Elite Standards Version) -->
-    <section class="hero-elite" style="min-height: 55vh; background: linear-gradient(135deg, #06061a 0%, #0a1f1f 60%, #12113a 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
+    <section class="hero-elite" style="min-height: 55vh; background: linear-gradient(135deg, #0f2b44 0%, #0d3535 60%, #1e2060 100%); display: flex; align-items: center; padding: 140px 0 80px; position: relative; overflow: hidden;">
         <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(90, 79, 207, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(251, 140, 0, 0.1) 0%, transparent 40%); pointer-events: none;"></div>
         
         <div class="container reveal">
@@ -79,32 +80,6 @@
         </div>
     </section>
 
-    <!-- Metrics Bar (Elite Sync) -->
-    <section style="padding: var(--sp-2xl) 0; background: #06061a; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <!-- Subtle grid overlay -->
-        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
-        
-        <div class="container">
-            <div class="grid grid-4" style="text-align: center; gap: var(--sp-xl); position: relative; z-index: 2;">
-                <div class="reveal">
-                    <p style="font-size: 3rem; font-weight: 800; color: #4DB6AC; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(77, 182, 172, 0.4));" class="counter" data-target="100">0</p>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">FSMS Setups</p>
-                </div>
-                <div class="reveal" style="transition-delay: 0.1s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: #FB8C00; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(251, 140, 0, 0.4));" class="counter" data-target="15">0</p>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Industry Sectors</p>
-                </div>
-                <div class="reveal" style="transition-delay: 0.2s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: #7c3aed; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.4));"><span class="counter" data-target="100">0</span>%</p>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Audit Success</p>
-                </div>
-                <div class="reveal" style="transition-delay: 0.3s;">
-                    <p style="font-size: 3rem; font-weight: 800; color: #00f2ff; margin: 0; line-height: 1; filter: drop-shadow(0 0 12px rgba(0, 242, 255, 0.4));">24/7</p>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin: 8px 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Advisory Support</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FSMS Consultancy Portfolio -->
     <section class="section-xl" style="position: relative; overflow: hidden; background: #fafafa;">
@@ -126,16 +101,16 @@
 
                 <!-- FSSC 22000 Consultancy -->
                 <div class="card capability-card reveal" style="padding: var(--sp-xl); transition-delay: 0.1s; --card-color: var(--clr-primary);">
-                    <div style="font-size: 0.7rem; font-weight: 800; color: var(--clr-primary); letter-spacing: 0.1em; margin-bottom: 8px; text-transform: uppercase;">FSSC 22000 v6</div>
+                    <div style="font-size: 0.7rem; font-weight: 800; color: var(--clr-primary); letter-spacing: 0.1em; margin-bottom: 8px; text-transform: uppercase;">FSSC 22000</div>
                     <h3 style="font-size: 1.25rem;" class="mb-md">FSSC 22000 Consultancy</h3>
                     <p class="text-small" style="color: var(--clr-text-soft); line-height: 1.7;">FSSC 22000 provides a complete certification scheme for food safety systems, incorporating ISO 22000, sector-specific PRPs, and additional requirements. Recognized by the Global Food Safety Initiative (GFSI).</p>
                 </div>
 
-                <!-- BRC-Food Consultancy -->
+                <!-- BRCGS - Food Consultancy -->
                 <div class="card capability-card reveal" style="padding: var(--sp-xl); transition-delay: 0.2s; --card-color: var(--clr-yellow);">
-                    <div style="font-size: 0.7rem; font-weight: 800; color: var(--clr-yellow); letter-spacing: 0.1em; margin-bottom: 8px; text-transform: uppercase;">BRCGS Food Safety</div>
-                    <h3 style="font-size: 1.25rem;" class="mb-md">BRC-Food Consultancy</h3>
-                    <p class="text-small" style="color: var(--clr-text-soft); line-height: 1.7;">The British Retail Consortium (BRC) Global Standard for Food Safety focuses on product safety, integrity, and quality. Implementation requires rigorous adherence to environmental standards and process controls.</p>
+                    <div style="font-size: 0.7rem; font-weight: 800; color: var(--clr-yellow); letter-spacing: 0.1em; margin-bottom: 8px; text-transform: uppercase;">BRCGS - Food Safety</div>
+                    <h3 style="font-size: 1.25rem;" class="mb-md">BRCGS - Food Consultancy</h3>
+                    <p class="text-small" style="color: var(--clr-text-soft); line-height: 1.7;">The Brand Reputation through Compliance Global Standard (BRCGS) for Food Safety focuses on product safety, integrity, and quality. Implementation requires rigorous adherence to Product and Process Controls.</p>
                 </div>
 
                 <!-- ISO 9001:2015 Consultancy -->
@@ -145,10 +120,10 @@
                     <p class="text-small" style="color: var(--clr-text-soft); line-height: 1.7;">Establishing a robust Quality Management System (QMS) centered on risk-based thinking and the PDCA cycle. Implementation helps organizations streamline processes and enhance customer satisfaction.</p>
                 </div>
 
-                <!-- BRC-Packaging Consultancy -->
+                <!-- BRCGS - Packaging Consultancy -->
                 <div class="card capability-card reveal" style="padding: var(--sp-xl); transition-delay: 0.4s; --card-color: var(--clr-coral);">
-                    <div style="font-size: 0.7rem; font-weight: 800; color: var(--clr-coral); letter-spacing: 0.1em; margin-bottom: 8px; text-transform: uppercase;">BRCGS Packaging</div>
-                    <h3 style="font-size: 1.25rem;" class="mb-md">BRC-Packaging Consultancy</h3>
+                    <div style="font-size: 0.7rem; font-weight: 800; color: var(--clr-coral); letter-spacing: 0.1em; margin-bottom: 8px; text-transform: uppercase;">BRCGS - Packaging</div>
+                    <h3 style="font-size: 1.25rem;" class="mb-md">BRCGS - Packaging Consultancy</h3>
                     <p class="text-small" style="color: var(--clr-text-soft); line-height: 1.7;">Ensures packaging materials do not compromise food safety. Implementation involves assessing hygiene of manufacturing environments and chemical migration risks into food.</p>
                 </div>
 
@@ -160,18 +135,6 @@
                 </div>
             </div>
 
-            <!-- Customer/Other Standards - Centered Highlight -->
-            <div class="reveal mt-xl" style="max-width: 800px; margin-left: auto; margin-right: auto; transition-delay: 0.6s;">
-                <div class="card capability-card" style="padding: var(--sp-xl); --card-color: var(--clr-primary); background: #fff; border-left: 4px solid var(--clr-primary);">
-                    <div class="grid grid-2" style="gap: var(--sp-xl); align-items: center;">
-                        <div>
-                            <div style="font-size: 0.75rem; font-weight: 800; color: var(--clr-primary); letter-spacing: 0.1em; margin-bottom: 8px; text-transform: uppercase;">Proprietary Audits</div>
-                            <h3 style="font-size: 1.4rem;" class="mb-md">Customer/Other Standards Consultancy</h3>
-                        </div>
-                        <p class="text-small" style="color: var(--clr-text-soft); line-height: 1.7; margin: 0;">Many major retailers (e.g., McDonald’s or Walmart) enforce proprietary standards. We tailor internal systems to meet these stringent requirements, protecting brand reputation and supply chain partnerships.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -226,7 +189,6 @@
             <span class="pre-heading" style="color: white; opacity: 0.8; letter-spacing: 0.2em; display: block; margin-bottom: var(--sp-sm);">100+ Successful Deployments</span>
             <h2 style="color: white; margin-bottom: var(--sp-md); font-size: clamp(2rem, 5vw, 2.8rem);">Ready for Global Certification?</h2>
             <p class="mb-xl" style="color: rgba(255,255,255,0.85); font-size: 1.12rem; max-width: 600px; margin-left: auto; margin-right: auto;">Our proven methodology takes you to international certification in record time without compromising quality.</p>
-            <a href="../contact.html?subject=ISO+22000+Inquiry" class="btn" style="background: white; color: var(--clr-primary); font-weight: 800; padding: 16px 36px;">Request a Free Assessment</a>
         </div>
     </section>
 
