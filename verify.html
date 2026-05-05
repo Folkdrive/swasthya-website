@@ -192,12 +192,27 @@
                 const data = await response.json();
 
                 if (data.status === 'valid') {
+                    // Helper to clean dates if API sends raw timestamps
+                    const cleanDate = (str) => {
+                        if (!str || str === '—') return '—';
+                        // If it looks like an ISO timestamp (contains T or Z)
+                        if (str.includes('T') || str.includes('Z')) {
+                            const d = new Date(str);
+                            if (!isNaN(d.getTime())) {
+                                const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                                return `${String(d.getDate()).padStart(2, '0')} ${months[d.getMonth()]} ${d.getFullYear()}`;
+                            }
+                        }
+                        return str;
+                    };
+
                     // Populate Card
                     document.getElementById('holder-name').textContent = data.name || '—';
                     document.getElementById('cert-program').textContent = data.training || '—';
-                    document.getElementById('cert-date').textContent = data.date || '—';
-                    document.getElementById('cert-refresher').textContent = data.refresher || '—';
+                    document.getElementById('cert-date').textContent = cleanDate(data.date);
+                    document.getElementById('cert-refresher').textContent = cleanDate(data.refresher);
                     document.getElementById('cert-status-text').textContent = data.statusText || 'VALID';
+
                     
                     // Show Card
                     validEl.style.display = 'block';
