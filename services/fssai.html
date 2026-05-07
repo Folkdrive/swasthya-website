@@ -45,6 +45,23 @@
             /* Reorder text to top for mobile reading */
             .section-xl .grid-2 > div:last-child { margin-top: var(--sp-lg); }
         }
+
+        /* Regulatory Expandable Card Styles */
+        .regulatory-card .content-wrapper {
+            max-height: 160px;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .regulatory-card.expanded .content-wrapper {
+            max-height: 1000px; /* Large enough for full text */
+        }
+        .regulatory-card.expanded .fade-overlay {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .regulatory-card.expanded .read-more-btn i {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body>
@@ -82,79 +99,7 @@
 
 
 
-    <!-- Regulatory Overview -->
-    <section class="section-xl" style="background: white; position: relative; overflow: hidden;">
-        <div class="container">
-            <div class="grid grid-2" style="gap: var(--sp-3xl); align-items: center; margin-bottom: var(--sp-3xl);">
-                <div class="reveal">
-                    <span class="pre-heading" style="color: var(--clr-secondary);">Expert Liaison</span>
-                    <h2 class="mb-xl">Global Regulatory <br>Navigation.</h2>
-                    <p class="mb-lg" style="color: var(--clr-text-soft); line-height: 1.9; font-size: 1.05rem;">Whether you are a startup manufacturer or a multi-state enterprise, we manage every layer of FSSAI compliance — from initial licensing to complex USFDA registrations.</p>
-                </div>
-                <div class="reveal" style="transition-delay: 0.2s;">
-                    <div style="position: relative; padding: 15px;">
-                        <div style="position: absolute; top: 0; left: 0; right: 30px; bottom: 30px; border: 2px solid var(--clr-primary); border-radius: var(--radius-lg); z-index: 1; opacity: 0.1;"></div>
-                        <img src="../assets/images/stock/Regulatory_3_optimized.jpg" alt="FSSAI Regulatory Consultation" style="width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite); position: relative; z-index: 2;">
-                    </div>
-                </div>
-            </div>
 
-            <div class="grid grid-3" style="gap: var(--sp-3xl); align-items: stretch;">
-
-    
-                    <div style="display: flex; flex-direction: column; gap: var(--sp-lg);">
-                         <div class="card capability-card reveal" style="padding: var(--sp-lg); --card-color: var(--clr-primary); height: 100%;">
-
-                             <p class="text-bold mb-xs" style="color: var(--clr-secondary);">Label & Artwork Compliance</p>
-                             <p class="text-small mb-0" style="color: var(--clr-text-soft);">Verifying nutritional tables, claims, and packaging iconography against the latest Indian and global mandates.</p>
-                         </div>
-                         <div class="card capability-card reveal" style="padding: var(--sp-lg); transition-delay: 0.1s; --card-color: var(--clr-coral); height: 100%;">
-
-                             <p class="text-bold mb-xs" style="color: var(--clr-secondary);">Import/Export Sovereignty</p>
-                             <p class="text-small mb-0" style="color: var(--clr-text-soft);">Smooth regulatory clearance through FSSAI and custom channels for cross-border operations.</p>
-                         </div>
-                    </div>
-
-                
-                <div class="reveal" style="transition-delay: 0.2s;">
-                    <div class="card capability-card" style="padding: var(--sp-2xl); --card-color: var(--clr-primary); height: 100%;">
-
-                        <h3 class="mb-xl" style="font-size: 1.5rem;">Licensing Spectrum</h3>
-                        <div style="display: flex; flex-direction: column; gap: var(--sp-md);">
-                             <div class="flex" style="gap: var(--sp-md); align-items: center; padding: 12px; background: #fafafa; border-radius: var(--radius-sm);">
-                                 <i class="fas fa-certificate" style="color: var(--clr-primary);"></i>
-                                 <span class="text-bold" style="font-size: 0.9rem;">Central Licensing & Registration</span>
-                             </div>
-                             <div class="flex" style="gap: var(--sp-md); align-items: center; padding: 12px; background: #fafafa; border-radius: var(--radius-sm);">
-                                 <i class="fas fa-globe" style="color: var(--clr-primary);"></i>
-                                 <span class="text-bold" style="font-size: 0.9rem;">USFDA Registration & DUNS</span>
-                             </div>
-                             <div class="flex" style="gap: var(--sp-md); align-items: center; padding: 12px; background: #fafafa; border-radius: var(--radius-sm);">
-                                 <i class="fas fa-shipping-fast" style="color: var(--clr-primary);"></i>
-                                 <span class="text-bold" style="font-size: 0.9rem;">Import & Export Licence (IEC Sync)</span>
-                             </div>
-                             <div class="flex" style="gap: var(--sp-md); align-items: center; padding: 12px; background: #fafafa; border-radius: var(--radius-sm);">
-                                 <i class="fas fa-clipboard-check" style="color: var(--clr-primary);"></i>
-                                 <span class="text-bold" style="font-size: 0.9rem;">Artwork Technical Verification</span>
-                             </div>
-                        </div>
-                        <div class="mt-xl text-center">
-                             <p class="text-small" style="color: var(--clr-text-muted); font-style: italic;">QCI & APEDA Approved Consultation</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- NEW: Right-side Image to fill empty space -->
-                <div class="reveal" style="transition-delay: 0.3s;">
-                    <div style="position: relative; height: 100%;">
-                        <div style="position: absolute; top: 15px; left: 15px; right: -15px; bottom: -15px; border: 2px solid var(--clr-primary); border-radius: var(--radius-lg); z-index: 1; opacity: 0.1;"></div>
-                        <img src="../assets/images/stock/Regulatory_1_optimized.jpg" alt="Regulatory Documentation" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-elite); position: relative; z-index: 2; min-height: 400px;">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- FSSAI Regulatory Support Modules -->
     <section class="section-xl" style="background: #fafafa; position: relative; overflow: hidden;">
@@ -164,48 +109,55 @@
                 <h2>Detailed Compliance Modules</h2>
             </div>
             
-            <div class="grid grid-2" style="gap: var(--sp-xl);">
+            <div class="grid grid-3" style="gap: var(--sp-xl); align-items: stretch;">
                 <!-- FoSTaC Training -->
                 <div class="reveal">
-                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; border-radius: var(--radius-2xl); background: #0A1F1F; color: white; --card-color: var(--clr-mint);">
-                         <div style="width: 55px; height: 55px; background: var(--clr-primary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-xl);">
-                             <i class="fas fa-graduation-cap" style="font-size: 1.5rem;"></i>
+                    <div class="card capability-card regulatory-card" style="padding: var(--sp-2xl); height: 100%; border-radius: var(--radius-2xl); background: #0A1F1F; color: white; --card-color: var(--clr-mint); position: relative; border: 1px solid rgba(255,255,255,0.05);">
+                         <div class="card-icon" style="width: 50px; height: 50px; background: var(--clr-primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-lg);">
+                             <i class="fas fa-graduation-cap" style="font-size: 1.3rem;"></i>
                          </div>
-                         <h3 class="mb-md" style="color: white; font-size: 1.6rem;">FoSTaC Training</h3>
-                         <p style="color: rgba(255,255,255,0.85); line-height: 1.8; font-size: 0.95rem;">Food Safety Training and Certification (FoSTaC) is a large-scale initiative by FSSAI aimed at ensuring that every food business has at least one trained and certified Food Safety Supervisor (FSS) for every 25 handlers. These training programs are tailored to specific industry sectors—such as catering, manufacturing, or retail—and cover best practices in hygiene, sanitation, and hazard management. By educating personnel on the ground, FoSTaC shifts the focus from mere reactive compliance to a proactive culture of food safety, significantly reducing the likelihood of foodborne illnesses and regulatory violations.</p>
+                         <h3 class="mb-md" style="color: white; font-size: 1.4rem; letter-spacing: -0.02em;">FoSTaC Training</h3>
+                         <div class="content-wrapper" style="position: relative;">
+                             <p class="expandable-text" style="color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 0.95rem; margin-bottom: 0;">Food Safety Training and Certification (FoSTaC) is a large-scale initiative by FSSAI aimed at ensuring that every food business has at least one trained and certified Food Safety Supervisor (FSS) for every 25 handlers. These training programs are tailored to specific industry sectors—such as catering, manufacturing, or retail—and cover best practices in hygiene, sanitation, and hazard management. By educating personnel on the ground, FoSTaC shifts the focus from mere reactive compliance to a proactive culture of food safety, significantly reducing the likelihood of foodborne illnesses and regulatory violations.</p>
+                             <div class="fade-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, #0A1F1F); pointer-events: none;"></div>
+                         </div>
+                         <button class="read-more-btn" onclick="toggleCard(this)" style="background: none; border: none; color: var(--clr-mint); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; padding: 10px 0; margin-top: 10px; display: flex; align-items: center; gap: 8px;">
+                             <span>Read Full Scope</span> <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s;"></i>
+                         </button>
                     </div>
                 </div>
                 
-                <!-- Artwork and Label Verification -->
-                <div class="reveal" style="transition-delay: 0.1s;">
-                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; --card-color: var(--clr-coral); border-radius: var(--radius-2xl); background: white;">
-                         <div style="width: 55px; height: 55px; background: #fff5f5; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--clr-coral); margin-bottom: var(--sp-xl);">
-                             <i class="fas fa-tags" style="font-size: 1.5rem;"></i>
-                         </div>
-                         <h3 class="mb-md" style="font-size: 1.6rem;">Artwork and Label Verification</h3>
-                         <p style="color: var(--clr-text-soft); line-height: 1.8; font-size: 0.95rem;">Artwork and Label Verification involves a meticulous review of packaging elements, including the list of ingredients, nutritional facts, allergen warnings, veg/non-veg logos, and the placement of the FSSAI logo. This service ensures that all mandatory declarations are present and technically accurate according to the Food Safety and Standards (Labelling and Display) Regulations. Proper verification prevents costly product recalls, legal penalties, and the rejection of batches during market surveillance or regulatory inspections.</p>
-                    </div>
-                </div>
-
                 <!-- FSSAI Regulatory Trainings -->
-                <div class="reveal" style="transition-delay: 0.2s;">
-                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; --card-color: var(--clr-primary); border-radius: var(--radius-2xl); background: white;">
-                         <div style="width: 55px; height: 55px; background: #e0f2f1; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--clr-primary); margin-bottom: var(--sp-xl);">
-                             <i class="fas fa-chalkboard-teacher" style="font-size: 1.5rem;"></i>
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <div class="card capability-card regulatory-card" style="padding: var(--sp-2xl); height: 100%; --card-color: var(--clr-primary); border-radius: var(--radius-2xl); background: white; position: relative; border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-sm);">
+                         <div class="card-icon" style="width: 50px; height: 50px; background: #e0f2f1; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--clr-primary); margin-bottom: var(--sp-lg);">
+                             <i class="fas fa-chalkboard-teacher" style="font-size: 1.3rem;"></i>
                          </div>
-                         <h3 class="mb-md" style="font-size: 1.6rem;">FSSAI Regulatory Trainings</h3>
-                         <p style="color: var(--clr-text-soft); line-height: 1.8; font-size: 0.95rem;">Our expert-led training programs about FSSAI Regulations provide a deep understanding about various regulatory framework, including licensing, labelling and display, packaging, advertising and claims as well as licensing and registration. We empower your team with the technical knowledge needed to get a solid grasp of various requirements applicable to all Food Business Operators.</p>
+                         <h3 class="mb-md" style="font-size: 1.4rem; letter-spacing: -0.02em;">FSSAI Regulatory Trainings</h3>
+                         <div class="content-wrapper" style="position: relative;">
+                             <p class="expandable-text" style="color: var(--clr-text-soft); line-height: 1.7; font-size: 0.95rem; margin-bottom: 0;">Our expert-led training programs about FSSAI Regulations provide a deep understanding about various regulatory frameworks, including licensing, labelling and display, packaging, advertising and claims as well as registration. We empower your team with the technical knowledge needed to get a solid grasp of various requirements applicable to all Food Business Operators.</p>
+                             <div class="fade-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, white); pointer-events: none;"></div>
+                         </div>
+                         <button class="read-more-btn" onclick="toggleCard(this)" style="background: none; border: none; color: var(--clr-primary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; padding: 10px 0; margin-top: 10px; display: flex; align-items: center; gap: 8px;">
+                             <span>Read Full Scope</span> <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s;"></i>
+                         </button>
                     </div>
                 </div>
 
                 <!-- USFDA Registration -->
-                <div class="reveal" style="transition-delay: 0.3s;">
-                    <div class="card capability-card" style="padding: var(--sp-3xl); height: 100%; --card-color: var(--clr-ocean); border-radius: var(--radius-2xl); background: #0c1a3d; color: white;">
-                         <div style="width: 55px; height: 55px; background: var(--clr-ocean); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; margin-bottom: var(--sp-xl);">
-                             <i class="fas fa-globe-americas" style="font-size: 1.5rem;"></i>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div class="card capability-card regulatory-card" style="padding: var(--sp-2xl); height: 100%; --card-color: var(--clr-ocean); border-radius: var(--radius-2xl); background: #0c1a3d; color: white; position: relative; border: 1px solid rgba(255,255,255,0.05);">
+                         <div class="card-icon" style="width: 50px; height: 50px; background: var(--clr-ocean); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: var(--sp-lg);">
+                             <i class="fas fa-globe-americas" style="font-size: 1.3rem;"></i>
                          </div>
-                         <h3 class="mb-md" style="color: white; font-size: 1.6rem;">USFDA Registration</h3>
-                         <p style="color: rgba(255,255,255,0.85); line-height: 1.8; font-size: 0.95rem;">For food, beverage, and dietary supplement companies looking to enter the United States market, USFDA Registration is mandatory under the Bioterrorism Act. This process involves registering the facility with the U.S. Food and Drug Administration and, for foreign entities, appointing a U.S. Agent as a local point of contact. Registration ensures that the FDA can track facilities and notify them of inspections or safety concerns. Beyond the legal mandate, it signifies that the facility is prepared to meet stringent American safety standards, which is vital for passing U.S. Customs and Border Protection checks.</p>
+                         <h3 class="mb-md" style="color: white; font-size: 1.4rem; letter-spacing: -0.02em;">USFDA Registration</h3>
+                         <div class="content-wrapper" style="position: relative;">
+                             <p class="expandable-text" style="color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 0.95rem; margin-bottom: 0;">For food, beverage, and dietary supplement companies looking to enter the United States market, USFDA Registration is mandatory under the Bioterrorism Act. This process involves registering the facility with the U.S. Food and Drug Administration and, for foreign entities, appointing a U.S. Agent as a local point of contact. Registration ensures that the FDA can track facilities and notify them of inspections or safety concerns. Beyond the legal mandate, it signifies that the facility is prepared to meet stringent American safety standards, which is vital for passing U.S. Customs and Border Protection checks.</p>
+                             <div class="fade-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, #0c1a3d); pointer-events: none;"></div>
+                         </div>
+                         <button class="read-more-btn" onclick="toggleCard(this)" style="background: none; border: none; color: var(--clr-ocean); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; padding: 10px 0; margin-top: 10px; display: flex; align-items: center; gap: 8px;">
+                             <span>Read Full Scope</span> <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s;"></i>
+                         </button>
                     </div>
                 </div>
             </div>
@@ -226,5 +178,21 @@
     <div id="floating-placeholder"></div>
     <script src="../assets/js/components.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+        function toggleCard(btn) {
+            const card = btn.closest('.regulatory-card');
+            const span = btn.querySelector('span');
+            
+            card.classList.toggle('expanded');
+            
+            if (card.classList.contains('expanded')) {
+                span.textContent = 'Show Less';
+            } else {
+                span.textContent = 'Read Full Scope';
+                // Scroll back to top of card if needed
+                card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+    </script>
 </body>
 </html>

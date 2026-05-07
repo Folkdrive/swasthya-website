@@ -1868,7 +1868,7 @@ a:hover { color: var(--clr-primary); }
     align-items: flex-start;
     z-index: 1;
     overflow: hidden;
-    padding-top: 80px; /* Aligned exactly below the 80px header */
+    padding-top: 110px; /* Increased to avoid overlap with header/logo */
     padding-bottom: 60px;
 }
 
@@ -1984,7 +1984,7 @@ a:hover { color: var(--clr-primary); }
 /* ── Headline ── */
 .slide-headline {
     font-family: 'Outfit', sans-serif !important;
-    font-size: clamp(2.2rem, 4.8vw, 4rem) !important; /* Slightly reduced */
+    font-size: clamp(1.8rem, 3.8vw, 3.2rem) !important; /* Reduced further to avoid logo overlap */
     font-weight: 800 !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;

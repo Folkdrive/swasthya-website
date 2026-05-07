@@ -30,11 +30,11 @@ function getHeaderTemplate(prefix) {
                     <!-- Left Section -->
                     <div class="nav-group nav-left">
                         <a href="${prefix}index.html" class="nav-link-portal">
-                            <span class="nav-art-symbol"><i class="fas fa-home"></i></span> Home
+                            Home
                         </a>
                         <div class="nav-dropdown-wrap">
                             <a href="${prefix}company.html" class="nav-link-portal">
-                                <span class="nav-art-symbol"><i class="fas fa-users"></i></span> About Us
+                                About Us
                             </a>
                             <div class="nav-dropdown">
                                 <a href="${prefix}company.html">Overview</a>
@@ -47,14 +47,13 @@ function getHeaderTemplate(prefix) {
                         </div>
                         <div class="nav-dropdown-wrap">
                             <a href="${prefix}services/index.html" class="nav-link-portal">
-                                <span class="nav-art-symbol"><i class="fas fa-layer-group"></i></span> Core Services
+                                Core Services
                             </a>
                             <div class="nav-dropdown">
                                 <a href="${prefix}services/fssai.html">FSSAI Regulatory Support</a>
                                 <a href="${prefix}services/iso22000.html">FSMS Consultancy</a>
                                 <a href="${prefix}services/audits.html">Audits</a>
-                                <a href="${prefix}services/technical.html">Engineering Services</a>
-                                <a href="${prefix}services/technical.html#technical">Technical Support</a>
+                                <a href="${prefix}services/technical.html">Engineering and Technical Services</a>
                             </div>
                         </div>
                     </div>
@@ -70,7 +69,7 @@ function getHeaderTemplate(prefix) {
                     <div class="nav-group nav-right">
                         <div class="nav-dropdown-wrap">
                             <a href="${prefix}trainings/index.html" class="nav-link-portal">
-                                <span class="nav-art-symbol"><i class="fas fa-chalkboard-teacher"></i></span> Trainings
+                                Trainings
                             </a>
                             <div class="nav-dropdown">
                                 <a href="${prefix}trainings/index.html#regulatory">Regulatory Trainings</a>
@@ -82,11 +81,11 @@ function getHeaderTemplate(prefix) {
                                 <a href="${prefix}trainings/index.html#custom">Custom Tailored</a>
                             </div>
                         </div>
-                        <a href="${prefix}approvals-awards.html" class="nav-link-portal">
-                            <span class="nav-art-symbol"><i class="fas fa-award"></i></span> Approvals & Awards
+                        <a href="${prefix}verify.html" class="nav-link-portal">
+                            Verify Certificate
                         </a>
                         <a href="${prefix}contact.html" class="nav-link-portal contact-pill">
-                            <span class="nav-art-symbol"><i class="fas fa-paper-plane"></i></span> Contact
+                            Contact
                         </a>
                     </div>
 
@@ -246,19 +245,7 @@ function getHeaderTemplate(prefix) {
                     padding-left: 25px;
                 }
 
-                .nav-art-symbol {
-                    font-size: 0.75rem;
-                    margin-right: 8px;
-                    opacity: 0.9;
-                    transition: all 0.4s ease;
-                    color: #12113a;
-                    display: inline-block;
-                }
-                .nav-link-portal:hover .nav-art-symbol {
-                    transform: scale(1.2) rotate(15deg);
-                    filter: drop-shadow(0 0 8px rgba(251, 140, 0, 0.4));
-                    color: #FB8C00;
-                }
+
 
                 .nav-link-portal {
                     color: #12113a; text-decoration: none;
@@ -343,12 +330,12 @@ function getHeaderTemplate(prefix) {
             <div class="cyber-tiles-grid">
                 <a href="${prefix}index.html" class="cyber-tile" style="--tile-color: #00f2ff; --delay: 0.05s">
                     <div class="cyber-tile-glow"></div>
-                    <i class="fas fa-home"></i>
+
                     <span>Home</span>
                 </a>
                 <a href="${prefix}company.html" class="cyber-tile" style="--tile-color: #FB8C00; --delay: 0.1s">
                     <div class="cyber-tile-glow"></div>
-                    <i class="fas fa-users"></i>
+
                     <span>About Us</span>
                 </a>
 
@@ -356,15 +343,15 @@ function getHeaderTemplate(prefix) {
                 <div class="cyber-tile-wrapper" style="--tile-color: #7c3aed; --delay: 0.15s">
                     <div class="cyber-tile cyber-accordion-trigger" data-accordion="services">
                         <div class="cyber-tile-glow"></div>
-                        <i class="fas fa-layer-group"></i>
+
                         <span>Services</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
+
                     </div>
                     <div class="cyber-accordion-content" id="acc-services">
                         <a href="${prefix}services/fssai.html">FSSAI Regulatory</a>
                         <a href="${prefix}services/iso22000.html">FSMS Consultancy</a>
                         <a href="${prefix}services/audits.html">Audits</a>
-                        <a href="${prefix}services/technical.html">Engineering</a>
+                        <a href="${prefix}services/technical.html">Engineering & Technical</a>
                         <a href="${prefix}services/index.html">View All</a>
                     </div>
                 </div>
@@ -373,9 +360,9 @@ function getHeaderTemplate(prefix) {
                 <div class="cyber-tile-wrapper" style="--tile-color: #10b981; --delay: 0.2s">
                     <div class="cyber-tile cyber-accordion-trigger" data-accordion="trainings">
                         <div class="cyber-tile-glow"></div>
-                        <i class="fas fa-chalkboard-teacher"></i>
+
                         <span>Trainings</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
+
                     </div>
                     <div class="cyber-accordion-content" id="acc-trainings">
                         <a href="${prefix}trainings/index.html#fostac">FoSTaC Training</a>
@@ -388,13 +375,13 @@ function getHeaderTemplate(prefix) {
 
                 <a href="${prefix}clientele.html" class="cyber-tile" style="--tile-color: #f43f5e; --delay: 0.25s">
                     <div class="cyber-tile-glow"></div>
-                    <i class="fas fa-building"></i>
+
                     <span>Clients</span>
                 </a>
-                <a href="${prefix}approvals-awards.html" class="cyber-tile" style="--tile-color: #f59e0b; --delay: 0.3s">
+                <a href="${prefix}verify.html" class="cyber-tile" style="--tile-color: #f59e0b; --delay: 0.3s">
                     <div class="cyber-tile-glow"></div>
-                    <i class="fas fa-award"></i>
-                    <span>Approvals & Awards</span>
+
+                    <span>Verify Certificate</span>
                 </a>
             </div>
 
@@ -410,11 +397,11 @@ function getHeaderTemplate(prefix) {
             <!-- CTA + social -->
             <div class="cyber-footer-cta">
                 <a href="${prefix}contact.html" class="cyber-contact-btn">
-                    <i class="fas fa-paper-plane"></i> Contact Us
+                    Contact Us
                 </a>
                 <div class="cyber-social">
-                    <a href="https://www.linkedin.com/in/thammaiah-n-d-b9468925" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/919980182600" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/search/results/all/?keywords=swasthya%20food%20consulting&origin=RICH_QUERY_SUGGESTION&heroEntityKey=urn%3Ali%3Aorganization%3A80190283&position=0" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/918105787342" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -741,7 +728,7 @@ function getFooterTemplate(prefix) {
                     <!-- Brand -->
                     <div>
                         <img src="${prefix}assets/images/Swasthya-Food-Consulting.png" alt="Swasthya" style="height: 54px; margin-bottom: 15px; display: block;">
-                        <p style="font-size: 0.78rem; color: #1e293b; line-height: 1.6; margin: 0 0 15px; font-weight: 500;">Bengaluru's premier BRCGS &amp; FoSTaC partner.<br>Est. 2022 &nbsp;·&nbsp; 135+ global partners.</p>
+                        <p style="font-size: 0.78rem; color: #1e293b; line-height: 1.6; margin: 0 0 15px; font-weight: 500;">India's Leading FoSTaC Training Partner, FSMS Consultants and BRCGS Training Partner</p>
                     </div>
 
                     <!-- Solutions -->
@@ -751,7 +738,7 @@ function getFooterTemplate(prefix) {
                             <a href="${prefix}services/fssai.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">FSSAI Regulatory</a>
                             <a href="${prefix}services/iso22000.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">FSMS Consultancy</a>
                             <a href="${prefix}services/audits.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Audits</a>
-                            <a href="${prefix}services/technical.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Engineering</a>
+                            <a href="${prefix}services/technical.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Engineering & Technical</a>
                             <a href="${prefix}trainings/index.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">FoSTaC Trainings</a>
                             <a href="${prefix}trainings/index.html#brcgs" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#004D40';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">BRCGS Trainings</a>
                         </div>
@@ -765,7 +752,7 @@ function getFooterTemplate(prefix) {
                             <a href="${prefix}company.html#founder" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Founder</a>
                             <a href="${prefix}company.html#timeline" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Our Evolution</a>
                             <a href="${prefix}clientele.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Clients</a>
-                            <a href="${prefix}approvals-awards.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Approvals & Awards</a>
+                            <a href="${prefix}verify.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Verify Certificate</a>
                             <a href="${prefix}contact.html" style="font-size: 0.85rem; color: #0f172a; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.color='#FB8C00';this.style.paddingLeft='5px'" onmouseout="this.style.color='#0f172a';this.style.paddingLeft='0'">Contact</a>
                         </div>
                     </div>
@@ -785,10 +772,10 @@ function getFooterTemplate(prefix) {
                             <i class="fas fa-file-invoice" style="margin-right: 10px;"></i>GSTIN: 29AJFPD0474P1ZV
                         </p>
                         <div style="display: flex; gap: 12px;">
-                            <a href="https://www.linkedin.com/in/thammaiah-n-d-b9468925" target="_blank" style="width: 42px; height: 42px; border-radius: 50%; background: #f1f5f9; border: 1.5px solid #cbd5e1; display: flex; align-items: center; justify-content: center; color: #475569; font-size: 1rem; text-decoration: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.background='#0077b5';this.style.color='white';this.style.borderColor='#0077b5';this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#f1f5f9';this.style.color='#475569';this.style.borderColor='#cbd5e1';this.style.transform='translateY(0)'">
+                            <a href="https://www.linkedin.com/search/results/all/?keywords=swasthya%20food%20consulting&origin=RICH_QUERY_SUGGESTION&heroEntityKey=urn%3Ali%3Aorganization%3A80190283&position=0" target="_blank" style="width: 42px; height: 42px; border-radius: 50%; background: #f1f5f9; border: 1.5px solid #cbd5e1; display: flex; align-items: center; justify-content: center; color: #475569; font-size: 1rem; text-decoration: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.background='#0077b5';this.style.color='white';this.style.borderColor='#0077b5';this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#f1f5f9';this.style.color='#475569';this.style.borderColor='#cbd5e1';this.style.transform='translateY(0)'">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://wa.me/919980182600" target="_blank" style="width: 42px; height: 42px; border-radius: 50%; background: #f1f5f9; border: 1.5px solid #cbd5e1; display: flex; align-items: center; justify-content: center; color: #475569; font-size: 1rem; text-decoration: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.background='#25d366';this.style.color='white';this.style.borderColor='#25d366';this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#f1f5f9';this.style.color='#475569';this.style.borderColor='#cbd5e1';this.style.transform='translateY(0)'">
+                            <a href="https://wa.me/918105787342" target="_blank" style="width: 42px; height: 42px; border-radius: 50%; background: #f1f5f9; border: 1.5px solid #cbd5e1; display: flex; align-items: center; justify-content: center; color: #475569; font-size: 1rem; text-decoration: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.background='#25d366';this.style.color='white';this.style.borderColor='#25d366';this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#f1f5f9';this.style.color='#475569';this.style.borderColor='#cbd5e1';this.style.transform='translateY(0)'">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
@@ -837,55 +824,10 @@ function getFloatingActionsTemplate(prefix) {
             </a>
         </div>
 
-        <!-- Side Peeping Tab: Verify Certificate -->
-        <div class="peeping-tab-elite" style="position: fixed; right: 0; top: 55%; transform: translateY(-50%); z-index: 1001;">
-            <a href="${prefix}verify.html" class="verify-side-tab">
-                <i class="fas fa-shield-check"></i>
-                <span class="tab-text">Verify Certificate</span>
-            </a>
-        </div>
+
 
         <style>
-            .verify-side-tab {
-                display: flex;
-                align-items: center;
-                gap: 14px;
-                background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-ocean) 100%);
-                color: white !important;
-                padding: 15px 24px 15px 18px;
-                border-radius: 40px 0 0 40px;
-                text-decoration: none;
-                font-weight: 700;
-                font-size: 0.95rem;
-                box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                transform: translateX(calc(100% - 55px)); /* Peeps out showing just the icon */
-                border: 1px solid rgba(255,255,255,0.2);
-                border-right: none;
-                backdrop-filter: blur(10px);
-            }
-            
-            .verify-side-tab:hover {
-                transform: translateX(0); /* Slides in fully on hover */
-                padding-right: 30px;
-                box-shadow: -15px 15px 40px rgba(0,0,0,0.3);
-                color: white !important;
-            }
 
-
-            .verify-side-tab i {
-                font-size: 1.4rem;
-                filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
-            }
-
-            @media (max-width: 768px) {
-                .verify-side-tab {
-                    padding: 12px 20px 12px 14px;
-                    font-size: 0.85rem;
-                    transform: translateX(calc(100% - 48px));
-                }
-                .verify-side-tab i { font-size: 1.2rem; }
-            }
             
             .elite-fab {
                 position: relative;

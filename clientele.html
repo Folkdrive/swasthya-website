@@ -8,6 +8,7 @@
     <title>Our Clientele | Swasthya Food Consulting | Trusted by 135+ Food Industry Brands</title>
     <meta name="description" content="Explore Swasthya's prestigious clientele across dairy, beverages, bakery, and retail sectors. Trusted by over 135 food industry brands for hygiene excellence and regulatory compliance.">
     <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="assets/images/Swasthya-Food-Consulting.png">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,12 +53,10 @@
             to { transform: translateX(calc(-100% - 2rem)); }
         }
 
-        /* Sleek Glass Logo Cards */
+        /* Sleek Glass Logo Cards - Updated for White Background */
         .client-card-elite {
-            background: rgba(255, 255, 255, 0.02);
-            border: 2px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: #ffffff;
+            border: 1px solid #eee;
             border-radius: var(--radius-lg);
             padding: var(--sp-lg);
             display: flex;
@@ -67,14 +66,14 @@
             height: 120px;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .client-card-elite:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(0, 242, 255, 0.5);
-            box-shadow: 0 15px 45px rgba(0, 242, 255, 0.2);
+            background: #ffffff;
+            border-color: var(--clr-primary);
+            box-shadow: 0 12px 30px rgba(90, 79, 207, 0.15);
         }
 
         .client-card-elite img {
@@ -82,6 +81,7 @@
             max-height: 85%;
             object-fit: contain;
             transition: all 0.4s ease;
+            filter: none !important; /* Ensure logos are colorful */
         }
 
         .client-card-elite:hover img {
@@ -151,14 +151,14 @@
     </section>
 
     <!-- Animated Logo Marquee Section -->
-    <section class="section-xl" style="position: relative; background: #06061a; overflow: hidden;">
+    <section class="section-xl" style="position: relative; background: #ffffff; overflow: hidden;">
         <!-- Futuristic Grid Background Overlay -->
-        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
         
         <div class="container" style="position: relative; z-index: 2;">
             <div class="centered-heading reveal" style="margin-bottom: var(--sp-3xl);">
-                <span class="pre-heading" style="color: rgba(255,255,255,0.5); letter-spacing: 0.2em;">A Legacy of Trust</span>
-                <h2 style="color: white;">Brands We've Empowered</h2>
+                <span class="pre-heading" style="color: var(--clr-text-soft); letter-spacing: 0.2em;">A Legacy of Trust</span>
+                <h2 style="color: var(--clr-text-main);">Brands We've Empowered</h2>
             </div>
 
             <!-- Row 1: Left to Right -->
