@@ -548,7 +548,7 @@ a:hover { color: var(--clr-primary); }
 
 .card {
     background: var(--clr-bg-pure);
-    padding: var(--sp-xl);
+    padding: clamp(var(--sp-lg), 5vw, var(--sp-xl));
     border-radius: var(--radius-md);
     border: 1.5px solid var(--clr-border);
     box-shadow: var(--shadow-md);
@@ -1063,6 +1063,14 @@ a:hover { color: var(--clr-primary); }
     gap: var(--sp-md);
     color: var(--clr-text-muted);
     font-size: 0.82rem;
+}
+
+@media (max-width: 640px) {
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .footer-bottom a { color: var(--clr-text-muted); }
@@ -1593,7 +1601,11 @@ a:hover { color: var(--clr-primary); }
 
 @media (max-width: 1024px) {
     .hero-grid { grid-template-columns: 1fr; text-align: center; padding: var(--sp-2xl) 0; }
-    .hero-visual { display: none; }
+    .hero-visual {
+        display: block;
+        margin: 40px auto 0;
+        max-width: 100%;
+    }
     .hero-text .flex { justify-content: center; }
 }
 

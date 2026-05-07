@@ -292,19 +292,19 @@ function getHeaderTemplate(prefix) {
                 .logo-portal-circle-glass:hover .logo-portal-img { transform: rotate(360deg); }
 
                 .mobile-toggle-portal {
-                    display: none; flex-direction: column; gap: 6px; cursor: pointer; z-index: 50; position: absolute; right: 20px; top: 25px;
+                    display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 50; position: absolute; right: 20px; top: 15px;
                 }
                 .mobile-toggle-portal span {
-                    display: block; width: 30px; height: 3px; background: #12113a; border-radius: 3px; transition: all 0.3s ease;
+                    display: block; width: 26px; height: 2px; background: #12113a; border-radius: 2px; transition: all 0.3s ease;
                 }
 
                 @media (max-width: 1024px) {
                     .nav-group { display: none; }
                     .mobile-toggle-portal { display: flex; }
-                    .nav-container-svg { height: 75px; }
-                    .logo-portal-wrap { top: -18px; }
-                    .logo-portal-circle-glass { width: 90px; height: 90px; border: none; background: transparent; }
-                    .logo-portal-img { height: 75px; }
+                    .nav-container-svg { height: 80px; }
+                    .logo-portal-wrap { top: -25px; }
+                    .logo-portal-circle-glass { width: 75px; height: 75px; border: none; background: transparent; }
+                    .logo-portal-img { height: 60px; }
                 }
             </style>
         </header>
@@ -314,17 +314,6 @@ function getHeaderTemplate(prefix) {
             <!-- Animated background mesh -->
             <div class="cyber-mesh-bg"></div>
             <div class="cyber-grid-lines"></div>
-
-            <!-- Close button -->
-            <button class="cyber-close-btn" id="cyber-close-btn" aria-label="Close Menu">
-                <span></span><span></span>
-            </button>
-
-            <!-- Logo at top -->
-            <div class="cyber-menu-logo">
-                <img src="${prefix}assets/images/Swasthya-Food-Consulting.png" alt="Swasthya">
-                <span>Swasthya</span>
-            </div>
 
             <!-- Main nav tiles -->
             <div class="cyber-tiles-grid">
