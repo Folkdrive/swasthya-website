@@ -268,7 +268,7 @@ function getHeaderTemplate(prefix) {
                 /* LOGO HUB */
                 .logo-portal-wrap {
                     position: absolute;
-                    top: -25px; left: 50%;
+                    top: -40px; left: 50%;
                     transform: translateX(-50%);
                     z-index: 30;
                 }
@@ -302,7 +302,7 @@ function getHeaderTemplate(prefix) {
                     .nav-group { display: none; }
                     .mobile-toggle-portal { display: flex; }
                     .nav-container-svg { height: 75px; }
-                    .logo-portal-wrap { top: -10px; }
+                    .logo-portal-wrap { top: -18px; }
                     .logo-portal-circle-glass { width: 90px; height: 90px; border: none; background: transparent; }
                     .logo-portal-img { height: 75px; }
                 }
@@ -785,12 +785,12 @@ function getFooterTemplate(prefix) {
                 <!-- Bottom bar -->
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 30px 0;">
                     <p style="font-size: 0.8rem; color: #475569; margin: 0; font-weight: 500;">
-                        &copy; 2026 Swasthya Food Consulting &nbsp;·&nbsp;
-                        <a href="https://www.folkdrive.in" target="_blank" style="color: #004D40; text-decoration: none; font-weight: 800;">Folkdrive India Pvt Ltd</a>
+                        &copy; 2026 Swasthya Food Consulting
                     </p>
                     <div style="display: flex; gap: 30px;">
-                        <a href="#" style="font-size: 0.8rem; color: #475569; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='#004D40'" onmouseout="this.style.color='#475569'">Privacy Policy</a>
-                        <a href="#" style="font-size: 0.8rem; color: #475569; text-decoration: none; transition: all 0.3s; font-weight: 500;" onmouseover="this.style.color='#004D40'" onmouseout="this.style.color='#475569'">Terms</a>
+                        <p style="font-size: 0.8rem; color: #475569; margin: 0; font-weight: 500;">
+                            Developed by <a href="https://www.folkdrive.in" target="_blank" style="color: #004D40; text-decoration: none; font-weight: 800;">Folkdrive India Pvt Ltd</a>
+                        </p>
                     </div>
                 </div>
 
