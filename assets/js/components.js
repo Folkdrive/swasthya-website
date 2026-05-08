@@ -309,7 +309,7 @@ function getHeaderTemplate(prefix) {
                     .nav-group { display: none; }
                     .mobile-toggle-portal { display: flex; }
                     .nav-container-svg { height: 75px; }
-                    .logo-portal-wrap { top: -10px; }
+                    .logo-portal-wrap { top: -18px; }
                     .logo-portal-circle-glass { width: 70px; height: 70px; border: none; background: transparent; }
                     .logo-portal-img { height: 55px; }
                 }
