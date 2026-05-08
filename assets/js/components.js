@@ -146,6 +146,13 @@ function getHeaderTemplate(prefix) {
                     -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0 H1200 V50 L780,50 C700,50 680,105 600,105 C520,105 500,50 420,50 L0,50 Z"/></svg>');
                 }
 
+                @media (max-width: 1024px) {
+                    .glass-mesh-bg {
+                        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0 H1200 V50 L780,50 C700,50 680,72 600,72 C520,72 500,50 420,50 L0,50 Z"/></svg>');
+                        -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0 H1200 V50 L780,50 C700,50 680,72 600,72 C520,72 500,50 420,50 L0,50 Z"/></svg>');
+                    }
+                }
+
                 @keyframes meshFlow {
                     0% { background-position: 0% 50%; }
                     50% { background-position: 100% 50%; }
@@ -301,10 +308,10 @@ function getHeaderTemplate(prefix) {
                 @media (max-width: 1024px) {
                     .nav-group { display: none; }
                     .mobile-toggle-portal { display: flex; }
-                    .nav-container-svg { height: 80px; }
-                    .logo-portal-wrap { top: -25px; }
-                    .logo-portal-circle-glass { width: 75px; height: 75px; border: none; background: transparent; }
-                    .logo-portal-img { height: 60px; }
+                    .nav-container-svg { height: 75px; }
+                    .logo-portal-wrap { top: -10px; }
+                    .logo-portal-circle-glass { width: 70px; height: 70px; border: none; background: transparent; }
+                    .logo-portal-img { height: 55px; }
                 }
             </style>
         </header>

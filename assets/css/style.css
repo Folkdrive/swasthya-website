@@ -1884,6 +1884,11 @@ a:hover { color: var(--clr-primary); }
     padding-bottom: 60px;
 }
 
+@media (max-width: 1024px) {
+    .slide { padding-top: 25px; }
+    .hero-elite { padding-top: 60px !important; }
+}
+
 .slide.active {
     opacity: 1;
     visibility: visible;
@@ -2304,7 +2309,7 @@ a:hover { color: var(--clr-primary); }
 }
 
 @media (max-width: 640px) {
-    .slide-content-wrap { padding-top: 105px; padding-bottom: 130px; }
+    .slide-content-wrap { padding-top: 15px; padding-bottom: 90px; }
     .slide-stats { gap: 15px; flex-wrap: wrap; justify-content: center; }
     .slide-stat { padding-right: 0; text-align: center; min-width: 120px; }
     .slide-stat-divider { display: none; }
