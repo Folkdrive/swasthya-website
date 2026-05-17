@@ -1,0 +1,25 @@
+# Swasthya Food Consulting - Redirects for Legacy URLs
+RewriteEngine On
+
+# Specific 301 Redirects from old PHP-based URLs
+RewriteRule ^index\.php/overview/?$ /company.html [R=301,L]
+RewriteRule ^index\.php/founder/?$ /company.html#founder [R=301,L,NE]
+RewriteRule ^index\.php/mission-and-vision/?$ /company.html#vision [R=301,L,NE]
+RewriteRule ^index\.php/timelines/?$ /company.html#timeline [R=301,L,NE]
+RewriteRule ^index\.php/training/?$ /trainings/index.html [R=301,L]
+RewriteRule ^index\.php/services-2/?$ /services/index.html [R=301,L]
+
+# Pattern-based Redirects (Handling categories and tags)
+RewriteRule ^index\.php/product-tag/.*$ /services/index.html [R=301,L]
+RewriteRule ^index\.php/product-category/.*$ /services/index.html [R=301,L]
+RewriteRule ^index\.php/tag/.*$ /clientele.html [R=301,L]
+RewriteRule ^index\.php/author/.*$ /company.html [R=301,L]
+
+# Redirect any other index.php path to home
+RewriteRule ^index\.php/.*$ /index.html [R=301,L]
+
+# Redirect base index.php to home
+RewriteRule ^index\.php$ /index.html [R=301,L]
+
+# Enable custom 404 page if desired
+# ErrorDocument 404 /404.html
